@@ -23,10 +23,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ottawa Valley Real Estate & Home Valuations | Prakash Solanki, REALTOR®</title>
     
+    <!-- Open Graph Meta Tags with Correct GitHub Image Path -->
     <meta property="og:title" content="Ottawa Valley Real Estate & Home Valuations | Prakash Solanki, REALTOR®">
-    <meta property="og:description" content="Professional Home Valuations & Custom Buyer Searches across Pembroke, Petawawa & Deep River. 100% Free, Zero Obligation.">
-    <meta property="og:image" content="https://solankihomes.ca/valley/remax_logo.png">
-    <meta property="og:url" content="https://solankihomes.ca/valley">
+    <meta property="og:description" content="Professional Home Valuations & Custom Buyer Searches across Pembroke, Petawawa, Deep River & the Whole Ottawa Valley. 100% Free, Zero Obligation.">
+    <meta property="og:image" content="https://prakash-solanki-remax.github.io/Ottawa-valley/remax_logo.png">
+    <meta property="og:url" content="https://prakash-solanki-remax.github.io/Ottawa-valley/">
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -139,6 +140,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         @media(min-width: 768px) { .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
         .card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-top: 5px solid #003399; padding: 24px 20px; border-radius: 14px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06); }
         
+        /* Accordion FAQ Styles */
+        .faq-section { background-color: #f1f5f9; padding: 60px 16px; border-top: 1px solid #cbd5e1; }
+        .faq-container { max-width: 850px; margin: 0 auto; }
+        .faq-accordion-item { background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 12px; margin-bottom: 14px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: border-color 0.2s ease; }
+        .faq-accordion-item.active { border-color: #003399; }
+        .faq-question-btn { width: 100%; padding: 18px 20px; background: none; border: none; text-align: left; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 800; color: #0f172a; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 12px; }
+        .faq-question-btn i { color: #dc2626; font-size: 14px; transition: transform 0.3s ease; flex-shrink: 0; }
+        .faq-accordion-item.active .faq-question-btn i { transform: rotate(180deg); }
+        .faq-answer-panel { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out, padding 0.35s ease; padding: 0 20px; background: #f8fafc; color: #475569; font-size: 14px; line-height: 1.6; font-weight: 500; }
+        .faq-accordion-item.active .faq-answer-panel { max-height: 300px; padding: 0 20px 20px 20px; border-top: 1px solid #e2e8f0; }
+
         .site-footer { background: linear-gradient(135deg, #020617 0%, #070d1d 100%); color: #94a3b8; padding: 50px 20px 30px; border-top: 3px solid #003399; }
         .footer-container { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; }
         @media(min-width: 768px) { .footer-container { grid-template-columns: 1.2fr 1fr; gap: 50px; } }
@@ -203,7 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </h1>
 
                 <p id="heroDesc" style="font-size: 14px; color: #cbd5e1; line-height: 1.6;">
-                    Comprehensive market data reviewing recent comparable sales across Pembroke, Petawawa, Deep River, Renfrew and surrounding Valley communities.
+                    Comprehensive market data reviewing recent comparable sales across Pembroke, Petawawa, Deep River, Renfrew, Laurentian Hills, Laurentian Valley, Whitewater Region and the whole Ottawa Valley.
                 </p>
 
                 <div class="hero-profile-card">
@@ -348,7 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="card">
                     <div style="width: 38px; height: 38px; background: #e0f2fe; color: #003399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 12px;"><i class="fa-solid fa-tree"></i></div>
                     <h3 style="font-size: 16px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Local Valley Focus</h3>
-                    <p style="font-size: 13px; color: #475569; line-height: 1.5;">Serving Pembroke, Petawawa, Deep River, Westmeath, and the entire Ottawa Valley region.</p>
+                    <p style="font-size: 13px; color: #475569; line-height: 1.5;">Serving Pembroke, Petawawa, Deep River, Renfrew, Laurentian Hills, Laurentian Valley, Whitewater Region, and the whole Ottawa Valley.</p>
                 </div>
                 <div class="card">
                     <div style="width: 38px; height: 38px; background: #fee2e2; color: #dc2626; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 12px;"><i class="fa-solid fa-water"></i></div>
@@ -358,7 +370,72 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="card">
                     <div style="width: 38px; height: 38px; background: #fef3c7; color: #d97706; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 12px;"><i class="fa-solid fa-shield-halved"></i></div>
                     <h3 style="font-size: 16px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Trusted RE/MAX Standards</h3>
-                    <p style="font-size: 13px; color: #475569; line-height: 1.5;">Professional guidance, military relocation experience, and absolute integrity.</p>
+                    <p style="font-size: 13px; color: #475569; line-height: 1.5;">Professional guidance, seamless relocation assistance, and absolute integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Accordion FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <span style="color: #dc2626; font-weight: 800; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;">Got Questions?</span>
+                <h2 style="font-size: 26px; font-weight: 800; color: #0f172a; margin-top: 6px;">Frequently Asked Questions</h2>
+            </div>
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-accordion-item">
+                <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                    <span>How do I get started with buying a home in the Ottawa Valley?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer-panel">
+                    Simply switch to the "Buying in the Valley" tab above, fill out your preferred town, property type, and budget range, and Prakash Solanki will set up custom MLS® alerts tailored directly to your criteria.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-accordion-item">
+                <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                    <span>Is the home valuation report really 100% free?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer-panel">
+                    Yes! Your Comparative Market Analysis (CMA) report and initial consultation come at zero cost and with absolute zero sales pressure or obligation to list.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-accordion-item">
+                <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                    <span>Do you assist with out-of-town relocations to the Ottawa Valley?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer-panel">
+                    Absolutely. We provide comprehensive relocation support, offering flexible virtual walkthroughs and streamlined house-hunting itineraries to ensure a smooth, stress-free transition into the area.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-accordion-item">
+                <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                    <span>What areas of the Ottawa Valley do you service?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer-panel">
+                    We proudly serve Pembroke, Petawawa, Deep River, Renfrew, Laurentian Hills, Laurentian Valley, Whitewater Region, and the whole Ottawa Valley community for both residential and rural properties.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-accordion-item">
+                <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                    <span>How is my property's market value calculated?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer-panel">
+                    Unlike automated online estimates that miss crucial upgrades or lot details, we manually analyze recent comparable sold properties, current active listings, and current local market trends to determine a precise value.
                 </div>
             </div>
         </div>
@@ -374,7 +451,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div style="font-size: 12px; color: #cbd5e1; font-weight: 600; margin-top: 3px;">RE/MAX Pembroke Realty Ltd., Brokerage</div>
                     <div style="font-size: 11px; color: #94a3b8; font-weight: 600; margin-top: 3px;"><i class="fa-solid fa-location-dot" style="color: #ef4444;"></i> 10A Canadian Forces Blvd, Petawawa, ON K8H 0H4</div>
                 </div>
-                <p style="font-size: 12px; color: #cbd5e1;">Serving Pembroke, Petawawa, Deep River, and the entire Ottawa Valley.</p>
+                <p style="font-size: 12px; color: #cbd5e1;">Serving Pembroke, Petawawa, Deep River, Renfrew, Laurentian Hills, and the whole Ottawa Valley.</p>
             </div>
             <div class="footer-contact-details">
                 <div style="font-size: 11px; font-weight: 800; color: #dc2626; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">Direct Contact</div>
@@ -382,10 +459,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="mailto:prakash.solanki@remax.net" class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>prakash.solanki@remax.net</span></a>
             </div>
         </div>
-        <div class="footer-bottom-bar">Proudly serving the Ottawa Valley region.</div>
+        <div class="footer-bottom-bar">Proudly serving the whole Ottawa Valley region.</div>
     </footer>
 
-    <!-- Interactive Logic Controller with Independent Form Submissions -->
+    <!-- Interactive Logic Controller with Accordion FAQ & Independent Submissions -->
     <script>
         let isSellingSubmitted = false;
         let isBuyingSubmitted = false;
@@ -404,7 +481,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if (mode === 'selling') {
                 document.getElementById('badgeText').textContent = "Ottawa Valley Home Valuation Portal";
                 document.getElementById('heroTitle').textContent = "What Is Your Ottawa Valley Home Worth?";
-                document.getElementById('heroDesc').textContent = "Comprehensive market data reviewing recent comparable sales across Pembroke, Petawawa, Deep River, Renfrew and surrounding Valley communities.";
+                document.getElementById('heroDesc').textContent = "Comprehensive market data reviewing recent comparable sales across Pembroke, Petawawa, Deep River, Renfrew, Laurentian Hills, Laurentian Valley, Whitewater Region and the whole Ottawa Valley.";
                 
                 setTimeout(() => {
                     const firstInput = document.getElementById('seller-first-field-valley');
@@ -415,7 +492,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             } else {
                 document.getElementById('badgeText').textContent = "Ottawa Valley Property Search Portal";
                 document.getElementById('heroTitle').textContent = "Find Your Next Home in the Ottawa Valley";
-                document.getElementById('heroDesc').textContent = "Whether looking for suburban homes, country properties, or waterfront retreats, get matched with active Valley listings.";
+                document.getElementById('heroDesc').textContent = "Whether looking for suburban homes, country properties, or waterfront retreats, get matched with active listings across the whole Ottawa Valley.";
                 
                 setTimeout(() => {
                     const firstInput = document.getElementById('buyer-first-field-valley');
@@ -434,6 +511,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 document.getElementById('buyerForm').style.display = 'none';
                 document.getElementById('formSuccessBuying').style.display = 'block';
                 document.getElementById('buyerFormCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Accordion FAQ Toggle Logic (Auto-collapses previous items)
+        function toggleFaq(button) {
+            const currentItem = button.parentElement;
+            const isActive = currentItem.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-accordion-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // If it wasn't active, open it
+            if (!isActive) {
+                currentItem.classList.add('active');
             }
         }
     </script>

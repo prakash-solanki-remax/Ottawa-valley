@@ -27,8 +27,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:site_name" content="Prakash Solanki, REALTOR®">
     <meta property="og:title" content="Ottawa Valley Real Estate & Home Valuations | Prakash Solanki, REALTOR®">
     <meta property="og:description" content="Professional Home Valuations & Custom Buyer Searches across Pembroke, Petawawa, Deep River & the Whole Ottawa Valley. 100% Free, Zero Obligation.">
-    <meta property="og:image" content="https://prakash-solanki-remax.github.io/Ottawa-valley/remax_logo.png">
-    <meta property="og:image:secure_url" content="https://prakash-solanki-remax.github.io/Ottawa-valley/remax_logo.png">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/REMAX_logo.svg/1200px-REMAX_logo.svg.png">
+    <meta property="og:image:secure_url" content="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/REMAX_logo.svg/1200px-REMAX_logo.svg.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -524,12 +524,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const currentItem = button.parentElement;
             const isActive = currentItem.classList.contains('active');
 
-            // Close all FAQ items
             document.querySelectorAll('.faq-accordion-item').forEach(item => {
                 item.classList.remove('active');
             });
 
-            // If it wasn't active, open it
             if (!isActive) {
                 currentItem.classList.add('active');
             }

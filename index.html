@@ -46,9 +46,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 999999 !important;
             background: linear-gradient(135deg, #070d1d 0%, #020617 100%); border-bottom: 3px solid #dc2626; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); padding: 8px 16px;
         }
-        body { padding-top: 72px; }
+        body { padding-top: 88px; }
         @media(min-width: 768px) {
-            body { padding-top: 82px; }
+            body { padding-top: 98px; }
             .site-header { padding: 10px 28px; }
         }
         .header-container { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
@@ -82,32 +82,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .portal-nav { 
             background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(7, 13, 29, 0.95) 100%); 
             border-bottom: 2px solid #003399; 
-            padding: 4px 12px; 
+            padding: 8px 12px; 
             position: sticky; 
-            top: 72px; 
+            top: 88px; 
             z-index: 999; 
             backdrop-filter: blur(12px); 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
+            box-shadow: 0 6px 16px rgba(0,0,0,0.5); 
         }
-        @media(min-width: 768px) { .portal-nav { top: 82px; padding: 6px 16px; } }
-        .portal-nav-inner { max-width: 600px; margin: 0 auto; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        @media(min-width: 768px) { .portal-nav { top: 98px; padding: 10px 16px; } }
+        .portal-nav-inner { max-width: 650px; margin: 0 auto; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
         .nav-btn { 
             background: #1e293b; 
-            color: #cbd5e1; 
+            color: #f1f5f9; 
             border: 2px solid #334155; 
-            padding: 6px 16px; 
-            border-radius: 8px; 
-            font-size: 12px; 
-            font-weight: 800; 
+            padding: 8px 18px; 
+            border-radius: 10px; 
+            font-size: 13px; 
+            font-weight: 900; 
             cursor: pointer; 
             transition: all 0.2s ease; 
             display: inline-flex; 
             align-items: center; 
-            gap: 6px; 
+            justify-content: space-between;
+            gap: 8px; 
             text-transform: uppercase; 
+            letter-spacing: 0.02em;
         }
-        .nav-btn:hover { background: #2563eb; color: #ffffff; border-color: #60a5fa; }
-        .nav-btn.active { background: linear-gradient(135deg, #003399 0%, #002266 100%); color: #ffffff; border-color: #dc2626; box-shadow: 0 4px 10px rgba(0, 51, 153, 0.6); }
+        @media(min-width: 768px) { .nav-btn { font-size: 14px; padding: 10px 22px; } }
+        .nav-btn:hover { background: #2563eb; color: #ffffff; border-color: #60a5fa; transform: translateY(-1px); }
+        .nav-btn.active { background: linear-gradient(135deg, #003399 0%, #002266 100%); color: #ffffff; border-color: #dc2626; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.5); }
+        .nav-btn i.arrow-icon { color: #ef4444; font-size: 13px; transition: transform 0.2s ease; }
+        .nav-btn.active i.arrow-icon { color: #60a5fa; }
 
         /* Hero Section */
         .hero { position: relative; background-color: #070d1d; color: #ffffff; padding: 20px 14px 45px; overflow: hidden; }
@@ -195,10 +200,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="portal-nav">
         <div class="portal-nav-inner">
             <button type="button" class="nav-btn active" id="btn-selling" onclick="switchMode('selling')">
-                <i class="fa-solid fa-house-chimney-user"></i> Selling in the Valley
+                <span><i class="fa-solid fa-house-chimney-user" style="color: #ef4444; margin-right: 4px;"></i> Selling in the Valley</span>
+                <i class="fa-solid fa-circle-arrow-right arrow-icon"></i>
             </button>
             <button type="button" class="nav-btn" id="btn-buying" onclick="switchMode('buying')">
-                <i class="fa-solid fa-magnifying-glass-location"></i> Buying in the Valley
+                <span><i class="fa-solid fa-magnifying-glass-location" style="color: #60a5fa; margin-right: 4px;"></i> Buying in the Valley</span>
+                <i class="fa-solid fa-circle-arrow-right arrow-icon"></i>
             </button>
         </div>
     </div>

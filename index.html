@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prakash Solanki, REALTOR® | Ottawa Valley Real Estate | RE/MAX Pembroke Realty Ltd.</title>
     <meta name="description" content="Prakash Solanki, REALTOR® at RE/MAX Pembroke Realty Ltd., Brokerage. Premium real estate services across Petawawa, Pembroke, Deep River, Renfrew, and the Ottawa Valley.">
     
@@ -64,27 +64,30 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white w-full max-w-full overflow-x-hidden">
 
-    <!-- 1. STICKY HEADER (MOBILE & DESKTOP OPTIMIZED) -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 w-full max-w-full overflow-hidden">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-2 w-full">
+    <!-- 1. MAIN NAVIGATION HEADER (DESKTOP & MOBILE MATCHED + STICKY) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-3.5 flex items-center justify-between gap-2 w-full">
             
             <!-- Left Side: Agent Branding -->
-            <a href="#" class="flex flex-col min-w-0 flex-shrink">
-                <span class="text-xs sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 leading-tight truncate">
-                    Prakash Solanki, <span class="text-remax-blue font-bold text-[10px] sm:text-base">REALTOR®</span>
-                </span>
-                <span class="text-[8px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 leading-tight truncate">RE/MAX Pembroke Realty Ltd.</span>
+            <a href="#" class="flex items-center gap-2 min-w-0 flex-shrink">
+                <div class="min-w-0">
+                    <span class="text-xs sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 block leading-tight truncate">
+                        Prakash Solanki, <span class="text-remax-blue font-bold text-[10px] sm:text-base">REALTOR®</span>
+                    </span>
+                    <span class="text-[8px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 block leading-tight truncate">RE/MAX Pembroke Realty Ltd., Brokerage</span>
+                    <span class="text-[7px] sm:text-[10px] font-semibold text-slate-500 block mt-0.5 truncate">10A Canadian Forces Dr., Petawawa, ON</span>
+                </div>
             </a>
 
-            <!-- Middle: RE/MAX Logo -->
+            <!-- Middle: RE/MAX Logo with Balloon -->
             <div class="flex items-center justify-center flex-shrink-0 px-1">
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-6 sm:h-10 md:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
+                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-5 sm:h-10 md:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
             </div>
 
             <!-- Right Side: Phone Button -->
-            <div class="flex items-center flex-shrink-0">
-                <a href="tel:16132033313" class="bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 font-bold px-2.5 py-1.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-1 shadow-sm whitespace-nowrap">
-                    <svg class="w-3.5 h-3.5 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            <div class="flex flex-col items-end flex-shrink-0">
+                <a href="tel:16132033313" class="bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 font-bold px-2 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-sm transition flex items-center gap-1 shadow-sm whitespace-nowrap">
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                     <span>(613) 203-3313</span>
                 </a>
             </div>
@@ -93,14 +96,14 @@
     </header>
 
     <!-- 2. HERO SECTION WITH CARDS & HEADSHOT -->
-    <section class="hero-bg text-white relative overflow-hidden pt-8 pb-14 sm:pt-16 sm:pb-20 px-3 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">
+    <section class="hero-bg text-white relative overflow-hidden pt-10 pb-14 sm:pt-16 sm:pb-20 px-3 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">
         <div class="absolute -top-10 left-1/4 w-96 h-96 bg-remax-blue/30 blur-3xl rounded-full pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10 w-full min-w-0">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10 w-full min-w-0">
             
             <!-- LEFT COLUMN: 4 EXPANDED CARDS GRID -->
             <div class="lg:col-span-7 w-full min-w-0 max-w-full">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full min-w-0">
+                <div class="grid sm:grid-cols-2 gap-4 w-full min-w-0">
                     
                     <!-- BUYING CARD -->
                     <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-blue p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full max-w-full min-w-0">
@@ -221,7 +224,7 @@
             </div>
 
             <!-- RIGHT COLUMN: HEADSHOT CARD -->
-            <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0 mt-6 lg:mt-0">
+            <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0">
                 <div class="relative w-full max-w-xs sm:max-w-sm">
                     <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-2 scale-105 opacity-40 blur-sm"></div>
 

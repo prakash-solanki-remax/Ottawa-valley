@@ -64,8 +64,8 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white w-full max-w-full overflow-x-hidden">
 
-    <!-- 1. MAIN NAVIGATION HEADER (DESKTOP & MOBILE MATCHED + STICKY) -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 w-full">
+    <!-- 1. MAIN NAVIGATION HEADER (STCKY FOR BOTH MOBILE & LAPTOP) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200 w-full">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-3.5 flex items-center justify-between gap-2 w-full">
             
             <!-- Left Side: Agent Branding -->
@@ -809,24 +809,24 @@
         </div>
     </footer>
 
-    <!-- 6. FLOATING STICKY HEADSHOT CHAT BADGE (BOTTOM RIGHT) -->
-    <div onclick="scrollToForm()" class="fixed bottom-5 right-5 z-50 cursor-pointer group flex items-center gap-3 bg-slate-900/95 hover:bg-slate-900 border-2 border-remax-blue hover:border-remax-red p-2.5 sm:p-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105">
+    <!-- 6. MOBILE-FRIENDLY FLOATING STICKY HEADSHOT BADGE (BOTTOM RIGHT) -->
+    <div onclick="scrollToForm()" ontouchend="scrollToForm(); event.preventDefault();" class="fixed bottom-4 right-4 z-50 cursor-pointer group flex items-center gap-2.5 bg-slate-900 border-2 border-remax-blue p-2 rounded-full shadow-2xl transition-transform active:scale-95">
         
         <!-- HEADSHOT WITH FLASHING BLUE DOT -->
-        <div class="relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+        <div class="relative w-11 h-11 flex-shrink-0">
             <img src="Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="w-full h-full rounded-full object-cover object-top border-2 border-white shadow-md" onerror="this.onerror=null; this.src='Prakash.jpeg';">
             
-            <!-- Animated Flashing Blue/Green Dot -->
-            <span class="absolute bottom-0 right-0 flex h-4 w-4">
+            <!-- Animated Flashing Blue Dot -->
+            <span class="absolute bottom-0 right-0 flex h-3.5 w-3.5">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-4 w-4 bg-remax-blue border-2 border-white"></span>
+                <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-remax-blue border-2 border-white"></span>
             </span>
         </div>
 
-        <!-- CHAT CALLOUT MESSAGE BOX -->
-        <div class="hidden sm:flex flex-col pr-3">
-            <span class="text-xs font-black text-white leading-tight">Have a question?</span>
-            <span class="text-[10px] font-extrabold text-remax-gold uppercase tracking-wider">Let's Talk →</span>
+        <!-- ALWAYS VISIBLE MOBILE CALLOUT -->
+        <div class="flex flex-col pr-2">
+            <span class="text-[11px] font-black text-white leading-tight">Have a question?</span>
+            <span class="text-[9px] font-extrabold text-remax-gold uppercase tracking-wider">Let's Talk →</span>
         </div>
     </div>
 

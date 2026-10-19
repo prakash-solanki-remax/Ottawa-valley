@@ -105,7 +105,7 @@
             <div class="lg:col-span-7 w-full min-w-0 max-w-full">
                 <div class="grid sm:grid-cols-2 gap-4 w-full min-w-0">
                     
-                    <!-- BUYING CARD (CLICKABLE WHOLE CARD) -->
+                    <!-- BUYING CARD -->
                     <a href="https://prakash-solanki-remax.github.io/Ottawa/" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-blue p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full max-w-full min-w-0">
                         <div class="w-full min-w-0">
                             <div class="flex items-center justify-between mb-3 w-full">
@@ -125,7 +125,7 @@
                         </span>
                     </a>
 
-                    <!-- SELLING CARD (CLICKABLE WHOLE CARD) -->
+                    <!-- SELLING CARD -->
                     <a href="https://prakash-solanki-remax.github.io/Ottawa/" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-red p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full max-w-full min-w-0">
                         <div class="w-full min-w-0">
                             <div class="flex items-center justify-between mb-3 w-full">
@@ -145,7 +145,7 @@
                         </span>
                     </a>
 
-                    <!-- MARKET REPORTS CARD WITH LINKED TOWNS -->
+                    <!-- MARKET REPORTS CARD -->
                     <div class="bg-slate-800/80 border border-slate-700 hover:border-remax-gold p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between w-full max-w-full min-w-0">
                         <div class="w-full min-w-0">
                             <div class="flex items-center justify-between mb-3 w-full">
@@ -159,7 +159,6 @@
                                 Explore live municipal market statistics, real-time inventory counts, average days on market, and verified sold data across our local communities:
                             </p>
                             
-                            <!-- Scrollable Town Pills Row with Exact Links -->
                             <div class="relative flex items-center gap-1 mb-2 w-full min-w-0">
                                 <button onclick="scrollRow('market-towns-scroll', -150)" aria-label="Previous towns" class="flex-shrink-0 bg-remax-gold text-slate-950 font-black px-2 py-1.5 rounded-lg text-xs hover:bg-white transition shadow-sm">
                                     ❮
@@ -193,7 +192,7 @@
                         </a>
                     </div>
 
-                    <!-- REAL ESTATE GUIDES CARD WITH ATTACHED PDF LINKS -->
+                    <!-- REAL ESTATE GUIDES CARD -->
                     <div class="bg-slate-800/80 border border-slate-700 hover:border-purple-400 p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between w-full max-w-full min-w-0">
                         <div class="w-full min-w-0">
                             <div class="flex items-center justify-between mb-3 w-full">
@@ -246,7 +245,6 @@
     <!-- 3. OTTAWA VALLEY COMMUNITIES & SPECIALTY MLS® LISTINGS SECTION -->
     <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 w-full overflow-hidden">
         
-        <!-- SECTION TITLE HEADER -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
                 <span class="text-remax-red font-bold uppercase tracking-wider text-xs">Explore Local Real Estate</span>
@@ -686,8 +684,8 @@
 
             </div>
 
-            <!-- "HAVE A QUESTION?" GOOGLE FORM INTEGRATION BOX -->
-            <div class="bg-slate-950/90 rounded-3xl p-6 sm:p-10 border-2 border-remax-red/40 shadow-2xl max-w-3xl mx-auto relative overflow-hidden">
+            <!-- "HAVE A QUESTION?" GOOGLE FORM INTEGRATION BOX WITH ID FOR SCROLLING -->
+            <div id="contact-form-section" class="bg-slate-950/90 rounded-3xl p-6 sm:p-10 border-2 border-remax-red/40 shadow-2xl max-w-3xl mx-auto relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-remax-red text-white text-[10px] font-black uppercase px-4 py-1.5 rounded-bl-xl tracking-wider">
                     Direct Connection
                 </div>
@@ -707,7 +705,7 @@
                 <form id="leadForm" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSde2wjsa-oJ_GXwGTZL32atB7xsf96tWnXIcJmKZxUyQcYxAw/formResponse" method="POST" target="hidden_iframe" onsubmit="window.submitted=true;" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <input type="text" name="entry.432417231" required placeholder="Your Name" class="w-full bg-white text-slate-900 font-medium rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
+                            <input id="form-name-field" type="text" name="entry.432417231" required placeholder="Your Name" class="w-full bg-white text-slate-900 font-medium rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
                         </div>
                         <div>
                             <input type="tel" name="entry.408933223" required placeholder="Phone Number" class="w-full bg-white text-slate-900 font-medium rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
@@ -754,7 +752,7 @@
 
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10 w-full">
             
-            <!-- COLUMN 1: AGENT IDENTITY, ADDRESS & DIRECT CONTACT -->
+            <!-- COLUMN 1 -->
             <div class="md:col-span-5 space-y-3">
                 <div>
                     <span class="text-2xl font-black text-white block tracking-tight">
@@ -781,7 +779,7 @@
                 </div>
             </div>
 
-            <!-- COLUMN 2: CENTERED BROKERAGE CARD -->
+            <!-- COLUMN 2 -->
             <div class="md:col-span-3 flex flex-col items-center justify-center text-center py-5 px-6 bg-slate-900/90 rounded-2xl border border-slate-800/80 shadow-xl">
                 <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-11 w-auto object-contain bg-white px-3 py-1.5 rounded-xl shadow-md border border-slate-200 mb-2" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
                 
@@ -793,7 +791,7 @@
                 </span>
             </div>
 
-            <!-- COLUMN 3: LEGAL COMPLIANCE & COPYRIGHT BLOCK -->
+            <!-- COLUMN 3 -->
             <div class="md:col-span-4 space-y-3.5 text-xs text-slate-300 leading-relaxed">
                 <p>
                     The listing data provided herein is sourced through PropTX and deemed reliable but is not guaranteed accurate. Listing data updated daily.
@@ -811,12 +809,50 @@
         </div>
     </footer>
 
+    <!-- 6. FLOATING STICKY HEADSHOT CHAT BADGE (BOTTOM RIGHT) -->
+    <div onclick="scrollToForm()" class="fixed bottom-5 right-5 z-50 cursor-pointer group flex items-center gap-3 bg-slate-900/95 hover:bg-slate-900 border-2 border-remax-blue hover:border-remax-red p-2.5 sm:p-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105">
+        
+        <!-- HEADSHOT WITH FLASHING BLUE DOT -->
+        <div class="relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+            <img src="Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="w-full h-full rounded-full object-cover object-top border-2 border-white shadow-md" onerror="this.onerror=null; this.src='Prakash.jpeg';">
+            
+            <!-- Animated Flashing Blue/Green Dot -->
+            <span class="absolute bottom-0 right-0 flex h-4 w-4">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-remax-blue border-2 border-white"></span>
+            </span>
+        </div>
+
+        <!-- CHAT CALLOUT MESSAGE BOX -->
+        <div class="hidden sm:flex flex-col pr-3">
+            <span class="text-xs font-black text-white leading-tight">Have a question?</span>
+            <span class="text-[10px] font-extrabold text-remax-gold uppercase tracking-wider">Let's Talk →</span>
+        </div>
+    </div>
+
     <!-- JavaScript Helpers -->
     <script>
         function scrollRow(elementId, distance) {
             const container = document.getElementById(elementId);
             if (container) {
                 container.scrollBy({ left: distance, behavior: 'smooth' });
+            }
+        }
+
+        // SMOOTH SCROLL TO FORM & FOCUS CURSOR INTO "NAME" FIELD
+        function scrollToForm() {
+            const formSection = document.getElementById('contact-form-section');
+            const nameField = document.getElementById('form-name-field');
+            
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Focus inside the input field once scrolled
+                setTimeout(() => {
+                    if (nameField) {
+                        nameField.focus();
+                    }
+                }, 600);
             }
         }
     </script>

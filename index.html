@@ -32,9 +32,15 @@
     </script>
     
     <style>
+        *, ::before, ::after {
+            box-sizing: border-box !important;
+        }
         html, body {
-            overflow-x: hidden;
-            width: 100%;
+            overflow-x: hidden !important;
+            width: 100% !important;
+            max-width: 100vw !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);
@@ -56,32 +62,32 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white w-full max-w-full overflow-x-hidden">
 
-    <!-- 1. MAIN NAVIGATION HEADER -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 flex items-center justify-between gap-2 sm:gap-4">
+    <!-- 1. MAIN NAVIGATION HEADER (STICKY MOBILE & DESKTOP) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-3.5 flex items-center justify-between gap-2 w-full">
             
             <!-- Left Side: Agent Branding -->
-            <a href="#" class="flex items-center gap-2 sm:gap-3.5">
-                <div>
-                    <span class="text-sm sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 block leading-tight">
-                        Prakash Solanki, <span class="text-remax-blue font-bold text-[11px] sm:text-base">REALTOR®</span>
+            <a href="#" class="flex items-center gap-2 min-w-0 flex-shrink">
+                <div class="min-w-0">
+                    <span class="text-xs sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 block leading-tight truncate">
+                        Prakash Solanki, <span class="text-remax-blue font-bold text-[10px] sm:text-base">REALTOR®</span>
                     </span>
-                    <span class="text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 block leading-tight">RE/MAX Pembroke Realty Ltd., Brokerage</span>
-                    <span class="text-[8px] sm:text-[10px] font-semibold text-slate-500 block mt-0.5">10A Canadian Forces Dr., Petawawa, ON</span>
+                    <span class="text-[8px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-600 block leading-tight truncate">RE/MAX Pembroke Realty Ltd., Brokerage</span>
+                    <span class="text-[7px] sm:text-[10px] font-semibold text-slate-500 block mt-0.5 truncate">10A Canadian Forces Dr., Petawawa, ON</span>
                 </div>
             </a>
 
             <!-- Middle: RE/MAX Logo with Balloon -->
-            <div class="flex items-center justify-center flex-shrink-0 mx-auto px-1">
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-6 sm:h-10 md:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
+            <div class="flex items-center justify-center flex-shrink-0 px-1">
+                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-5 sm:h-10 md:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
             </div>
 
-            <!-- Right Side: Phone & Email Buttons -->
-            <div class="flex flex-col items-end gap-1 flex-shrink-0">
-                <a href="tel:16132033313" class="bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 font-bold px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[11px] sm:text-sm transition flex items-center gap-1.5 shadow-sm">
-                    <svg class="w-3.5 h-3.5 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            <!-- Right Side: Phone Button -->
+            <div class="flex flex-col items-end flex-shrink-0">
+                <a href="tel:16132033313" class="bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 font-bold px-2 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-sm transition flex items-center gap-1 shadow-sm whitespace-nowrap">
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                     <span>(613) 203-3313</span>
                 </a>
             </div>
@@ -90,20 +96,20 @@
     </header>
 
     <!-- 2. HERO SECTION WITH 4 EXPANDED ACTION CARDS -->
-    <section class="hero-bg text-white relative overflow-hidden pt-10 pb-14 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <section class="hero-bg text-white relative overflow-hidden pt-10 pb-14 sm:pt-16 sm:pb-20 px-3 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">
         <div class="absolute -top-10 left-1/4 w-96 h-96 bg-remax-blue/30 blur-3xl rounded-full pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10 w-full min-w-0">
             
             <!-- LEFT COLUMN: 4 EXPANDED CARDS GRID -->
-            <div class="lg:col-span-7">
-                <div class="grid sm:grid-cols-2 gap-4">
+            <div class="lg:col-span-7 w-full min-w-0 max-w-full">
+                <div class="grid sm:grid-cols-2 gap-4 w-full min-w-0">
                     
                     <!-- BUYING CARD -->
-                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-blue p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-remax-blue/20 text-remax-blue rounded-xl flex items-center justify-center">
+                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-blue p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full max-w-full min-w-0">
+                        <div class="w-full min-w-0">
+                            <div class="flex items-center justify-between mb-3 w-full">
+                                <div class="w-10 h-10 bg-remax-blue/20 text-remax-blue rounded-xl flex items-center justify-center flex-shrink-0">
                                     <svg class="w-5 h-5 text-remax-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                                 </div>
                                 <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-blue bg-remax-blue/15 px-3 py-1.5 rounded-lg border border-remax-blue/30">FOR BUYERS</span>
@@ -113,17 +119,17 @@
                                 Gain early access to premier Ottawa Valley listings before they hit public channels. From family neighborhoods in Petawawa to quiet waterfront retreats, receive expert local guidance and tailored offer strategies designed to get your offer accepted.
                             </p>
                         </div>
-                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-blue group-hover:text-white border border-slate-700 group-hover:border-remax-blue px-4 py-2.5 rounded-xl transition flex items-center justify-between">
+                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-blue group-hover:text-white border border-slate-700 group-hover:border-remax-blue px-4 py-2.5 rounded-xl transition flex items-center justify-between w-full">
                             <span>Free, no-obligation service</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </span>
                     </a>
 
                     <!-- SELLING CARD -->
-                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-red p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-remax-red/20 text-remax-red rounded-xl flex items-center justify-center">
+                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-red p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full max-w-full min-w-0">
+                        <div class="w-full min-w-0">
+                            <div class="flex items-center justify-between mb-3 w-full">
+                                <div class="w-10 h-10 bg-remax-red/20 text-remax-red rounded-xl flex items-center justify-center flex-shrink-0">
                                     <svg class="w-5 h-5 text-remax-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                                 </div>
                                 <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-red bg-remax-red/15 px-3 py-1.5 rounded-lg border border-remax-red/30">FOR SELLERS</span>
@@ -133,17 +139,17 @@
                                 Maximize your property value with high-impact digital marketing, targeted social buyer campaigns, and precise Comparative Market Analysis (CMA). Discover exact neighborhood sold trends and strategic staging tips to secure the highest return on your home.
                             </p>
                         </div>
-                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-red group-hover:text-white border border-slate-700 group-hover:border-remax-red px-4 py-2.5 rounded-xl transition flex items-center justify-between">
+                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-red group-hover:text-white border border-slate-700 group-hover:border-remax-red px-4 py-2.5 rounded-xl transition flex items-center justify-between w-full">
                             <span>Free Home Evaluation</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </span>
                     </a>
 
                     <!-- MARKET REPORTS CARD -->
-                    <div class="bg-slate-800/80 border border-slate-700 hover:border-remax-gold p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-amber-400/20 text-remax-gold rounded-xl flex items-center justify-center">
+                    <div class="bg-slate-800/80 border border-slate-700 hover:border-remax-gold p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between w-full max-w-full min-w-0">
+                        <div class="w-full min-w-0">
+                            <div class="flex items-center justify-between mb-3 w-full">
+                                <div class="w-10 h-10 bg-amber-400/20 text-remax-gold rounded-xl flex items-center justify-center flex-shrink-0">
                                     <svg class="w-5 h-5 text-remax-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                                 </div>
                                 <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-gold bg-remax-gold/15 px-3 py-1.5 rounded-lg border border-remax-gold/30">LOCAL REPORTS</span>
@@ -154,12 +160,12 @@
                             </p>
                             
                             <!-- Scrollable Town Pills Row -->
-                            <div class="relative flex items-center gap-1 mb-2">
+                            <div class="relative flex items-center gap-1 mb-2 w-full min-w-0">
                                 <button onclick="scrollRow('market-towns-scroll', -150)" aria-label="Previous towns" class="flex-shrink-0 bg-remax-gold text-slate-950 font-black px-2 py-1.5 rounded-lg text-xs hover:bg-white transition shadow-sm">
                                     ❮
                                 </button>
                                 
-                                <div id="market-towns-scroll" class="flex items-center gap-1.5 overflow-x-auto custom-scroll py-1 px-1 flex-grow">
+                                <div id="market-towns-scroll" class="flex items-center gap-1.5 overflow-x-auto custom-scroll py-1 px-1 flex-grow min-w-0">
                                     <a href="https://myre.io/0nkCXcMs5Suh" target="_blank" class="text-[10px] font-semibold bg-slate-900/90 hover:bg-remax-blue text-slate-200 px-2.5 py-1 rounded-lg border border-slate-700 transition flex-shrink-0">Pembroke</a>
                                     <a href="https://myre.io/0IZdTFHKTc4t" target="_blank" class="text-[10px] font-semibold bg-slate-900/90 hover:bg-remax-blue text-slate-200 px-2.5 py-1 rounded-lg border border-slate-700 transition flex-shrink-0">Petawawa</a>
                                     <a href="https://myre.io/001oKrkQvGdd" target="_blank" class="text-[10px] font-semibold bg-slate-900/90 hover:bg-remax-blue text-slate-200 px-2.5 py-1 rounded-lg border border-slate-700 transition flex-shrink-0">Deep River</a>
@@ -181,17 +187,17 @@
                                 </button>
                             </div>
                         </div>
-                        <a href="https://myre.io/0O8hS2S5rI3e" target="_blank" class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 hover:bg-remax-gold hover:text-slate-950 border border-slate-700 hover:border-remax-gold px-4 py-2.5 rounded-xl transition flex items-center justify-between group">
+                        <a href="https://myre.io/0O8hS2S5rI3e" target="_blank" class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 hover:bg-remax-gold hover:text-slate-950 border border-slate-700 hover:border-remax-gold px-4 py-2.5 rounded-xl transition flex items-center justify-between group w-full">
                             <span>Full Region Report</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </a>
                     </div>
 
                     <!-- REAL ESTATE GUIDES CARD -->
-                    <div class="bg-slate-800/80 border border-slate-700 hover:border-purple-400 p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center">
+                    <div class="bg-slate-800/80 border border-slate-700 hover:border-purple-400 p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between w-full max-w-full min-w-0">
+                        <div class="w-full min-w-0">
+                            <div class="flex items-center justify-between mb-3 w-full">
+                                <div class="w-10 h-10 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center flex-shrink-0">
                                     <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                 </div>
                                 <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-purple-300 bg-purple-500/15 px-3 py-1.5 rounded-lg border border-purple-500/30">FREE GUIDES</span>
@@ -202,7 +208,7 @@
                             </p>
                         </div>
                         
-                        <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <div class="grid grid-cols-2 gap-2 mt-auto w-full">
                             <a href="Home%20Buyer'%20s%20Guide.pdf" target="_blank" class="text-center text-xs font-bold bg-slate-900/90 hover:bg-remax-blue text-slate-100 py-2.5 px-2 rounded-xl border border-slate-700 hover:border-remax-blue transition shadow-sm flex items-center justify-center gap-1.5">
                                 <span>Buyer Guide</span>
                                 <span>📄</span>
@@ -218,7 +224,7 @@
             </div>
 
             <!-- RIGHT COLUMN: HEADSHOT CARD -->
-            <div class="lg:col-span-5 flex justify-center">
+            <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0">
                 <div class="relative w-full max-w-xs sm:max-w-sm">
                     <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-2 scale-105 opacity-40 blur-sm"></div>
 
@@ -238,7 +244,7 @@
     </section>
 
     <!-- 3. OTTAWA VALLEY COMMUNITIES & SPECIALTY MLS® LISTINGS SECTION -->
-    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 w-full overflow-hidden">
         
         <!-- SECTION TITLE HEADER -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -256,7 +262,7 @@
         </div>
 
         <!-- ROW 1: TOWN-BY-TOWN MLS® LISTING CAROUSEL -->
-        <div class="space-y-3">
+        <div class="space-y-3 w-full overflow-hidden">
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-remax-blue"></span>
@@ -265,7 +271,7 @@
                 <span class="text-xs text-slate-500 font-semibold">17 Locations</span>
             </div>
 
-            <div class="relative group">
+            <div class="relative group w-full min-w-0">
                 <button onclick="scrollRow('towns-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
                     <span class="text-2xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
                 </button>
@@ -274,7 +280,7 @@
                     <span class="text-2xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
                 </button>
 
-                <div id="towns-scroll" class="flex flex-nowrap gap-5 overflow-x-auto custom-scroll py-2 px-1">
+                <div id="towns-scroll" class="flex flex-nowrap gap-5 overflow-x-auto custom-scroll py-2 px-1 w-full min-w-0">
                     
                     <!-- 1. All Ottawa Valley -->
                     <a href="https://myre.io/0rwApqzFkl3g" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-remax-red card-hover flex flex-col justify-between">
@@ -519,7 +525,7 @@
         </div>
 
         <!-- ROW 2: SPECIALTY LIFESTYLE CATEGORIES CAROUSEL -->
-        <div class="space-y-3 pt-4 border-t border-slate-200">
+        <div class="space-y-3 pt-4 border-t border-slate-200 w-full overflow-hidden">
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-remax-red"></span>
@@ -528,7 +534,7 @@
                 <span class="text-xs text-slate-500 font-semibold">5 Featured Searches</span>
             </div>
 
-            <div class="relative group">
+            <div class="relative group w-full min-w-0">
                 <button onclick="scrollRow('specialty-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
                     <span class="text-2xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
                 </button>
@@ -537,7 +543,7 @@
                     <span class="text-2xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
                 </button>
 
-                <div id="specialty-scroll" class="flex flex-nowrap gap-5 overflow-x-auto custom-scroll py-2 px-1">
+                <div id="specialty-scroll" class="flex flex-nowrap gap-5 overflow-x-auto custom-scroll py-2 px-1 w-full min-w-0">
                     
                     <!-- 1. Waterfront Properties -->
                     <a href="https://myre.io/0lqlcyW63dmq" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-cyan-500 card-hover flex flex-col justify-between">
@@ -616,10 +622,10 @@
     </section>
 
     <!-- 4. HERITAGE & LIFESTYLE OF THE OTTAWA VALLEY SECTION -->
-    <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800">
+    <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800 w-full">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-remax-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             
             <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
                 <span class="text-remax-red font-bold uppercase tracking-widest text-xs bg-remax-red/10 px-3 py-1 rounded-full border border-remax-red/20">
@@ -701,10 +707,10 @@
     </section>
 
     <!-- 5. EXECUTIVE FOOTER -->
-    <footer class="bg-slate-950 text-slate-200 pt-12 pb-10 px-4 sm:px-6 lg:px-8 border-t-2 border-remax-red relative overflow-hidden">
+    <footer class="bg-slate-950 text-slate-200 pt-12 pb-10 px-4 sm:px-6 lg:px-8 border-t-2 border-remax-red relative overflow-hidden w-full">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-remax-blue/10 blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10 w-full">
             
             <!-- COLUMN 1: AGENT IDENTITY, ADDRESS & DIRECT CONTACT -->
             <div class="md:col-span-5 space-y-3">

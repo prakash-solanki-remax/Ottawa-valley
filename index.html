@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Prakash Solanki, REALTOR® | Ottawa Valley Real Estate | RE/MAX Pembroke Realty Ltd.</title>
     <meta name="description" content="Prakash Solanki, REALTOR® at RE/MAX Pembroke Realty Ltd., Brokerage. Premium real estate services across Petawawa, Pembroke, Deep River, Renfrew, and the Ottawa Valley.">
     
@@ -32,6 +32,10 @@
     </script>
     
     <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);
         }
@@ -52,18 +56,18 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white w-full overflow-x-hidden">
 
     <!-- 1. STICKY HEADER: ADJUSTED BUTTON POSITION & UNDER-BUTTON SUBTEXT -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-1.5 sm:py-2 flex items-center justify-between gap-2">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 w-full">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between gap-1 sm:gap-2">
             
             <!-- Left Side: Agent Name & Brokerage -->
-            <a href="#" class="flex flex-col flex-shrink-0">
-                <span class="text-xs sm:text-base lg:text-xl font-black tracking-tight text-slate-900 leading-tight">
-                    Prakash Solanki, <span class="text-remax-blue font-bold text-[10px] sm:text-sm">REALTOR®</span>
+            <a href="#" class="flex flex-col flex-shrink min-w-0">
+                <span class="text-[12px] sm:text-base lg:text-xl font-black tracking-tight text-slate-900 leading-tight truncate">
+                    Prakash Solanki, <span class="text-remax-blue font-bold text-[9px] sm:text-sm">REALTOR®</span>
                 </span>
-                <span class="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-600 leading-tight">
+                <span class="text-[7.5px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-600 leading-tight truncate">
                     RE/MAX Pembroke Realty Ltd.
                 </span>
                 <span class="hidden lg:block text-[9px] font-semibold text-slate-500 mt-0.5">
@@ -72,26 +76,26 @@
             </a>
 
             <!-- Middle: BUYER & SELLER Buttons + Subtext Underneath -->
-            <div class="flex items-start justify-center gap-2 flex-shrink-0 mx-auto -mt-1 sm:-mt-1.5">
+            <div class="flex items-start justify-center gap-1.5 sm:gap-2 flex-shrink-0 mx-auto">
                 
                 <!-- BUYER COLUMN -->
                 <div class="flex flex-col items-center">
-                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-gradient-to-r from-blue-700 to-remax-blue hover:from-blue-800 hover:to-blue-900 text-white px-2.5 py-1 sm:px-3.5 sm:py-1 rounded-lg shadow-sm transition border border-blue-600 flex items-center gap-1 group">
-                        <svg class="w-3.5 h-3.5 text-amber-300 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        <span class="text-[10px] sm:text-xs font-black tracking-tight">BUYER</span>
+                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-gradient-to-r from-blue-700 to-remax-blue hover:from-blue-800 hover:to-blue-900 text-white px-2 py-1 sm:px-3.5 sm:py-1 rounded-md sm:rounded-lg shadow-sm transition border border-blue-600 flex items-center gap-1 group">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-300 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        <span class="text-[9px] sm:text-xs font-black tracking-tight">BUYER</span>
                     </a>
-                    <span class="text-[8px] sm:text-[9px] font-extrabold text-remax-blue mt-0.5 uppercase tracking-tight text-center whitespace-nowrap">
+                    <span class="text-[7px] sm:text-[9px] font-extrabold text-remax-blue mt-0.5 uppercase tracking-tighter text-center whitespace-nowrap">
                         Free, no-obligation
                     </span>
                 </div>
 
                 <!-- SELLER COLUMN -->
                 <div class="flex flex-col items-center">
-                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/" target="_blank" class="bg-gradient-to-r from-red-600 to-remax-red hover:from-red-700 hover:to-red-800 text-white px-2.5 py-1 sm:px-3.5 sm:py-1 rounded-lg shadow-sm transition border border-red-500 flex items-center gap-1 group">
-                        <svg class="w-3.5 h-3.5 text-amber-300 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                        <span class="text-[10px] sm:text-xs font-black tracking-tight">SELLER</span>
+                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/" target="_blank" class="bg-gradient-to-r from-red-600 to-remax-red hover:from-red-700 hover:to-red-800 text-white px-2 py-1 sm:px-3.5 sm:py-1 rounded-md sm:rounded-lg shadow-sm transition border border-red-500 flex items-center gap-1 group">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-300 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        <span class="text-[9px] sm:text-xs font-black tracking-tight">SELLER</span>
                     </a>
-                    <span class="text-[8px] sm:text-[9px] font-extrabold text-remax-red mt-0.5 uppercase tracking-tight text-center whitespace-nowrap">
+                    <span class="text-[7px] sm:text-[9px] font-extrabold text-remax-red mt-0.5 uppercase tracking-tighter text-center whitespace-nowrap">
                         Free home evaluation
                     </span>
                 </div>
@@ -100,10 +104,10 @@
 
             <!-- Right Side: Streamlined Call Action -->
             <div class="flex items-center flex-shrink-0">
-                <a href="tel:16132033313" class="bg-slate-900 hover:bg-remax-red text-white font-bold px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg text-[10px] sm:text-xs transition flex items-center gap-1.5 shadow-sm group border border-slate-800">
+                <a href="tel:16132033313" class="bg-slate-900 hover:bg-remax-red text-white font-bold p-1.5 sm:px-3.5 sm:py-1.5 rounded-md sm:rounded-lg text-[10px] sm:text-xs transition flex items-center gap-1 shadow-sm group border border-slate-800">
                     <svg class="w-3.5 h-3.5 text-remax-red group-hover:text-white transition flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                     <span class="hidden sm:inline">(613) 203-3313</span>
-                    <span class="sm:hidden font-extrabold">CALL</span>
+                    <span class="sm:hidden font-extrabold text-[9px]">CALL</span>
                 </a>
             </div>
 
@@ -111,66 +115,66 @@
     </header>
 
     <!-- 2. HERO SECTION WITH 4 EXPANDED ACTION CARDS -->
-    <section class="hero-bg text-white relative overflow-hidden pt-10 pb-14 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <section class="hero-bg text-white relative overflow-hidden pt-6 pb-12 sm:pt-16 sm:pb-20 px-3 sm:px-6 lg:px-8 border-b border-slate-800 w-full">
         <div class="absolute -top-10 left-1/4 w-96 h-96 bg-remax-blue/30 blur-3xl rounded-full pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-6 lg:gap-12 items-center relative z-10 w-full">
             
             <!-- LEFT COLUMN: 4 EXPANDED CARDS GRID -->
-            <div class="lg:col-span-7">
-                <div class="grid sm:grid-cols-2 gap-4">
+            <div class="lg:col-span-7 w-full max-w-full">
+                <div class="grid sm:grid-cols-2 gap-4 w-full">
                     
                     <!-- BUYING CARD -->
-                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-blue p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group">
+                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/#buying" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-blue p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-remax-blue/20 text-remax-blue rounded-xl flex items-center justify-center">
+                                <div class="w-9 h-9 sm:w-10 sm:h-10 bg-remax-blue/20 text-remax-blue rounded-xl flex items-center justify-center">
                                     <svg class="w-5 h-5 text-remax-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                                 </div>
-                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-blue bg-remax-blue/15 px-3 py-1.5 rounded-lg border border-remax-blue/30">FOR BUYERS</span>
+                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-blue bg-remax-blue/15 px-2.5 py-1 rounded-lg border border-remax-blue/30">FOR BUYERS</span>
                             </div>
-                            <h3 class="text-base font-extrabold text-white mb-2">Find Your Dream Home</h3>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                            <h3 class="text-lg sm:text-xl font-black text-white mb-2">Find Your Dream Home</h3>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3">
                                 Gain early access to premier Ottawa Valley listings before they hit public channels. From family neighborhoods in Petawawa to quiet waterfront retreats, receive expert local guidance and tailored offer strategies designed to get your offer accepted.
                             </p>
                         </div>
-                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-blue group-hover:text-white border border-slate-700 group-hover:border-remax-blue px-4 py-2.5 rounded-xl transition flex items-center justify-between">
+                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-blue group-hover:text-white border border-slate-700 group-hover:border-remax-blue px-3.5 py-2.5 rounded-xl transition flex items-center justify-between">
                             <span>Free, no-obligation service</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </span>
                     </a>
 
                     <!-- SELLING CARD -->
-                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-red p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group">
+                    <a href="https://prakash-solanki-remax.github.io/Ottawa-valley/" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:border-remax-red p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between group w-full">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-remax-red/20 text-remax-red rounded-xl flex items-center justify-center">
+                                <div class="w-9 h-9 sm:w-10 sm:h-10 bg-remax-red/20 text-remax-red rounded-xl flex items-center justify-center">
                                     <svg class="w-5 h-5 text-remax-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                                 </div>
-                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-red bg-remax-red/15 px-3 py-1.5 rounded-lg border border-remax-red/30">FOR SELLERS</span>
+                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-red bg-remax-red/15 px-2.5 py-1 rounded-lg border border-remax-red/30">FOR SELLERS</span>
                             </div>
-                            <h3 class="text-base font-extrabold text-white mb-2">Sell For Top Dollar</h3>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                            <h3 class="text-lg sm:text-xl font-black text-white mb-2">Sell For Top Dollar</h3>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3">
                                 Maximize your property value with high-impact digital marketing, targeted social buyer campaigns, and precise Comparative Market Analysis (CMA). Discover exact neighborhood sold trends and strategic staging tips to secure the highest return on your home.
                             </p>
                         </div>
-                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-red group-hover:text-white border border-slate-700 group-hover:border-remax-red px-4 py-2.5 rounded-xl transition flex items-center justify-between">
+                        <span class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-red group-hover:text-white border border-slate-700 group-hover:border-remax-red px-3.5 py-2.5 rounded-xl transition flex items-center justify-between">
                             <span>Free Home Evaluation</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </span>
                     </a>
 
                     <!-- MARKET REPORTS CARD -->
-                    <div class="bg-slate-800/80 border border-slate-700 hover:border-remax-gold p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between">
+                    <div class="bg-slate-800/80 border border-slate-700 hover:border-remax-gold p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between w-full">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-amber-400/20 text-remax-gold rounded-xl flex items-center justify-center">
+                                <div class="w-9 h-9 sm:w-10 sm:h-10 bg-amber-400/20 text-remax-gold rounded-xl flex items-center justify-center">
                                     <svg class="w-5 h-5 text-remax-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                                 </div>
-                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-gold bg-remax-gold/15 px-3 py-1.5 rounded-lg border border-remax-gold/30">LOCAL REPORTS</span>
+                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-remax-gold bg-remax-gold/15 px-2.5 py-1 rounded-lg border border-remax-gold/30">LOCAL REPORTS</span>
                             </div>
-                            <h3 class="text-base font-extrabold text-white mb-2">Ottawa Valley Market Data</h3>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                            <h3 class="text-lg sm:text-xl font-black text-white mb-2">Ottawa Valley Market Data</h3>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3">
                                 Explore live municipal market statistics, real-time inventory counts, average days on market, and verified sold data across our local communities:
                             </p>
                             
@@ -202,23 +206,23 @@
                                 </button>
                             </div>
                         </div>
-                        <a href="https://myre.io/0O8hS2S5rI3e" target="_blank" class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 hover:bg-remax-gold hover:text-slate-950 border border-slate-700 hover:border-remax-gold px-4 py-2.5 rounded-xl transition flex items-center justify-between group">
+                        <a href="https://myre.io/0O8hS2S5rI3e" target="_blank" class="mt-2 text-xs sm:text-sm font-extrabold text-remax-gold bg-slate-900/90 hover:bg-remax-gold hover:text-slate-950 border border-slate-700 hover:border-remax-gold px-3.5 py-2.5 rounded-xl transition flex items-center justify-between group">
                             <span>Full Region Report</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </a>
                     </div>
 
                     <!-- REAL ESTATE GUIDES CARD -->
-                    <div class="bg-slate-800/80 border border-slate-700 hover:border-purple-400 p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between">
+                    <div class="bg-slate-800/80 border border-slate-700 hover:border-purple-400 p-4 sm:p-5 rounded-2xl shadow-lg transition card-hover flex flex-col justify-between w-full">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-10 h-10 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center">
+                                <div class="w-9 h-9 sm:w-10 sm:h-10 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center">
                                     <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                 </div>
-                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-purple-300 bg-purple-500/15 px-3 py-1.5 rounded-lg border border-purple-500/30">FREE GUIDES</span>
+                                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-purple-300 bg-purple-500/15 px-2.5 py-1 rounded-lg border border-purple-500/30">FREE GUIDES</span>
                             </div>
-                            <h3 class="text-base font-extrabold text-white mb-2">Buyer & Seller Toolkits</h3>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                            <h3 class="text-lg sm:text-xl font-black text-white mb-2">Buyer & Seller Toolkits</h3>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-4">
                                 Download official RE/MAX step-by-step PDF playbooks packed with essential roadmaps, negotiation tips, financing considerations, and staging checklists.
                             </p>
                         </div>
@@ -239,7 +243,7 @@
             </div>
 
             <!-- RIGHT COLUMN: HEADSHOT CARD WITH TOP BROKERAGE BANNER -->
-            <div class="lg:col-span-5 flex justify-center">
+            <div class="lg:col-span-5 flex justify-center w-full">
                 <div class="relative w-full max-w-xs sm:max-w-sm">
                     <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-2 scale-105 opacity-40 blur-sm"></div>
 
@@ -263,13 +267,13 @@
     </section>
 
     <!-- 3. OTTAWA VALLEY COMMUNITIES & SPECIALTY MLS® LISTINGS SECTION -->
-    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    <section class="py-10 sm:py-16 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10 w-full">
         
         <!-- SECTION TITLE HEADER -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
                 <span class="text-remax-red font-bold uppercase tracking-wider text-xs">Explore Local Real Estate</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Featured Communities & MLS® Listings</h2>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Featured Communities & MLS® Listings</h2>
                 <p class="text-slate-600 text-sm mt-1">Browse live home search feeds, active town properties, and specialty lifestyle collections.</p>
             </div>
             
@@ -291,19 +295,19 @@
             </div>
 
             <div class="relative group">
-                <button onclick="scrollRow('towns-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-2xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
+                <button onclick="scrollRow('towns-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
                 </button>
 
-                <button onclick="scrollRow('towns-scroll', 360)" aria-label="Scroll right" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-2xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
+                <button onclick="scrollRow('towns-scroll', 360)" aria-label="Scroll right" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
                 </button>
 
-                <div id="towns-scroll" class="flex flex-nowrap gap-5 overflow-x-auto custom-scroll py-2 px-1">
+                <div id="towns-scroll" class="flex flex-nowrap gap-4 sm:gap-5 overflow-x-auto custom-scroll py-2 px-1">
                     
                     <!-- 1. All Ottawa Valley -->
-                    <a href="https://myre.io/0rwApqzFkl3g" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-remax-red card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0rwApqzFkl3g" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-remax-red card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Ottawa Valley Real Estate" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-red text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -316,8 +320,8 @@
                     </a>
 
                     <!-- 2. Petawawa -->
-                    <a href="https://myre.io/0ibee1RUI0Yu" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0ibee1RUI0Yu" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Petawawa Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -330,8 +334,8 @@
                     </a>
 
                     <!-- 3. Pembroke -->
-                    <a href="https://myre.io/0k00dLGDY3mg" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0k00dLGDY3mg" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Pembroke Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -344,8 +348,8 @@
                     </a>
 
                     <!-- 4. Deep River -->
-                    <a href="https://myre.io/0dtwn1RZl8Po" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0dtwn1RZl8Po" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Deep River Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-darkBlue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -358,8 +362,8 @@
                     </a>
 
                     <!-- 5. Chalk River & Laurentian Hills South -->
-                    <a href="https://myre.io/0SAUuwR7BEMu" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0SAUuwR7BEMu" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" alt="Chalk River Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -372,8 +376,8 @@
                     </a>
 
                     <!-- 6. Whitewater Region -->
-                    <a href="https://myre.io/0sp764zP564q" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0sp764zP564q" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Whitewater Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-gold text-slate-900 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -386,8 +390,8 @@
                     </a>
 
                     <!-- 7. Renfrew -->
-                    <a href="https://myre.io/0oYkCzqHGkJt" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0oYkCzqHGkJt" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" alt="Renfrew Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-red text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -400,8 +404,8 @@
                     </a>
 
                     <!-- 8. Arnprior -->
-                    <a href="https://myre.io/0IuTpt9RmEQm" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0IuTpt9RmEQm" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80" alt="Arnprior Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -414,8 +418,8 @@
                     </a>
 
                     <!-- 9. Eganville & Bonnechere Valley -->
-                    <a href="https://myre.io/0vGlo2yKpVSv" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0vGlo2yKpVSv" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Eganville Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-darkBlue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -428,8 +432,8 @@
                     </a>
 
                     <!-- 10. Killaloe, Hagarty, Richards, & Round Lake -->
-                    <a href="https://myre.io/0EoVfvuAgy8p" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0EoVfvuAgy8p" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Killaloe Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -442,8 +446,8 @@
                     </a>
 
                     <!-- 11. Madawaska Valley -->
-                    <a href="https://myre.io/0fFV9OyRsmhp" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0fFV9OyRsmhp" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Madawaska Valley Homes" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-red text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -456,8 +460,8 @@
                     </a>
 
                     <!-- 12. North Algona / Wilberforce Township -->
-                    <a href="https://myre.io/0f79EERkFBXn" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0f79EERkFBXn" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="North Algona Wilberforce" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -470,8 +474,8 @@
                     </a>
 
                     <!-- 13. Horton Township -->
-                    <a href="https://myre.io/0KmjFMozldwi" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0KmjFMozldwi" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80" alt="Horton Township" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-darkBlue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -484,8 +488,8 @@
                     </a>
 
                     <!-- 14. Greater Madawaska -->
-                    <a href="https://myre.io/079sdbsRx3cd" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/079sdbsRx3cd" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Calabogie & Greater Madawaska" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-red text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -498,8 +502,8 @@
                     </a>
 
                     <!-- 15. Laurentian Valley -->
-                    <a href="https://myre.io/0oBRxHsBNrDu" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0oBRxHsBNrDu" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=600&q=80" alt="Laurentian Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-blue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -512,8 +516,8 @@
                     </a>
 
                     <!-- 16. Laurentian Hills North -->
-                    <a href="https://myre.io/0Y70Eh34ZLwl" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0Y70Eh34ZLwl" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Laurentian Hills North" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-gold text-slate-900 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -526,8 +530,8 @@
                     </a>
 
                     <!-- 17. Head Township -->
-                    <a href="https://myre.io/0XRqXmdVu7jr" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0XRqXmdVu7jr" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" alt="Head Township" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-remax-darkBlue text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">ACTIVE MLS® SEARCH</span>
@@ -554,19 +558,19 @@
             </div>
 
             <div class="relative group">
-                <button onclick="scrollRow('specialty-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-2xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
+                <button onclick="scrollRow('specialty-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
                 </button>
 
-                <button onclick="scrollRow('specialty-scroll', 360)" aria-label="Scroll right" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-2xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
+                <button onclick="scrollRow('specialty-scroll', 360)" aria-label="Scroll right" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
                 </button>
 
-                <div id="specialty-scroll" class="flex flex-nowrap gap-5 overflow-x-auto custom-scroll py-2 px-1">
+                <div id="specialty-scroll" class="flex flex-nowrap gap-4 sm:gap-5 overflow-x-auto custom-scroll py-2 px-1">
                     
                     <!-- 1. Waterfront Properties -->
-                    <a href="https://myre.io/0lqlcyW63dmq" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-cyan-500 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0lqlcyW63dmq" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-cyan-500 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Ottawa Valley Waterfront Properties" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-cyan-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">WATERFRONT SEARCH</span>
@@ -579,8 +583,8 @@
                     </a>
 
                     <!-- 2. Swimming Pool Properties -->
-                    <a href="https://myre.io/0tIiS9wDtFZe" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-blue-500 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0tIiS9wDtFZe" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-blue-500 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Homes with Pool Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">🏊 HOMES WITH POOL</span>
@@ -593,8 +597,8 @@
                     </a>
 
                     <!-- 3. Golf Nearby Properties -->
-                    <a href="https://myre.io/0suEQeZHISuv" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-emerald-500 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0suEQeZHISuv" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-emerald-500 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=600&q=80" alt="Golf Properties Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">⛳ GOLF NEARBY</span>
@@ -607,8 +611,8 @@
                     </a>
 
                     <!-- 4. Fireplace Properties -->
-                    <a href="https://myre.io/07QahkZtijVn" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-orange-500 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/07QahkZtijVn" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-orange-500 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Homes with Fireplace Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-orange-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">🔥 HOMES WITH FIREPLACE</span>
@@ -621,8 +625,8 @@
                     </a>
 
                     <!-- 5. Price Reduced Properties -->
-                    <a href="https://myre.io/0bevPRisF69c" target="_blank" class="w-64 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-amber-500 card-hover flex flex-col justify-between">
-                        <div class="relative h-44 overflow-hidden">
+                    <a href="https://myre.io/0bevPRisF69c" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-amber-500 card-hover flex flex-col justify-between">
+                        <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Price Reduced Homes Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
                             <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">🏷️ RECENT PRICE DROPS</span>
@@ -641,28 +645,28 @@
     </section>
 
     <!-- 4. HERITAGE & LIFESTYLE OF THE OTTAWA VALLEY SECTION -->
-    <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800">
+    <section class="py-12 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800 w-full">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-remax-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10 w-full">
             
-            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
                 <span class="text-remax-red font-bold uppercase tracking-widest text-xs bg-remax-red/10 px-3 py-1 rounded-full border border-remax-red/20">
                     Local Heritage & Roots
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black tracking-tight mt-3 mb-4">
+                <h2 class="text-2xl sm:text-4xl font-black tracking-tight mt-3 mb-4">
                     The Spirit & History of the Ottawa Valley
                 </h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p class="text-slate-200 text-xs sm:text-base leading-relaxed">
                     More than just a place to live, the Ottawa Valley is a region steeped in pioneering history, legendary river culture, and deep community pride.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center mb-12 sm:mb-16">
                 
-                <div class="space-y-6">
-                    <div class="border-l-4 border-remax-red pl-5">
-                        <h3 class="text-xl sm:text-2xl font-extrabold text-white">
+                <div class="space-y-5 sm:space-y-6">
+                    <div class="border-l-4 border-remax-red pl-4 sm:pl-5">
+                        <h3 class="text-lg sm:text-2xl font-black text-white">
                             From Timber Pioneers to Modern Communities
                         </h3>
                         <p class="text-xs text-remax-gold font-semibold uppercase tracking-wider mt-1">
@@ -670,29 +674,29 @@
                         </p>
                     </div>
 
-                    <p class="text-slate-300 text-sm leading-relaxed">
+                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
                         Long before becoming a haven for families, military personnel, and outdoor enthusiasts, the Ottawa Valley was the beating heart of Canada’s booming 19th-century timber industry. Hardy lumberjacks navigated the mighty Ottawa River, driving massive square timber rafts downstream toward Montreal and Quebec City.
                     </p>
 
-                    <p class="text-slate-300 text-sm leading-relaxed">
+                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
                         Towns like <strong class="text-white">Pembroke</strong> grew into bustling commercial hubs fueled by the trade, while <strong class="text-white">Petawawa</strong> evolved from rugged wilderness into one of Canada's most vital military communities, and <strong class="text-white">Deep River</strong> rose as a beacon of scientific innovation during the mid-20th century.
                     </p>
 
-                    <div class="pt-2 flex flex-wrap gap-4 text-xs font-bold">
-                        <span class="bg-slate-800 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700">🌲 Rich Logging Heritage</span>
-                        <span class="bg-slate-800 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700">🎖️ Proud Military Roots</span>
-                        <span class="bg-slate-800 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700">🌊 Pristine Waterfront Living</span>
+                    <div class="pt-2 flex flex-wrap gap-2 sm:gap-4 text-xs font-bold">
+                        <span class="bg-slate-800 text-slate-200 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl border border-slate-700">🌲 Rich Logging Heritage</span>
+                        <span class="bg-slate-800 text-slate-200 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl border border-slate-700">🎖️ Proud Military Roots</span>
+                        <span class="bg-slate-800 text-slate-200 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl border border-slate-700">🌊 Pristine Waterfront Living</span>
                     </div>
                 </div>
 
-                <div class="relative">
+                <div class="relative w-full">
                     <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-1 scale-105 opacity-30 blur-md"></div>
                     
                     <div class="relative bg-slate-950 p-3 sm:p-4 rounded-3xl border border-slate-800 shadow-2xl">
-                        <div class="relative h-64 sm:h-80 rounded-2xl overflow-hidden mb-4">
+                        <div class="relative h-56 sm:h-80 rounded-2xl overflow-hidden mb-4">
                             <img src="https://www.logsend.com/wp-content/uploads/2018/06/Ottawa-River-Sawlogs.png" alt="Historical Ottawa River Logging Heritage" class="w-full h-full object-cover filter sepia-[0.2] contrast-125">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                            <span class="absolute bottom-3 left-3 bg-slate-900/90 text-slate-300 text-[11px] font-semibold px-3 py-1.5 rounded-lg border border-slate-700/80 backdrop-blur-sm">
+                            <span class="absolute bottom-3 left-3 bg-slate-900/90 text-slate-300 text-[10px] sm:text-[11px] font-semibold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-slate-700/80 backdrop-blur-sm">
                                 Archival Ottawa River Timber Drive
                             </span>
                         </div>
@@ -705,18 +709,18 @@
 
             </div>
 
-            <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 rounded-3xl p-8 sm:p-10 border border-slate-800 text-center max-w-4xl mx-auto shadow-xl">
-                <h3 class="text-lg sm:text-xl font-bold text-white mb-2">
+            <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 rounded-3xl p-6 sm:p-10 border border-slate-800 text-center max-w-4xl mx-auto shadow-xl w-full">
+                <h3 class="text-base sm:text-xl font-bold text-white mb-2">
                     Looking to Write Your Own Chapter in the Ottawa Valley?
                 </h3>
                 <p class="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto mb-6">
                     Whether you are posted to Garrison Petawawa, buying your first family home in Pembroke, or seeking a peaceful waterfront escape, I am here to help you navigate every step.
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-3">
-                    <a href="tel:16132033313" class="bg-remax-red hover:bg-red-700 text-white font-bold text-xs px-6 py-3 rounded-xl transition shadow-lg">
+                    <a href="tel:16132033313" class="bg-remax-red hover:bg-red-700 text-white font-bold text-xs px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl transition shadow-lg">
                         Call Prakash Directly
                     </a>
-                    <a href="mailto:prakash.solanki@remax.net" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs px-6 py-3 rounded-xl border border-slate-700 transition shadow-lg">
+                    <a href="mailto:prakash.solanki@remax.net" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl border border-slate-700 transition shadow-lg">
                         Send an Email
                     </a>
                 </div>
@@ -726,16 +730,16 @@
     </section>
 
     <!-- 5. EXECUTIVE FOOTER -->
-    <footer class="bg-slate-950 text-slate-200 pt-12 pb-10 px-4 sm:px-6 lg:px-8 border-t-2 border-remax-red relative overflow-hidden">
+    <footer class="bg-slate-950 text-slate-200 pt-10 pb-8 px-3 sm:px-6 lg:px-8 border-t-2 border-remax-red relative overflow-hidden w-full">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-remax-blue/10 blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10 w-full">
             
             <!-- COLUMN 1: AGENT IDENTITY, ADDRESS & DIRECT CONTACT -->
             <div class="md:col-span-5 space-y-3">
                 <div>
-                    <span class="text-2xl font-black text-white block tracking-tight">
-                        Prakash Solanki, <span class="text-remax-blue font-extrabold text-lg">REALTOR®</span>
+                    <span class="text-xl sm:text-2xl font-black text-white block tracking-tight">
+                        Prakash Solanki, <span class="text-remax-blue font-extrabold text-base sm:text-lg">REALTOR®</span>
                     </span>
                     <p class="text-xs font-bold uppercase tracking-wider text-remax-red mt-0.5">
                         RE/MAX Pembroke Realty Ltd., Brokerage
@@ -746,12 +750,12 @@
                 </div>
 
                 <div class="flex flex-wrap items-center gap-2 pt-1">
-                    <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-remax-red text-white border border-slate-800 hover:border-remax-red font-bold px-3.5 py-2 rounded-xl text-xs transition shadow-md group">
+                    <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-remax-red text-white border border-slate-800 hover:border-remax-red font-bold px-3 py-2 rounded-xl text-xs transition shadow-md group">
                         <svg class="w-4 h-4 text-remax-red group-hover:text-white transition" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                         <span>(613) 203-3313</span>
                     </a>
                     
-                    <a href="mailto:prakash.solanki@remax.net" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-remax-blue text-white border border-slate-800 hover:border-remax-blue font-bold px-3.5 py-2 rounded-xl text-xs transition shadow-md group">
+                    <a href="mailto:prakash.solanki@remax.net" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-remax-blue text-white border border-slate-800 hover:border-remax-blue font-bold px-3 py-2 rounded-xl text-xs transition shadow-md group">
                         <svg class="w-4 h-4 text-remax-blue group-hover:text-white transition" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
                         <span>prakash.solanki@remax.net</span>
                     </a>
@@ -759,8 +763,8 @@
             </div>
 
             <!-- COLUMN 2: CENTERED BROKERAGE CARD -->
-            <div class="md:col-span-3 flex flex-col items-center justify-center text-center py-5 px-6 bg-slate-900/90 rounded-2xl border border-slate-800/80 shadow-xl">
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-11 w-auto object-contain bg-white px-3 py-1.5 rounded-xl shadow-md border border-slate-200 mb-2" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
+            <div class="md:col-span-3 flex flex-col items-center justify-center text-center py-4 px-5 bg-slate-900/90 rounded-2xl border border-slate-800/80 shadow-xl">
+                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-10 w-auto object-contain bg-white px-3 py-1 rounded-xl shadow-md border border-slate-200 mb-2" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
                 
                 <span class="text-xs font-black text-white uppercase tracking-wide block">
                     RE/MAX PEMBROKE REALTY LTD.
@@ -771,7 +775,7 @@
             </div>
 
             <!-- COLUMN 3: LEGAL COMPLIANCE & COPYRIGHT BLOCK -->
-            <div class="md:col-span-4 space-y-3.5 text-xs text-slate-300 leading-relaxed">
+            <div class="md:col-span-4 space-y-3 text-xs text-slate-300 leading-relaxed">
                 <p>
                     The listing data provided herein is sourced through PropTX and deemed reliable but is not guaranteed accurate. Listing data updated daily.
                 </p>

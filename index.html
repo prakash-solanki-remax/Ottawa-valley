@@ -747,27 +747,39 @@
         </div>
     </section>
 
-    <!-- 5. CENTERED EXECUTIVE FOOTER -->
+    <!-- 5. TOP-TO-BOTTOM LOGO-FIRST CENTERED FOOTER -->
     <footer class="bg-slate-950 text-slate-300 pt-12 pb-28 sm:pb-16 px-4 sm:px-6 lg:px-8 border-t-4 border-remax-red relative overflow-hidden w-full">
         <div class="absolute bottom-0 right-0 w-96 h-96 bg-remax-blue/10 blur-[100px] pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 relative z-10 w-full items-center text-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center text-center relative z-10 w-full space-y-6">
             
-            <!-- COLUMN 1: AGENT IDENTITY & CENTERED BUTTONS -->
-            <div class="md:col-span-5 space-y-4 text-center sm:text-left">
-                <div class="text-center sm:text-left">
+            <!-- TOP: OFFICIAL BROKERAGE BADGE / LOGO -->
+            <div class="flex flex-col items-center justify-center p-5 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl w-full max-w-sm">
+                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-11 w-auto object-contain bg-white px-3.5 py-1.5 rounded-xl shadow-md border border-slate-200 mb-2" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
+                
+                <span class="text-xs font-black text-white uppercase tracking-wider block">
+                    RE/MAX Pembroke Realty Ltd.
+                </span>
+                <span class="text-[10px] font-semibold text-slate-400 italic mt-0.5 block">
+                    *Independently owned and operated
+                </span>
+            </div>
+
+            <!-- MIDDLE: AGENT IDENTITY & CONTACT BUTTONS -->
+            <div class="space-y-3 w-full">
+                <div>
                     <h3 class="text-2xl font-black text-white tracking-tight">
                         Prakash Solanki, <span class="text-sky-400 font-extrabold text-lg">REALTOR®</span>
                     </h3>
-                    <p class="text-xs font-extrabold uppercase tracking-widest text-remax-red mt-1">
-                        RE/MAX Pembroke Realty Ltd., Brokerage
-                    </p>
-                    <p class="text-xs text-slate-400 font-medium mt-1 flex items-center justify-center sm:justify-start gap-1.5">
+                 <!--   <p class="text-xs font-extrabold uppercase tracking-widest text-remax-red mt-1">    -->
+                  <!--      RE/MAX Pembroke Realty Ltd., Brokerage     -->
+                  <!--  </p>      -->
+                    <p class="text-xs text-slate-400 font-medium mt-1 flex items-center justify-center gap-1.5">
                         <span>📍</span> 10A Canadian Forces Drive, Petawawa, ON K8H 0H4
                     </p>
                 </div>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2.5 pt-1">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 pt-1">
                     <a href="tel:16132033313" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-remax-red text-white border border-slate-800 hover:border-remax-red font-bold px-4 py-2.5 rounded-xl text-xs transition shadow-md group">
                         <svg class="w-4 h-4 text-remax-red group-hover:text-white transition flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                         <span>(613) 203-3313</span>
@@ -780,20 +792,8 @@
                 </div>
             </div>
 
-            <!-- COLUMN 2: OFFICIAL BROKERAGE BADGE -->
-            <div class="md:col-span-3 flex flex-col items-center justify-center text-center p-5 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl max-w-xs mx-auto sm:max-w-none w-full">
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-11 w-auto object-contain bg-white px-3.5 py-1.5 rounded-xl shadow-md border border-slate-200 mb-2" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
-                
-                <span class="text-xs font-black text-white uppercase tracking-wider block">
-                    RE/MAX Pembroke Realty Ltd.
-                </span>
-                <span class="text-[10px] font-semibold text-slate-400 italic mt-0.5 block">
-                    *Independently owned and operated
-                </span>
-            </div>
-
-            <!-- COLUMN 3: LEGAL DISCLOSURES & COPYRIGHT -->
-            <div class="md:col-span-4 space-y-2 text-xs text-slate-400 leading-relaxed bg-slate-900/40 p-4 sm:p-0 rounded-2xl border border-slate-800/60 sm:border-none text-center sm:text-left">
+            <!-- BOTTOM: LEGAL DISCLOSURES & COPYRIGHT -->
+            <div class="space-y-2 text-xs text-slate-400 leading-relaxed bg-slate-900/40 p-4 rounded-2xl border border-slate-800/60 w-full">
                 <p>
                     Listing data provided herein is sourced through PropTX and deemed reliable but is not guaranteed accurate. Listing data updated daily.
                 </p>

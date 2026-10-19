@@ -42,7 +42,8 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            overflow-x: hidden;
+            /* Fixed mobile sticky issue by using overflow-x: clip instead of hidden */
+            overflow-x: clip; 
         }
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);

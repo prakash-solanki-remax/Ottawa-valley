@@ -35,6 +35,7 @@
         html, body {
             overflow-x: hidden;
             width: 100%;
+            max-width: 100vw;
         }
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);
@@ -58,7 +59,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white w-full overflow-x-hidden">
 
-    <!-- 1. STICKY HEADER: ADJUSTED BUTTON POSITION & UNDER-BUTTON SUBTEXT -->
+    <!-- 1. STICKY HEADER -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 w-full">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between gap-1 sm:gap-2">
             
@@ -114,7 +115,7 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION WITH 4 EXPANDED ACTION CARDS -->
+    <!-- 2. HERO SECTION -->
     <section class="hero-bg text-white relative overflow-hidden pt-6 pb-12 sm:pt-16 sm:pb-20 px-3 sm:px-6 lg:px-8 border-b border-slate-800 w-full">
         <div class="absolute -top-10 left-1/4 w-96 h-96 bg-remax-blue/30 blur-3xl rounded-full pointer-events-none"></div>
 
@@ -242,9 +243,9 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: HEADSHOT CARD WITH TOP BROKERAGE BANNER -->
-            <div class="lg:col-span-5 flex justify-center w-full">
-                <div class="relative w-full max-w-xs sm:max-w-sm">
+            <!-- RIGHT COLUMN: HEADSHOT CARD WITH TOP BROKERAGE BANNER (FIXED MOBILE VISIBILITY) -->
+            <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0">
+                <div class="relative w-full max-w-xs sm:max-w-sm mx-auto">
                     <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-2 scale-105 opacity-40 blur-sm"></div>
 
                     <div class="relative bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-700/80 flex flex-col">
@@ -267,7 +268,7 @@
     </section>
 
     <!-- 3. OTTAWA VALLEY COMMUNITIES & SPECIALTY MLS® LISTINGS SECTION -->
-    <section class="py-10 sm:py-16 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10 w-full">
+    <section class="py-10 sm:py-16 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10 w-full overflow-hidden">
         
         <!-- SECTION TITLE HEADER -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -285,7 +286,7 @@
         </div>
 
         <!-- ROW 1: TOWN-BY-TOWN MLS® LISTING CAROUSEL -->
-        <div class="space-y-3">
+        <div class="space-y-3 w-full overflow-hidden">
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-remax-blue"></span>
@@ -294,19 +295,21 @@
                 <span class="text-xs text-slate-500 font-semibold">17 Locations</span>
             </div>
 
-            <div class="relative group">
-                <button onclick="scrollRow('towns-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
+            <div class="relative group w-full">
+                <!-- Navigation Buttons (Hidden on small touchscreens to prevent blocking edges) -->
+                <button onclick="scrollRow('towns-scroll', -360)" aria-label="Scroll left" class="hidden sm:flex absolute -left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-12 h-12 items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-2xl font-black leading-none -ml-0.5">❮</span>
                 </button>
 
-                <button onclick="scrollRow('towns-scroll', 360)" aria-label="Scroll right" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
+                <button onclick="scrollRow('towns-scroll', 360)" aria-label="Scroll right" class="hidden sm:flex absolute -right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-12 h-12 items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-2xl font-black leading-none -mr-0.5">❯</span>
                 </button>
 
-                <div id="towns-scroll" class="flex flex-nowrap gap-4 sm:gap-5 overflow-x-auto custom-scroll py-2 px-1">
+                <!-- Responsive Carousel Widths to Prevent Window Overflow -->
+                <div id="towns-scroll" class="flex flex-nowrap gap-4 sm:gap-5 overflow-x-auto custom-scroll py-2 px-1 w-full">
                     
                     <!-- 1. All Ottawa Valley -->
-                    <a href="https://myre.io/0rwApqzFkl3g" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-remax-red card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0rwApqzFkl3g" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-remax-red card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Ottawa Valley Real Estate" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
@@ -320,7 +323,7 @@
                     </a>
 
                     <!-- 2. Petawawa -->
-                    <a href="https://myre.io/0ibee1RUI0Yu" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0ibee1RUI0Yu" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Petawawa Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -334,7 +337,7 @@
                     </a>
 
                     <!-- 3. Pembroke -->
-                    <a href="https://myre.io/0k00dLGDY3mg" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0k00dLGDY3mg" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Pembroke Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -348,7 +351,7 @@
                     </a>
 
                     <!-- 4. Deep River -->
-                    <a href="https://myre.io/0dtwn1RZl8Po" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0dtwn1RZl8Po" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Deep River Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -362,7 +365,7 @@
                     </a>
 
                     <!-- 5. Chalk River & Laurentian Hills South -->
-                    <a href="https://myre.io/0SAUuwR7BEMu" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0SAUuwR7BEMu" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" alt="Chalk River Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -376,7 +379,7 @@
                     </a>
 
                     <!-- 6. Whitewater Region -->
-                    <a href="https://myre.io/0sp764zP564q" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0sp764zP564q" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Whitewater Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -390,7 +393,7 @@
                     </a>
 
                     <!-- 7. Renfrew -->
-                    <a href="https://myre.io/0oYkCzqHGkJt" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0oYkCzqHGkJt" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" alt="Renfrew Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -404,7 +407,7 @@
                     </a>
 
                     <!-- 8. Arnprior -->
-                    <a href="https://myre.io/0IuTpt9RmEQm" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0IuTpt9RmEQm" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80" alt="Arnprior Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -418,7 +421,7 @@
                     </a>
 
                     <!-- 9. Eganville & Bonnechere Valley -->
-                    <a href="https://myre.io/0vGlo2yKpVSv" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0vGlo2yKpVSv" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Eganville Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -432,7 +435,7 @@
                     </a>
 
                     <!-- 10. Killaloe, Hagarty, Richards, & Round Lake -->
-                    <a href="https://myre.io/0EoVfvuAgy8p" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0EoVfvuAgy8p" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Killaloe Homes for Sale" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -446,7 +449,7 @@
                     </a>
 
                     <!-- 11. Madawaska Valley -->
-                    <a href="https://myre.io/0fFV9OyRsmhp" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0fFV9OyRsmhp" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Madawaska Valley Homes" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -460,7 +463,7 @@
                     </a>
 
                     <!-- 12. North Algona / Wilberforce Township -->
-                    <a href="https://myre.io/0f79EERkFBXn" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0f79EERkFBXn" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="North Algona Wilberforce" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -474,7 +477,7 @@
                     </a>
 
                     <!-- 13. Horton Township -->
-                    <a href="https://myre.io/0KmjFMozldwi" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0KmjFMozldwi" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80" alt="Horton Township" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -488,7 +491,7 @@
                     </a>
 
                     <!-- 14. Greater Madawaska -->
-                    <a href="https://myre.io/079sdbsRx3cd" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/079sdbsRx3cd" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Calabogie & Greater Madawaska" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -502,7 +505,7 @@
                     </a>
 
                     <!-- 15. Laurentian Valley -->
-                    <a href="https://myre.io/0oBRxHsBNrDu" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0oBRxHsBNrDu" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=600&q=80" alt="Laurentian Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -516,7 +519,7 @@
                     </a>
 
                     <!-- 16. Laurentian Hills North -->
-                    <a href="https://myre.io/0Y70Eh34ZLwl" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0Y70Eh34ZLwl" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Laurentian Hills North" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -530,7 +533,7 @@
                     </a>
 
                     <!-- 17. Head Township -->
-                    <a href="https://myre.io/0XRqXmdVu7jr" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0XRqXmdVu7jr" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" alt="Head Township" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -548,7 +551,7 @@
         </div>
 
         <!-- ROW 2: SPECIALTY LIFESTYLE CATEGORIES CAROUSEL -->
-        <div class="space-y-3 pt-4 border-t border-slate-200">
+        <div class="space-y-3 pt-4 border-t border-slate-200 w-full overflow-hidden">
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-extrabold text-slate-800 uppercase tracking-wider flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-remax-red"></span>
@@ -557,19 +560,20 @@
                 <span class="text-xs text-slate-500 font-semibold">5 Featured Searches</span>
             </div>
 
-            <div class="relative group">
-                <button onclick="scrollRow('specialty-scroll', -360)" aria-label="Scroll left" class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-xl sm:text-3xl font-black leading-none -ml-0.5">❮</span>
+            <div class="relative group w-full">
+                <!-- Navigation Buttons -->
+                <button onclick="scrollRow('specialty-scroll', -360)" aria-label="Scroll left" class="hidden sm:flex absolute -left-5 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-remax-red text-slate-800 hover:text-white border-2 border-slate-300 hover:border-remax-red shadow-2xl rounded-full w-12 h-12 items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-2xl font-black leading-none -ml-0.5">❮</span>
                 </button>
 
-                <button onclick="scrollRow('specialty-scroll', 360)" aria-label="Scroll right" class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
-                    <span class="text-xl sm:text-3xl font-black leading-none -mr-0.5">❯</span>
+                <button onclick="scrollRow('specialty-scroll', 360)" aria-label="Scroll right" class="hidden sm:flex absolute -right-5 top-1/2 -translate-y-1/2 z-30 bg-remax-red hover:bg-remax-blue text-white border-2 border-remax-red hover:border-remax-blue shadow-2xl rounded-full w-12 h-12 items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none">
+                    <span class="text-2xl font-black leading-none -mr-0.5">❯</span>
                 </button>
 
-                <div id="specialty-scroll" class="flex flex-nowrap gap-4 sm:gap-5 overflow-x-auto custom-scroll py-2 px-1">
+                <div id="specialty-scroll" class="flex flex-nowrap gap-4 sm:gap-5 overflow-x-auto custom-scroll py-2 px-1 w-full">
                     
                     <!-- 1. Waterfront Properties -->
-                    <a href="https://myre.io/0lqlcyW63dmq" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-cyan-500 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0lqlcyW63dmq" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-cyan-500 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Ottawa Valley Waterfront Properties" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
@@ -583,7 +587,7 @@
                     </a>
 
                     <!-- 2. Swimming Pool Properties -->
-                    <a href="https://myre.io/0tIiS9wDtFZe" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-blue-500 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0tIiS9wDtFZe" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-blue-500 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Homes with Pool Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
@@ -597,7 +601,7 @@
                     </a>
 
                     <!-- 3. Golf Nearby Properties -->
-                    <a href="https://myre.io/0suEQeZHISuv" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-emerald-500 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0suEQeZHISuv" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-emerald-500 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=600&q=80" alt="Golf Properties Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
@@ -611,7 +615,7 @@
                     </a>
 
                     <!-- 4. Fireplace Properties -->
-                    <a href="https://myre.io/07QahkZtijVn" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-orange-500 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/07QahkZtijVn" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-orange-500 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Homes with Fireplace Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
@@ -625,7 +629,7 @@
                     </a>
 
                     <!-- 5. Price Reduced Properties -->
-                    <a href="https://myre.io/0bevPRisF69c" target="_blank" class="w-60 sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-amber-500 card-hover flex flex-col justify-between">
+                    <a href="https://myre.io/0bevPRisF69c" target="_blank" class="w-[78%] sm:w-72 flex-shrink-0 group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border-2 border-amber-500 card-hover flex flex-col justify-between">
                         <div class="relative h-40 sm:h-44 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Price Reduced Homes Ottawa Valley" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
@@ -644,7 +648,7 @@
 
     </section>
 
-    <!-- 4. HERITAGE & LIFESTYLE OF THE OTTAWA VALLEY SECTION -->
+    <!-- 4. HERITAGE & LIFESTYLE SECTION -->
     <section class="py-12 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800 w-full">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-remax-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
 

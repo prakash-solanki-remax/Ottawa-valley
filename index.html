@@ -85,7 +85,7 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            padding-top: 70px; 
+            padding-top: 76px; 
         }
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);
@@ -110,40 +110,37 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
 
-    <!-- 1. MAIN NAVIGATION HEADER -->
-
-<!-- 1. MAIN NAVIGATION HEADER -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm w-full">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-2 w-full">
+    <!-- 1. REDESIGNED NAVIGATION HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
             
-            <!-- LEFT: AGENT IDENTITY & BROKERAGE -->
+            <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & ADDRESS -->
             <a href="#" class="flex flex-col min-w-0 flex-shrink group">
                 <div class="flex items-center gap-1.5 leading-tight truncate">
-                    <span class="text-base sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
+                    <span class="text-sm sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
                         Prakash Solanki
                     </span>
-                    <span class="text-[11px] sm:text-sm font-extrabold tracking-wider text-remax-blue uppercase">
+                    <span class="text-[10px] sm:text-xs lg:text-xs font-extrabold tracking-wider text-remax-blue uppercase">
                         REALTOR®
                     </span>
                 </div>
-                <span class="text-[10px] sm:text-xs font-black uppercase tracking-wider text-slate-600 block leading-tight mt-0.5 truncate">
+                <span class="text-[10px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
                     RE/MAX Pembroke Realty Ltd.
+                </span>
+                <span class="text-[9px] sm:text-[11px] font-semibold text-slate-500 block leading-tight mt-0.5 truncate">
+                    📍 10A Canadian Forces Dr., Petawawa, ON
                 </span>
             </a>
 
-            <!-- CENTER: EXTRA RE/MAX LOGO (DESKTOP ONLY) -->
-            <div class="hidden md:flex items-center justify-center flex-shrink-0 px-3 border-x border-slate-100">
-                <img src="remax_logo.png" alt="RE/MAX Logo" class="h-9 md:h-11 w-auto object-contain" onerror="this.onerror=null; this.src='Remax_with_balloon_2.jpg';">
+            <!-- CENTER: PROMINENT RE/MAX LOGO (DESKTOP & MOBILE INTEGRATED) -->
+            <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
+                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-9 sm:h-12 md:h-14 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
             </div>
 
-            <!-- RIGHT: LOGO + BIG PROMINENT CLICK-TO-CALL BUTTON -->
-            <div class="flex flex-col items-end flex-shrink-0 gap-1">
-                <!-- RE/MAX Balloon Logo -->
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-6 sm:h-8 w-auto object-contain" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
-                
-                <!-- Big Click-to-Call Phone Button -->
-                <a href="tel:16132033313" class="inline-flex items-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-base transition-all duration-200 shadow-md whitespace-nowrap">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            <!-- RIGHT: DESKTOP CLICK-TO-CALL BUTTON (HIDDEN ON MOBILE TO PREVENT CLUTTER) -->
+            <div class="hidden md:flex items-center flex-shrink-0">
+                <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                     <span>(613) 203-3313</span>
                 </a>
             </div>
@@ -151,7 +148,6 @@
         </div>
     </header>
 
-    
     <!-- 2. HERO SECTION WITH 4 CARDS & HEADSHOT -->
     <section class="hero-bg text-white relative overflow-hidden pt-8 pb-14 sm:pt-14 sm:pb-20 px-3.5 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">
         <div class="absolute -top-10 left-1/4 w-96 h-96 bg-remax-blue/30 blur-3xl rounded-full pointer-events-none"></div>
@@ -173,8 +169,7 @@
                             </div>
                             <h3 class="text-2xl font-extrabold text-white mb-2">Find Your Dream Home</h3>
                             <p class="text-slate-100 text-[17px] leading-relaxed mb-4">
-                              <!--  Gain early access to premier Ottawa Valley listings before they hit public channels. From family neighborhoods in Petawawa to quiet waterfront retreats, receive expert local guidance and tailored offer strategies designed to get your offer accepted. -->
-                                    Gain early access to premier Ottawa Valley listings before they hit public channels. From local neighborhoods and acreage to quiet waterfront retreats, receive expert local guidance and tailored offer strategies designed to get your offer accepted.
+                                Gain early access to premier Ottawa Valley listings before they hit public channels. From local neighborhoods and acreage to quiet waterfront retreats, receive expert local guidance and tailored offer strategies designed to get your offer accepted.
                             </p>
                         </div>
                         <span class="mt-2 text-sm font-extrabold text-remax-gold bg-slate-900/90 group-hover:bg-remax-blue group-hover:text-white border border-slate-700 group-hover:border-remax-blue px-4 py-3 rounded-xl transition flex items-center justify-between w-full">
@@ -862,6 +857,12 @@
 
         </div>
     </footer>
+
+    <!-- MOBILE STICKY CALL BUTTON (BOTTOM-LEFT) -->
+    <a href="tel:16132033313" class="md:hidden fixed bottom-4 left-4 z-50 inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-full shadow-2xl border-2 border-white transition-transform active:scale-95">
+        <svg class="w-4 h-4 text-white flex-shrink-0 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        <span class="text-xs tracking-wide">(613) 203-3313</span>
+    </a>
 
     <!-- 6. MOBILE-FRIENDLY FLOATING STICKY HEADSHOT BADGE -->
     <div onclick="scrollToForm()" ontouchend="scrollToForm(); event.preventDefault();" class="fixed bottom-4 right-4 z-50 cursor-pointer group flex items-center gap-2.5 bg-slate-900 border-2 border-remax-blue p-2 rounded-full shadow-2xl transition-transform active:scale-95">

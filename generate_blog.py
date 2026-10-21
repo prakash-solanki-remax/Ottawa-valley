@@ -32,6 +32,17 @@ OTHER_TOWNS = [
     "Greater Madawaska"
 ]
 
+TOPICS = [
+    "Home Selling Tips to Maximizing Equity",
+    "First-Time Home Buyer Mistakes to Avoid",
+    "Garrison Petawawa Military Relocation & House Hunting Trip (HHT) Guide",
+    "Understanding Property Values and Local Market Trends",
+    "Preparing Your Home for a Fast Market Sale",
+    "Waterfront Property Buying Checklist",
+    "Closing Costs and Financial Steps for Buying a Home in Ontario"
+]
+selected_topic = random.choice(TOPICS)
+
 # Create a weighted pool: Core towns appear 3x more often than other towns
 weighted_town_pool = (CORE_TOWNS * 3) + OTHER_TOWNS
 
@@ -41,7 +52,7 @@ selected_town = random.choice(weighted_town_pool)
 print(f"Selected town for this post: {selected_town}")
 
 
-selected_topic = random.choice(TOPICS)
+
 today_str = datetime.date.today().strftime("%B %d, %Y")
 slug_date = datetime.date.today().strftime("%Y-%m-%d")
 

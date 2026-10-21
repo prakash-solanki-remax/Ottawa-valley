@@ -7,30 +7,40 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable is missing!")
 
-TOWNS = [
-    # Core Municipalities & Primary Hubs
-    "Pembroke", "Petawawa", "Deep River", "Laurentian Hills", "Laurentian Valley", 
-    "Renfrew", "Arnprior", "Whitewater Region", "Eganville",
-    
-    # Townships & Rural Districts
-    "Admaston/Bromley", "Greater Madawaska", "Westmeath", "Calabogie", "Horton", 
-    "Barry's Bay", "McNab/Braeside", "Bonnechere Valley", "North Algona Wilberforce", 
-    "Madawaska Valley", "Killaloe, Hagarty and Richards",
-    
-    # Specific Communities & Regional Areas
-    "Combermere", "Killaloe", "Round Lake", "Ottawa Valley"
-]
-TOPICS = [
-    "Home Selling Tips to Maximize Equity",
-    "First-Time Home Buyer Mistakes to Avoid",
-    "Garrison Petawawa Military Relocation & House Hunting Trip (HHT) Guide",
-    "Understanding Property Values and Local Market Trends",
-    "Preparing Your Home for a Fast Market Sale",
-    "Waterfront Property Buying Checklist",
-    "Closing Costs and Financial Steps for Buying a Home in Ontario"
+import random
+
+# Core Towns (Weighted heavily so they appear much more frequently)
+CORE_TOWNS = [
+    "Pembroke",
+    "Petawawa",
+    "Deep River",
+    "Renfrew",
+    "Laurentian Valley",
+    "Arnprior",
+    "Whitewater Region",
+    "Laurentian Hills"
 ]
 
-selected_town = random.choice(TOWNS)
+# Other Towns (Secondary coverage)
+OTHER_TOWNS = [
+    "Madawaska Valley",
+    "Bonnechere Valley",
+    "North Algona Wilberforce",
+    "Head, Clara and Maria",
+    "Horton",
+    "Admaston/Bromley",
+    "Greater Madawaska"
+]
+
+# Create a weighted pool: Core towns appear 3x more often than other towns
+weighted_town_pool = (CORE_TOWNS * 3) + OTHER_TOWNS
+
+# Select a town for this run
+selected_town = random.choice(weighted_town_pool)
+
+print(f"Selected town for this post: {selected_town}")
+
+
 selected_topic = random.choice(TOPICS)
 today_str = datetime.date.today().strftime("%B %d, %Y")
 slug_date = datetime.date.today().strftime("%Y-%m-%d")

@@ -8,11 +8,18 @@ if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable is missing!")
 
 TOWNS = [
-    "Petawawa", "Pembroke", "Deep River", "Chalk River", "Laurentian Valley",
-    "Laurentian Hills", "Renfrew", "Arnprior", "Whitewater Region", "Eganville",
-    "Calabogie", "Barry's Bay", "Cobden", "Beachburg", "Killaloe", "Madawaska Valley"
+    # Core Municipalities & Primary Hubs
+    "Pembroke", "Petawawa", "Deep River", "Laurentian Hills", "Laurentian Valley", 
+    "Renfrew", "Arnprior", "Whitewater Region", "Eganville",
+    
+    # Townships & Rural Districts
+    "Admaston/Bromley", "Greater Madawaska", "Westmeath", "Calabogie", "Horton", 
+    "Barry's Bay", "McNab/Braeside", "Bonnechere Valley", "North Algona Wilberforce", 
+    "Madawaska Valley", "Killaloe, Hagarty and Richards",
+    
+    # Specific Communities & Regional Areas
+    "Combermere", "Killaloe", "Round Lake", "Ottawa Valley"
 ]
-
 TOPICS = [
     "Home Selling Tips to Maximize Equity",
     "First-Time Home Buyer Mistakes to Avoid",

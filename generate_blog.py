@@ -154,7 +154,7 @@ full_page = f"""<!DOCTYPE html>
         </div>
         <div class="mt-12 p-6 bg-slate-900 rounded-xl border border-red-500/30 text-center space-y-3">
             <h3 class="text-xl font-bold text-white">Planning a Move in {selected_town} or the Ottawa Valley?</h3>
-            <p class="text-sm text-slate-300">Contact Prakash Solanki today for a free home evaluation or personalized MLS® property alerts.</p>
+            <p class="text-sm text-slate-300">Contact Prakash Solanki today for a free home evaluation or personalized MLS property alerts.</p>
             <div class="pt-2 flex justify-center gap-4">
                  <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Free Home Evaluation</a>
                  <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Custom MLS Alerts</a>

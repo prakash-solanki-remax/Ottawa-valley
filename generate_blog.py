@@ -98,12 +98,15 @@ Strict Guidelines:
 2. Naturally mention Prakash Solanki, REALTOR®, RE/MAX Pembroke Realty Ltd., Brokerage, and phone number (613) 203-3313.
 3. Address specific buyer and seller intent for {selected_town} and the Ottawa Valley region.
 4. Structurally use <h2>, <h3>, <p>, <ul>, and <li> tags with clean styling class names like Tailwind CSS.
-5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at [https://seller.solankihomes.ca](https://seller.solankihomes.ca) or request custom MLS alerts at [https://buyer.solankihomes.ca](https://buyer.solankihomes.ca).
-"""
+5. 5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at https://seller.solankihomes.ca or request custom MLS alerts at https://buyer.solankihomes.ca.
+
 
 # Clean API Endpoint (No markdown brackets)
-url = f"[https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=){GEMINI_API_KEY}"
+base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key="
+url = base_url + GEMINI_API_KEY
 payload = {"contents": [{"parts": [{"text": prompt}]}]}
+
+
 
 # Automatic Retry Loop for handling temporary 503 errors
 max_retries = 3

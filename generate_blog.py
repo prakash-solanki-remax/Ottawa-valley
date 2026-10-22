@@ -4,7 +4,7 @@ import datetime
 import time
 import re
 import requests
-
+# -*- coding: utf-8 -*-
 # Ensure API Key is available
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GEMINI_API_KEY:

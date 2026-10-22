@@ -101,7 +101,7 @@ Strict Guidelines:
 5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at [https://seller.solankihomes.ca](https://seller.solankihomes.ca) or request custom MLS alerts at [https://buyer.solankihomes.ca](https://buyer.solankihomes.ca).
 """
 
-# Direct, clean API endpoint string
+# Clean endpoint URL mapping path
 url = f"[https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=){GEMINI_API_KEY}"
 payload = {"contents": [{"parts": [{"text": prompt}]}]}
 

@@ -132,7 +132,6 @@ for attempt in range(max_retries):
 
 # Build HTML template wrappers safely without f-string quote conflicts
 head_html = """<!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">

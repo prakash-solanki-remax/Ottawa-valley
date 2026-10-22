@@ -101,7 +101,7 @@ Strict Guidelines:
 5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at [https://seller.solankihomes.ca](https://seller.solankihomes.ca) or request custom MLS alerts at [https://buyer.solankihomes.ca](https://buyer.solankihomes.ca).
 """
 
-# Fixed raw endpoint URL mapping path
+# Clean endpoint URL mapping path (No markdown brackets)
 url = f"[https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=){GEMINI_API_KEY}"
 payload = {"contents": [{"parts": [{"text": prompt}]}]}
 
@@ -127,7 +127,7 @@ for attempt in range(max_retries):
             print("API Error Response:", data)
             raise e
 
-# Build full web page template wrapper with static links
+# Build full web page template wrapper with clean static links
 full_page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,14 +162,12 @@ full_page = f"""<!DOCTYPE html>
 </html>"""
 
 # --- File System Local Disk Output ---
-# 1. Clean strings to make a web-safe lowercase filename template
 clean_topic = re.sub(r'[^a-zA-Z0-9\s-]', '', selected_topic.lower())
 clean_town = re.sub(r'[^a-zA-Z0-9\s-]', '', selected_town.lower())
 combined_text = f"{clean_topic} in {clean_town}"
 slug = re.sub(r'[\s_]+', '-', combined_text.strip())
 filename = f"{slug_date}-{slug}.html"
 
-# 2. Open physical stream and commit contents to target folder
 output_dir = "blog"
 os.makedirs(output_dir, exist_ok=True)
 file_path = os.path.join(output_dir, filename)

@@ -5,6 +5,8 @@ import time
 import re
 import requests
 from google import genai
+from google.genai.errors import ServerError
+
 # -*- coding: utf-8 -*-
 # Ensure API Key is available
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -104,10 +106,23 @@ Guidelines:
 Return ONLY valid HTML content for the article body inside the <div>. Do not include markdown code blocks like ```html.
 """
 
-response = client.models.generate_content(
-    model="gemini-3.8-flash",
-    contents=prompt,
-)
+
+max_retries = 3
+for attempt in range(max_retries):
+  try:
+    response = client.models.generate_content(
+        model="gemini-3.8-flash",
+        contents=prompt,
+    )
+    break
+  except ServerError as e:
+    if e.code == 503 and attempt < max_retries - 1:
+      wait_time = (attempt + 1) * 15
+      print(f"503 High Demand. Retrying in {wait_time}s... (Attempt {attempt + 1}/{max_retries})")
+      time.sleep(wait_time)
+    else:
+      raise e
+
 article_html = response.text.strip()
 
 if article_html.startswith("```html"):

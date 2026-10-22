@@ -102,7 +102,7 @@ Guidelines:
 2. Incorporate local geographic references relevant to {selected_town} and the Ottawa Valley.
 3. Include practical, actionable real estate advice.
 4. Structurally use <h2>, <h3>, <p>, <ul>, and <li> tags with clean styling class names like Tailwind CSS.
-5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at https://solankihomes.ca or request custom MLS alerts at https://solankihomes.ca.
+5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at solankihomes.ca or request custom MLS alerts.
 Return ONLY valid HTML content for the article body inside the <div>. Do not include markdown code blocks like ```html.
 """
 

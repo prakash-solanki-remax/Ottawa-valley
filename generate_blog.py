@@ -145,7 +145,7 @@ full_page = f"""<!DOCTYPE html>
 <body class="bg-slate-900 text-slate-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto bg-slate-800 p-6 sm:p-10 rounded-2xl border border-slate-700 shadow-2xl">
         <div class="mb-8 border-b border-slate-700 pb-6">
-            <a href="[https://solankihomes.ca](https://solankihomes.ca)" class="text-xs font-bold uppercase text-red-500 tracking-wider hover:underline">← Back to SolankiHomes.ca</a>
+            <a href="https://solankihomes.ca" class="text-xs font-bold uppercase text-red-500 tracking-wider hover:underline">&larr; Back to SolankiHomes.ca</a>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 leading-tight">{selected_topic} in {selected_town}, ON</h1>
             <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR® on {today_str}</p>
         </div>

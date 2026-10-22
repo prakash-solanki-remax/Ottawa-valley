@@ -130,33 +130,36 @@ for attempt in range(max_retries):
             print("API Error Response:", data)
             raise e
 
-# Build full web page template wrapper with static links
-# Build full web page template wrapper
-head_html = f"""<!DOCTYPE html>
+# Build HTML template wrappers safely without f-string quote conflicts
+head_html = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{selected_topic} in {selected_town}, ON | Prakash Solanki REALTOR</title>
-    <meta name="description" content="Expert insights on {selected_topic} in {selected_town}, Ontario with Prakash Solanki, RE/MAX Pembroke Realty Ltd. Brokerage.">
+    <title>TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON | Prakash Solanki REALTOR</title>
+    <meta name="description" content="Expert insights on TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, Ontario with Prakash Solanki, RE/MAX Pembroke Realty Ltd. Brokerage.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>body {{ font-family: 'Plus Jakarta Sans', sans-serif; }}</style>
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto bg-slate-800 p-6 sm:p-10 rounded-2xl border border-slate-700 shadow-2xl">
         <div class="mb-8 border-b border-slate-700 pb-6">
             <a href="https://solankihomes.ca" class="text-xs font-bold uppercase text-red-500 tracking-wider hover:underline">&larr; Back to SolankiHomes.ca</a>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 leading-tight">{selected_topic} in {selected_town}, ON</h1>
-            <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR on {today_str}</p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 leading-tight">TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON</h1>
+            <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR on DATE_PLACEHOLDER</p>
         </div>
         <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-4">
 """
 
-tail_html = f"""
+head_html = head_html.replace("TOPIC_PLACEHOLDER", selected_topic)
+head_html = head_html.replace("TOWN_PLACEHOLDER", selected_town)
+head_html = head_html.replace("DATE_PLACEHOLDER", today_str)
+
+tail_html = """
         </div>
         <div class="mt-12 p-6 bg-slate-900 rounded-xl border border-red-500/30 text-center space-y-3">
-            <h3 class="text-xl font-bold text-white">Planning a Move in {selected_town} or the Ottawa Valley?</h3>
+            <h3 class="text-xl font-bold text-white">Planning a Move in TOWN_PLACEHOLDER or the Ottawa Valley?</h3>
             <p class="text-sm text-slate-300">Contact Prakash Solanki today for a free home evaluation or personalized MLS property alerts.</p>
             <div class="pt-2 flex justify-center gap-4">
                  <a href="https://seller.solankihomes.ca" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Free Home Evaluation</a>
@@ -167,6 +170,8 @@ tail_html = f"""
 </body>
 </html>
 """
+
+tail_html = tail_html.replace("TOWN_PLACEHOLDER", selected_town)
 
 full_page = head_html + article_html + tail_html
 

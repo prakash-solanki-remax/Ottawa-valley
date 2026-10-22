@@ -147,7 +147,7 @@ full_page = f"""<!DOCTYPE html>
         <div class="mb-8 border-b border-slate-700 pb-6">
             <a href="https://solankihomes.ca" class="text-xs font-bold uppercase text-red-500 tracking-wider hover:underline">&larr; Back to SolankiHomes.ca</a>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 leading-tight">{selected_topic} in {selected_town}, ON</h1>
-            <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR® on {today_str}</p>
+            <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR on {today_str}</p>
         </div>
         <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-4">
             {article_html}

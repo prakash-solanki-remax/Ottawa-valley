@@ -89,48 +89,30 @@ today_str = datetime.date.today().strftime("%B %d, %Y")
 slug_date = datetime.date.today().strftime("%Y-%m-%d")
 
 prompt = f"""
-You are an expert real estate SEO copywriter for Prakash Solanki, REALTOR® at RE/MAX Pembroke Realty Ltd., Brokerage in Petawawa, Ontario.
+You are an expert real estate SEO copywriter for Prakash Solanki, an individual REALTOR® with RE/MAX Pembroke Realty Ltd., Brokerage, serving Pembroke, Petawawa, Deep River, Renfrew, Whitewater Region, and the Ottawa Valley.
+Write a complete, highly engaging HTML blog post about: "{selected_topic}" specifically tailored for home buyers/sellers in "{selected_town}", Ontario.
 
-Write a complete, highly engaging HTML blog post on the topic: "{selected_topic} in {selected_town}, Ontario".
-
-Strict Guidelines:
-1. Return ONLY pure HTML content inside an <article> tag. Do not include markdown backticks like ```html.
-2. Naturally mention Prakash Solanki, REALTOR®, RE/MAX Pembroke Realty Ltd., Brokerage, and phone number (613) 203-3313.
-3. Address specific buyer and seller intent for {selected_town} and the Ottawa Valley region.
+Guidelines:
+1. Write in a professional, authoritative, yet warm and approachable tone.
+2. Incorporate local geographic references relevant to {selected_town} and the Ottawa Valley.
+3. Include practical, actionable real estate advice.
 4. Structurally use <h2>, <h3>, <p>, <ul>, and <li> tags with clean styling class names like Tailwind CSS.
-5. 5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at https://seller.solankihomes.ca or request custom MLS alerts at https://buyer.solankihomes.ca.
+5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at https://solankihomes.ca or request custom MLS alerts at https://solankihomes.ca.
+Return ONLY valid HTML content for the article body inside the <div>. Do not include markdown code blocks like ```html.
+"""
 
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents=prompt,
+)
+article_html = response.text.strip()
 
-# Clean API Endpoint (No markdown brackets)
-base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key="
-url = base_url + GEMINI_API_KEY
-payload = {"contents": [{"parts": [{"text": prompt}]}]}
+if article_html.startswith("```html"):
+    article_html = article_html[7:]
+if article_html.endswith("```"):
+    article_html = article_html[:-3]
+article_html = article_html.strip()
 
-
-
-# Automatic Retry Loop for handling temporary 503 errors
-max_retries = 3
-article_html = ""
-data = {}
-
-for attempt in range(max_retries):
-    try:
-        response = requests.post(url, json=payload)
-        data = response.json()
-        
-        # Safe response payload schema parsing mapping
-        article_html = data["candidates"][0]["content"]["parts"][0]["text"]
-        article_html = article_html.replace("```html", "").replace("```", "").strip()
-        break  # Success! Exit retry loop
-    except Exception as e:
-        if attempt < max_retries - 1:
-            print(f"API busy or error encountered ({e}). Retrying in 15 seconds... (Attempt {attempt + 1}/{max_retries})")
-            time.sleep(15)
-        else:
-            print("API Error Response:", data)
-            raise e
-
-# Build HTML template wrappers safely without f-string quote conflicts
 head_html = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,14 +120,14 @@ head_html = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON | Prakash Solanki REALTOR</title>
     <meta name="description" content="Expert insights on TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, Ontario with Prakash Solanki, RE/MAX Pembroke Realty Ltd. Brokerage.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap)" rel="stylesheet">
     <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto bg-slate-800 p-6 sm:p-10 rounded-2xl border border-slate-700 shadow-2xl">
         <div class="mb-8 border-b border-slate-700 pb-6">
-            <a href="https://solankihomes.ca" class="text-xs font-bold uppercase text-red-500 tracking-wider hover:underline">&larr; Back to SolankiHomes.ca</a>
+            <a href="[https://solankihomes.ca](https://solankihomes.ca)" class="text-xs font-bold uppercase text-red-500 tracking-wider hover:underline">&larr; Back to SolankiHomes.ca</a>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 leading-tight">TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON</h1>
             <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR on DATE_PLACEHOLDER</p>
         </div>
@@ -162,8 +144,8 @@ tail_html = """
             <h3 class="text-xl font-bold text-white">Planning a Move in TOWN_PLACEHOLDER or the Ottawa Valley?</h3>
             <p class="text-sm text-slate-300">Contact Prakash Solanki today for a free home evaluation or personalized MLS property alerts.</p>
             <div class="pt-2 flex justify-center gap-4">
-                 <a href="https://seller.solankihomes.ca" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Free Home Evaluation</a>
-                 <a href="https://buyer.solankihomes.ca" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Custom MLS Alerts</a>
+                 <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Free Home Evaluation</a>
+                 <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Custom MLS Alerts</a>
             </div>
         </div>
     </div>

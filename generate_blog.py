@@ -4,12 +4,15 @@ import datetime
 import time
 import re
 import requests
+from google import genai
 # -*- coding: utf-8 -*-
 # Ensure API Key is available
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable is missing!")
 
+# Initialize Gemini client
+client = genai.Client(api_key=GEMINI_API_KEY)
 # Core / Primary Markets (Weighted higher for frequent posting)
 CORE_TOWNS = [
     "Petawawa",

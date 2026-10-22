@@ -131,15 +131,16 @@ for attempt in range(max_retries):
             raise e
 
 # Build full web page template wrapper with static links
-full_page = f"""<!DOCTYPE html>
+# Build full web page template wrapper
+head_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{selected_topic} in {selected_town}, ON | Prakash Solanki REALTOR</title>
     <meta name="description" content="Expert insights on {selected_topic} in {selected_town}, Ontario with Prakash Solanki, RE/MAX Pembroke Realty Ltd. Brokerage.">
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap)" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>body {{ font-family: 'Plus Jakarta Sans', sans-serif; }}</style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -150,7 +151,9 @@ full_page = f"""<!DOCTYPE html>
             <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR on {today_str}</p>
         </div>
         <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-4">
-            {article_html}
+"""
+
+tail_html = f"""
         </div>
         <div class="mt-12 p-6 bg-slate-900 rounded-xl border border-red-500/30 text-center space-y-3">
             <h3 class="text-xl font-bold text-white">Planning a Move in {selected_town} or the Ottawa Valley?</h3>
@@ -162,7 +165,10 @@ full_page = f"""<!DOCTYPE html>
         </div>
     </div>
 </body>
-</html>"""
+</html>
+"""
+
+full_page = head_html + article_html + tail_html
 
 # --- File System Local Disk Output ---
 clean_topic = re.sub(r'[^a-zA-Z0-9\s-]', '', selected_topic.lower())

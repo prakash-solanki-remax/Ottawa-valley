@@ -1,57 +1,89 @@
 import os
 import random
 import datetime
+import time
+import re
 import requests
 
+# Ensure API Key is available
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable is missing!")
 
-import random
-
-# Core Towns (Weighted heavily so they appear much more frequently)
+# Core / Primary Markets (Weighted higher for frequent posting)
 CORE_TOWNS = [
-    "Pembroke",
     "Petawawa",
-    "Deep River",
-    "Renfrew",
-    "Laurentian Valley",
-    "Arnprior",
-    "Whitewater Region",
-    "Laurentian Hills"
+    "Pembroke and Laurentian Valley",
+    "Renfrew, Arnprior, and Carleton Place",
+    "Deep River, Chalk River, and Laurentian Hills"
 ]
 
-# Other Towns (Secondary coverage)
+# Secondary Regional Clusters
 OTHER_TOWNS = [
-    "Madawaska Valley",
-    "Bonnechere Valley",
-    "North Algona Wilberforce",
-    "Head, Clara and Maria",
-    "Horton",
-    "Admaston/Bromley",
-    "Greater Madawaska"
+    "Horton, Admaston/Bromley, Greater Madawaska, and Calabogie",
+    "McNab/Braeside",
+    "Eganville, Bonnechere Valley, and North Algona Wilberforce",
+    "Madawaska Valley, Barry's Bay, and Combermere",
+    "Killaloe, Hagarty, Richards, and Round Lake"
 ]
 
-TOPICS = [
-    "Home Selling Tips to Maximizing Equity",
-    "First-Time Home Buyer Mistakes to Avoid",
+# --- Topic Pools by Regional Tracks ---
+MILITARY_HUB_TOPICS = [
     "Garrison Petawawa Military Relocation & House Hunting Trip (HHT) Guide",
-    "Understanding Property Values and Local Market Trends",
-    "Preparing Your Home for a Fast Market Sale",
-    "Waterfront Property Buying Checklist",
-    "Closing Costs and Financial Steps for Buying a Home in Ontario"
+    "IRP & SIRVA Relocation Breakdown: Navigating Canadian Forces Relocations",
+    "Renting vs. Buying: Should Military Families Buy or Rent in Petawawa?",
+    "Selling on a Posting: How to Quickly List and Sell Your Petawawa Home",
+    "Moving for CNL: Housing Options in Deep River, Chalk River, and Laurentian Hills",
+    "Living Off-Base: The Best Neighborhoods in Petawawa for DND Civilian Contractors",
+    "Pembroke Regional Hospital Relocation: Where Healthcare Professionals Buy Homes",
+    "Investing in the Valley: Capitalizing on the Petawawa & Pembroke Rental Market",
+    "First-Time Home Buyer Mistakes to Avoid in Petawawa & Pembroke",
+    "Home Selling Tips for Maximizing Equity in the Local Housing Market",
+    "Family-Friendly Neighborhoods: Finding the Right Property in Pembroke & Petawawa",
+    "Preparing Your Home for a Fast Market Sale: Staging & Curb Appeal Tips",
+    "Downsizing or Upgrading: Navigating Property Transitions Locally",
+    "Maintenance-Free Living: The Rise of Modern Townhomes and Condos in Pembroke"
 ]
-selected_topic = random.choice(TOPICS)
+
+COMMUTER_TOPICS = [
+    "Commuting from Carleton Place or Arnprior to Ottawa: What to Expect",
+    "First-Time Home Buyer Mistakes to Avoid in High-Demand Suburbs",
+    "Home Selling Tips for Maximizing Equity in Fast-Moving Markets",
+    "Downsizing Locally: Transitioning from Rural Property to an Arnprior Townhome",
+    "Arnprior & Carleton Place Market Update: Suburban Demand vs. Ottawa Pricing"
+]
+
+RURAL_WATERFRONT_TOPICS = [
+    "Septic & Well Inspections: What Buyers Must Know About Rural Ontario Infrastructure",
+    "Shoreline Allowances: Understanding Crown Reserves When Buying Waterfront",
+    "Cottage as a Primary Residence: Living Year-Round in Recreational Properties",
+    "Ottawa Valley Acreage & Waterfront Report: Pricing Trends for Rural Properties"
+]
+
+GENERAL_MARKET_TOPICS = [
+    "Renfrew County Housing Overview: Inventory and Average Days on Market",
+    "Preparing Your Home for a Fast Market Sale in the Ottawa Valley",
+    "Understanding Property Values and Local Market Trends"
+]
 
 # Create a weighted pool: Core towns appear 3x more often than other towns
 weighted_town_pool = (CORE_TOWNS * 3) + OTHER_TOWNS
 
 # Select a town for this run
 selected_town = random.choice(weighted_town_pool)
-
 print(f"Selected town for this post: {selected_town}")
 
+# Intelligent Topic Routing
+if selected_town in ["Petawawa", "Pembroke and Laurentian Valley"]:
+    selected_topic = random.choice(MILITARY_HUB_TOPICS)
+elif selected_town == "Deep River, Chalk River, and Laurentian Hills":
+    selected_topic = random.choice(MILITARY_HUB_TOPICS + RURAL_WATERFRONT_TOPICS)
+elif selected_town in ["Renfrew, Arnprior, and Carleton Place", "McNab/Braeside"]:
+    selected_topic = random.choice(COMMUTER_TOPICS + GENERAL_MARKET_TOPICS)
+else:
+    selected_topic = random.choice(RURAL_WATERFRONT_TOPICS + GENERAL_MARKET_TOPICS)
 
+print(f"Selected topic: {selected_topic}")
 
 today_str = datetime.date.today().strftime("%B %d, %Y")
 slug_date = datetime.date.today().strftime("%Y-%m-%d")
@@ -69,20 +101,33 @@ Strict Guidelines:
 5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at [https://seller.solankihomes.ca](https://seller.solankihomes.ca) or request custom MLS alerts at [https://buyer.solankihomes.ca](https://buyer.solankihomes.ca).
 """
 
-url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=" + GEMINI_API_KEY
-
+# Fixed raw endpoint URL mapping path
+url = f"[https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=){GEMINI_API_KEY}"
 payload = {"contents": [{"parts": [{"text": prompt}]}]}
 
-response = requests.post(url, json=payload)
-data = response.json()
+# Automatic Retry Loop for handling temporary 503 errors
+max_retries = 3
+article_html = ""
+data = {}
 
-try:
-    article_html = data["candidates"][0]["content"]["parts"][0]["text"]
-    article_html = article_html.replace("```html", "").replace("```", "").strip()
-except Exception as e:
-    print("API Error Response:", data)
-    raise e
+for attempt in range(max_retries):
+    try:
+        response = requests.post(url, json=payload)
+        data = response.json()
+        
+        # Safe response payload schema parsing mapping
+        article_html = data["candidates"][0]["content"]["parts"][0]["text"]
+        article_html = article_html.replace("```html", "").replace("```", "").strip()
+        break  # Success! Exit retry loop
+    except Exception as e:
+        if attempt < max_retries - 1:
+            print(f"API busy or error encountered ({e}). Retrying in 15 seconds... (Attempt {attempt + 1}/{max_retries})")
+            time.sleep(15)
+        else:
+            print("API Error Response:", data)
+            raise e
 
+# Build full web page template wrapper with static links
 full_page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,18 +153,28 @@ full_page = f"""<!DOCTYPE html>
             <h3 class="text-xl font-bold text-white">Planning a Move in {selected_town} or the Ottawa Valley?</h3>
             <p class="text-sm text-slate-300">Contact Prakash Solanki today for a free home evaluation or personalized MLS® property alerts.</p>
             <div class="pt-2 flex justify-center gap-4">
-                <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">Find Homes</a>
-                <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" class="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">Free Valuation</a>
+                 <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Free Home Evaluation</a>
+                 <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Custom MLS Alerts</a>
             </div>
         </div>
     </div>
 </body>
 </html>"""
 
-os.makedirs("blog", exist_ok=True)
-filename = f"blog/{slug_date}-{selected_town.lower().replace(' ', '-')}.html"
+# --- File System Local Disk Output ---
+# 1. Clean strings to make a web-safe lowercase filename template
+clean_topic = re.sub(r'[^a-zA-Z0-9\s-]', '', selected_topic.lower())
+clean_town = re.sub(r'[^a-zA-Z0-9\s-]', '', selected_town.lower())
+combined_text = f"{clean_topic} in {clean_town}"
+slug = re.sub(r'[\s_]+', '-', combined_text.strip())
+filename = f"{slug_date}-{slug}.html"
 
-with open(filename, "w", encoding="utf-8") as f:
+# 2. Open physical stream and commit contents to target folder
+output_dir = "blog"
+os.makedirs(output_dir, exist_ok=True)
+file_path = os.path.join(output_dir, filename)
+
+with open(file_path, "w", encoding="utf-8") as f:
     f.write(full_page)
 
-print(f"Successfully generated article: {filename}")
+print(f"File successfully compiled and written to disk at: {file_path}")

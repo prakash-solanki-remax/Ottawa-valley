@@ -477,11 +477,11 @@
   </div>
 
   <!-- Interactive Reader & Sidebar -->
- <!-- Interactive Reader & Sidebar -->
   <!--  <div class="sh-body">  -->
       <!--  <div class="sh-body flex flex-col md:flex-row w-full"> -->
-       <div class="sh-body" style="display: flex; flex-direction: row; width: 100%;">     
-      <div class="sh-sidebar">
+       <div class="sh-body" style="display: flex; flex-direction: row; width: 100%; align-items: flex-start;">
+  <!-- Sidebar Container -->
+  <div class="sh-sidebar" style="width: 320px; min-width: 320px; flex-shrink: 0;">
         <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
         
 
@@ -531,10 +531,9 @@
                 </a>
               </div>
             </div>
-
-            <!-- 4. EGANVILLE, BONNECHERE VALLEY & WILBERFORCE -->
+<!-- 4. EGANVILLE, BONNECHERE VALLEY & WILBERFORCE -->
             <div class="border border-slate-700/80 rounded-lg overflow-hidden bg-slate-800/40">
-              <button onclick="toggleAccordion('region4')" class="w-full flex items-center justify-between p-3 text-left font-bold text-xs sm:text-sm text-sky-400 hover:bg-slate-800 transition">
+              <button onclick="toggleAccordion('region4')" class="w-full flex items-center justify-between p-3 text-left font-bold text-xs sm:text-sm text-slate-300 hover:bg-slate-800 transition">
                 <span>Eganville, Bonnechere Valley & Wilberforce</span>
                 <span id="icon-region4" class="text-slate-400 text-xs">▼</span>
               </button>
@@ -545,7 +544,7 @@
 
             <!-- 5. MADAWASKA VALLEY, BARRY'S BAY & COMBERMERE -->
             <div class="border border-slate-700/80 rounded-lg overflow-hidden bg-slate-800/40">
-              <button onclick="toggleAccordion('region5')" class="w-full flex items-center justify-between p-3 text-left font-bold text-xs sm:text-sm text-sky-400 hover:bg-slate-800 transition">
+              <button onclick="toggleAccordion('region5')" class="w-full flex items-center justify-between p-3 text-left font-bold text-xs sm:text-sm text-slate-300 hover:bg-slate-800 transition">
                 <span>Madawaska Valley, Barry's Bay & Combermere</span>
                 <span id="icon-region5" class="text-slate-400 text-xs">▼</span>
               </button>
@@ -554,6 +553,8 @@
               </div>
             </div>
 
+
+              
             <!-- 6. KILLALOE, HAGARTY, RICHARDS & ROUND LAKE -->
             <div class="border border-slate-700/80 rounded-lg overflow-hidden bg-slate-800/40">
               <button onclick="toggleAccordion('region6')" class="w-full flex items-center justify-between p-3 text-left font-bold text-xs sm:text-sm text-sky-400 hover:bg-slate-800 transition">
@@ -595,7 +596,8 @@
       </div>
 
       <!-- Live Post Embedded Frame (Right Side Display Area) -->
-      <div class="sh-viewer">
+      <!-- Viewer Container -->
+  <div class="sh-viewer" style="flex: 1; min-width: 0;">
         <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer"></iframe>
       </div>
     </div>

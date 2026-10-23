@@ -393,14 +393,27 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
-  .sh-body {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    min-height: 520px;
-  }
-  @media (max-width: 850px) {
-    .sh-body { grid-template-columns: 1fr; }
-  }
+.sh-body {
+            display: flex;
+            flex-direction: column-reverse; /* Mobile: Blog on top, towns menu underneath */
+            min-height: 520px;
+        }
+        @media (min-width: 850px) {
+            .sh-body {
+                flex-direction: row; /* Desktop: Side-by-side (sidebar left, blog right) */
+            }
+            .sh-sidebar {
+                width: 320px;
+                min-width: 320px;
+                flex-shrink: 0;
+            }
+            .sh-viewer {
+                flex: 1;
+                min-width: 0;
+            }
+        }
+
+    
   .sh-sidebar {
     background: #1e293b;
     padding: 16px;

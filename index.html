@@ -314,6 +314,206 @@
                 </div>
             </div>
 
+
+<!-- SOLANKIHOMES INSIGHTS EMBEDDED DASHBOARD WIDGET -->
+<style>
+  .sh-widget-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f172a;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    color: #f8fafc;
+  }
+  .sh-header {
+    background: linear-gradient(135deg, #0b1329 0%, #1e293b 100%);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #dc2626;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .sh-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .sh-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #38bdf8;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+  }
+  .sh-title-area h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+  .sh-subtitle {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+  .sh-remax-logo {
+    height: 45px;
+    width: auto;
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .sh-body {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 520px;
+  }
+  @media (max-width: 850px) {
+    .sh-body { grid-template-columns: 1fr; }
+  }
+  .sh-sidebar {
+    background: #1e293b;
+    padding: 16px;
+    border-right: 1px solid #334155;
+    overflow-y: auto;
+    max-height: 520px;
+  }
+  .sh-search {
+    width: 100%;
+    padding: 10px 14px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+  .sh-city-group {
+    margin-bottom: 16px;
+  }
+  .sh-city-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #38bdf8;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #334155;
+  }
+  .sh-post-item {
+    padding: 10px 12px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .sh-post-item:hover, .sh-post-item.active {
+    border-color: #38bdf8;
+    background: #1e293b;
+  }
+  .sh-post-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    line-height: 1.3;
+  }
+  .sh-viewer {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+  }
+  .sh-viewer iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    border: none;
+  }
+</style>
+
+<div class="sh-widget-container">
+  <!-- Header with Live Profile Picture & RE/MAX Banner Logo -->
+  <div class="sh-header">
+    <div class="sh-brand">
+      <img src="/Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="sh-avatar">
+      <div class="sh-title-area">
+        <h2>SolankiHomes Insights</h2>
+        <p class="sh-subtitle">Prakash Solanki, REALTOR® | RE/MAX Pembroke Realty Ltd., Brokerage</p>
+      </div>
+    </div>
+    <img src="/remax_logo_bann.png" alt="RE/MAX Logo" class="sh-remax-logo">
+  </div>
+
+  <!-- Interactive Reader & Sidebar -->
+  <div class="sh-body">
+    <div class="sh-sidebar">
+      <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
+      
+      <div id="sh-articles-list">
+        <!-- Articles Grouped by Region -->
+        <div class="sh-city-group" data-region="Carleton Place / Arnprior / McNab">
+          <div class="sh-city-name">Carleton Place & Arnprior</div>
+          <div class="sh-post-item active" onclick="loadArticle('/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html', this)">
+            <div class="sh-post-title">Commuting to Ottawa: What to Expect in McNab/Braeside</div>
+          </div>
+        </div>
+
+        <div class="sh-city-group" data-region="Laurentian Hills & Valley">
+          <div class="sh-city-name">Laurentian Valley & Hills</div>
+          <div class="sh-post-item" onclick="loadArticle('/blog/2026-10-21-laurentian-hills.html', this)">
+            <div class="sh-post-title">Laurentian Hills Real Estate & Living Guide</div>
+          </div>
+          <div class="sh-post-item" onclick="loadArticle('/blog/2026-10-21-laurentian-valley.html', this)">
+            <div class="sh-post-title">Laurentian Valley Real Estate & Living Guide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Post Embedded Frame -->
+    <div class="sh-viewer">
+      <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  function loadArticle(url, element) {
+    document.getElementById('sh-frame').src = url;
+    const items = document.querySelectorAll('.sh-post-item');
+    items.forEach(item => item.classList.remove('active'));
+    if(element) element.classList.add('active');
+  }
+
+  function filterPosts() {
+    const query = document.getElementById('sh-search-input').value.toLowerCase();
+    const items = document.querySelectorAll('.sh-post-item');
+    items.forEach(item => {
+      const title = item.innerText.toLowerCase();
+      item.style.display = title.includes(query) ? 'block' : 'none';
+    });
+  }
+</script>
+
+            
+
+
+
+
+
+
+            
             <!-- RIGHT COLUMN: HEADSHOT CARD -->
             <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0">
                 <div class="relative w-full max-w-xs sm:max-w-sm">

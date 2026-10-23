@@ -493,9 +493,14 @@
 
   <!-- Interactive Reader & Sidebar -->
 <!-- Interactive Reader & Sidebar Container -->
-  <div class="sh-body" style="display: flex; flex-direction: row; width: 100%; align-items: flex-start;">
-    
-    <!-- Sidebar Container (Left Side) -->
+<div class="sh-body">
+
+    <!-- 1. VIEWER CONTAINER (Appears ON TOP on mobile, RIGHT side on desktop) -->
+    <div class="sh-viewer">
+      <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer" style="width: 100%; height: 520px; border: none;"></iframe>
+    </div>
+
+    <!-- 2. SIDEBAR CONTAINER (Appears UNDERNEATH on mobile, LEFT side on desktop) -->
     <div class="sh-sidebar" style="width: 320px; min-width: 320px; flex-shrink: 0;">
       <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
       
@@ -506,7 +511,7 @@
 
         <!-- Accordion Regions Container -->
         <div class="space-y-2">
-
+    
           <!-- 1. PETAWAWA, PEMBROKE & LAURENTIAN VALLEY -->
           <div class="border border-slate-700/80 rounded-lg overflow-hidden bg-slate-800/40">
             <button onclick="toggleAccordion('region1')" class="w-full flex items-center justify-between p-3 text-left font-bold text-xs sm:text-sm text-sky-400 hover:bg-slate-800 transition">

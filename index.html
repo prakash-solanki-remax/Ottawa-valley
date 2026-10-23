@@ -477,74 +477,81 @@
   </div>
 
   <!-- Interactive Reader & Sidebar -->
-  <div class="sh-body">
-    <div class="sh-sidebar">
-      <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
-      
-<div id="sh-articles-list">
+ <!-- Interactive Reader & Sidebar -->
+    <div class="sh-body">
+      <div class="sh-sidebar">
+        <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
         
-        <!-- 1. PETAWAWA, PEMBROKE & LAURENTIAN VALLEY -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Petawawa, Pembroke & Laurentian Valley</div>
-          <div class="sh-post-item" onclick="loadArticle('/blog/2026-10-21-laurentian-valley.html', this)">
-            <div class="sh-post-title">Laurentian Valley Real Estate & Living Guide</div>
+        <div id="sh-articles-list">
+          <!-- 1. PETAWAWA, PEMBROKE & LAURENTIAN VALLEY -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Petawawa, Pembroke & Laurentian Valley</div>
+            <div class="sh-post-item" onclick="loadArticle('/blog/2026-10-21-laurentian-valley.html', this)">
+              <div class="sh-post-title">Laurentian Valley Real Estate & Living Guide</div>
+            </div>
+          </div>
+
+          <!-- 2. DEEP RIVER, CHALK RIVER & LAURENTIAN HILLS -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Deep River, Chalk River & Laurentian Hills</div>
+            <div class="sh-post-item" onclick="loadArticle('/blog/2026-10-21-laurentian-hills.html', this)">
+              <div class="sh-post-title">Laurentian Hills Real Estate & Living Guide</div>
+            </div>
+          </div>
+
+          <!-- 3. RENFREW, ARNPRIOR & CARLETON PLACE -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Renfrew, Arnprior & Carleton Place</div>
+            <div class="sh-post-item active" onclick="loadArticle('/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html', this)">
+              <div class="sh-post-title">Commuting to Ottawa: What to Expect in McNab/Braeside</div>
+            </div>
+          </div>
+
+          <!-- 4. EGANVILLE, BONNECHERE VALLEY, NORTH ALGONA & WILBERFORCE -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Eganville, Bonnechere Valley & Wilberforce</div>
+          </div>
+
+          <!-- 5. MADAWASKA VALLEY, BARRY'S BAY & COMBERMERE -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Madawaska Valley, Barry's Bay & Combermere</div>
+          </div>
+
+          <!-- 6. KILLALOE, HAGARTY, RICHARDS & ROUND LAKE -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Killaloe, Hagarty, Richards & Round Lake</div>
+          </div>
+
+          <!-- 7. HORTON, ADMASTON/BROMLEY, CALABOGIE & MCNAB/BRAESIDE -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Horton, Calabogie, McNab/Braeside & Townships</div>
+          </div>
+
+          <!-- 8. OTTAWA VALLEY (GENERAL) -->
+          <div class="sh-city-group">
+            <div class="sh-city-name">Ottawa Valley (General)</div>
           </div>
         </div>
-
-        <!-- 2. DEEP RIVER, CHALK RIVER & LAURENTIAN HILLS -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Deep River, Chalk River & Laurentian Hills</div>
-          <div class="sh-post-item" onclick="loadArticle('/blog/2026-10-21-laurentian-hills.html', this)">
-            <div class="sh-post-title">Laurentian Hills Real Estate & Living Guide</div>
-          </div>
-        </div>
-
-        <!-- 3. RENFREW, ARNPRIOR & CARLETON PLACE -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Renfrew, Arnprior & Carleton Place</div>
-          <div class="sh-post-item active" onclick="loadArticle('/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html', this)">
-            <div class="sh-post-title">Commuting to Ottawa: What to Expect in McNab/Braeside</div>
-          </div>
-        </div>
-
-        <!-- 4. EGANVILLE, BONNECHERE VALLEY, NORTH ALGONA & WILBERFORCE -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Eganville, Bonnechere Valley & Wilberforce</div>
-          <!-- Future posts will appear here -->
-        </div>
-
-        <!-- 5. MADAWASKA VALLEY, BARRY'S BAY & COMBERMERE -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Madawaska Valley, Barry's Bay & Combermere</div>
-          <!-- Future posts will appear here -->
-        </div>
-
-        <!-- 6. KILLALOE, HAGARTY, RICHARDS & ROUND LAKE -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Killaloe, Hagarty, Richards & Round Lake</div>
-          <!-- Future posts will appear here -->
-        </div>
-
-        <!-- 7. HORTON, ADMASTON/BROMLEY, CALABOGIE & MCNAB/BRAESIDE -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Horton, Calabogie, McNab/Braeside & Townships</div>
-          <!-- Future posts will appear here -->
-        </div>
-
-        <!-- 8. OTTAWA VALLEY (GENERAL) -->
-        <div class="sh-city-group">
-          <div class="sh-city-name">Ottawa Valley (General)</div>
-          <!-- Future regional posts will appear here -->
-        </div>
-
       </div>
-    <!-- Live Post Embedded Frame -->
-    <div class="sh-viewer">
-      <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer"></iframe>
-    </div>
-  </div>
-</div>
 
+      <!-- Live Post Embedded Frame (Right Side Display Area) -->
+      <div class="sh-viewer">
+        <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer"></iframe>
+      </div>
+    </div>
+
+    
+
+    
+
+
+
+    
+      <!-- Live Post Embedded Frame (Right Side Display Area) -->
+      <div class="sh-viewer">
+        <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer"></iframe>
+      </div>
+    </div>
 <script>
   function loadArticle(url, element) {
     document.getElementById('sh-frame').src = url;

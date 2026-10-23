@@ -395,12 +395,14 @@
   }
 .sh-body {
             display: flex;
-            flex-direction: column-reverse; /* Mobile: Blog on top, towns menu underneath */
+            flex-direction: column; /* Mobile: Top-to-bottom stack */
+            width: 100%;
             min-height: 520px;
         }
         @media (min-width: 850px) {
             .sh-body {
-                flex-direction: row; /* Desktop: Side-by-side (sidebar left, blog right) */
+                flex-direction: row-reverse; /* Desktop: Sidebar on left, Blog on right */
+                align-items: flex-start;
             }
             .sh-sidebar {
                 width: 320px;

@@ -180,17 +180,16 @@ tail_html = """
           </p>
         </div>
         <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
-          <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-1.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow transition leading-tight">
-            <span class="block text-xs sm:text-sm">Free Evaluation</span>
-            <span class="block text-[10px] sm:text-xs font-normal opacity-90">Sell High</span>
+          <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow transition">
+            Free Evaluation / Sell High
           </a>
-          <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-1.5 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg border border-slate-600 transition leading-tight">
-            <span class="block text-xs sm:text-sm">Buy Smart</span>
-            <span class="block text-[10px] sm:text-xs font-normal opacity-90">Free & No-Obligation</span>
+          <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs sm:text-sm rounded-lg border border-slate-600 transition">
+            Buy Smart / Free No-Obligation
           </a>
         </div>
       </div>
     </div>
+
 
 
 </body>

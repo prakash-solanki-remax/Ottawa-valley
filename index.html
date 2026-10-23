@@ -393,29 +393,27 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
-.sh-body {
-            display: flex;
-            flex-direction: column; /* Mobile: Top-to-bottom stack */
-            width: 100%;
-            min-height: 520px;
-        }
-        @media (min-width: 850px) {
-            .sh-body {
-                flex-direction: row-reverse; /* Desktop: Sidebar on left, Blog on right */
-                align-items: flex-start;
-            }
-            .sh-sidebar {
-                width: 320px;
-                min-width: 320px;
-                flex-shrink: 0;
-            }
-            .sh-viewer {
-                flex: 1;
-                min-width: 0;
-            }
-        }
-
-    
+  .sh-body {
+    display: flex;
+    flex-direction: column; /* Mobile: Blog reader on top, sidebar underneath */
+    width: 100%;
+    min-height: 520px;
+  }
+  @media (min-width: 850px) {
+    .sh-body {
+        flex-direction: row-reverse; /* Desktop: Sidebar on left, Blog on right */
+        align-items: flex-start;
+    }
+    .sh-sidebar {
+        width: 320px;
+        min-width: 320px;
+        flex-shrink: 0;
+    }
+    .sh-viewer {
+        flex: 1;
+        min-width: 0;
+    }
+  }
   .sh-sidebar {
     background: #1e293b;
     padding: 16px;
@@ -432,38 +430,6 @@
     color: #ffffff;
     margin-bottom: 12px;
     box-sizing: border-box;
-  }
-  .sh-city-group {
-    margin-bottom: 16px;
-  }
-  .sh-city-name {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #38bdf8;
-    margin-bottom: 8px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #334155;
-  }
-  .sh-post-item {
-    padding: 10px 12px;
-    background: #0f172a;
-    border: 1px solid #334155;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .sh-post-item:hover, .sh-post-item.active {
-    border-color: #38bdf8;
-    background: #1e293b;
-  }
-  .sh-post-title {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: #e2e8f0;
-    line-height: 1.3;
   }
   .sh-viewer {
     background: #ffffff;
@@ -488,16 +454,15 @@
         <p class="sh-subtitle">Prakash Solanki, REALTOR® | RE/MAX Pembroke Realty Ltd., Brokerage</p>
       </div>
     </div>
- <!--   <img src="/remax_logo_bann.png" alt="RE/MAX Logo" class="sh-remax-logo"> -->
   </div>
 
-  <!-- Interactive Reader & Sidebar -->
-<!-- Interactive Reader & Sidebar Container -->
-<div class="sh-body">
+  <!-- Interactive Reader & Sidebar Container -->
+  <div class="sh-body">
     <!-- 1. VIEWER CONTAINER (Appears ON TOP on mobile, RIGHT side on desktop) -->
     <div class="sh-viewer">
       <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer" style="width: 100%; height: 520px; border: none;"></iframe>
     </div>
+
     <!-- 2. SIDEBAR CONTAINER (Appears UNDERNEATH on mobile, LEFT side on desktop) -->
     <div class="sh-sidebar" style="width: 320px; min-width: 320px; flex-shrink: 0;">
       <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
@@ -607,25 +572,12 @@
       </div>
     </div>
 
-    <!-- Viewer Container (Right Side) -->
-    <div class="sh-viewer" style="flex: 1; min-width: 0;">
-      <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer" style="width: 100%; height: 520px; border: none;"></iframe>
-    </div>
-
   </div>
+</div>
 
-    
-     <!-- Live Post Embedded Frame (Right Side Display Area) -->
-  <!--    <div class="sh-viewer">
-        <iframe id="sh-frame" src="/blog/2026-10-22-commuting-from-carleton-place-or-arnprior-to-ottawa-what-to-expect-in-mcnabbraeside.html" title="SolankiHomes Article Viewer"></iframe>
-      </div>   -->
-    </div>
 <script>
   function loadArticle(url, element) {
     document.getElementById('sh-frame').src = url;
-    const items = document.querySelectorAll('.sh-post-item');
-    items.forEach(item => item.classList.remove('active'));
-    if(element) element.classList.add('active');
   }
 
   function filterPosts() {
@@ -638,12 +590,6 @@
   }
 </script>
 
-
-
-
-
-
-    
     <!-- 3. OTTAWA VALLEY COMMUNITIES & SPECIALTY MLS® LISTINGS SECTION -->
     <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 w-full overflow-hidden">
         
@@ -1256,21 +1202,20 @@
                 }, 600);
             }
         }
+
+        function toggleAccordion(id) {
+            const target = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (target.classList.contains('hidden')) {
+              target.classList.remove('hidden');
+              if (icon) icon.textContent = '▲';
+            } else {
+              target.classList.add('hidden');
+              if (icon) icon.textContent = '▼';
+            }
+        }
     </script>
-<script>
-  function toggleAccordion(id) {
-    const target = document.getElementById(id);
-    const icon = document.getElementById('icon-' + id);
-    
-    if (target.classList.contains('hidden')) {
-      target.classList.remove('hidden');
-      if (icon) icon.textContent = '▲';
-    } else {
-      target.classList.add('hidden');
-      if (icon) icon.textContent = '▼';
-    }
-  }
-</script>
     
 </body>
 </html>

@@ -169,21 +169,30 @@ tail_html = """
     </div>
 
 <!-- Sticky Bottom CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-3 px-4 z-50 shadow-2xl">
-      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-        <p class="text-xs sm:text-sm font-semibold text-slate-200">
-          Planning a move in TOWN_PLACEHOLDER or the Ottawa Valley?
-        </p>
+    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-2.5 px-4 z-50 shadow-2xl">
+      <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
+        <div class="hidden sm:block">
+          <p class="text-xs sm:text-sm font-semibold text-slate-200">
+            Planning a move in TOWN_PLACEHOLDER?
+          </p>
+          <p class="text-[10px] text-slate-400 uppercase tracking-wider font-medium">
+            100% Free & No Obligation
+          </p>
+        </div>
         <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
-          <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow transition duration-150">
-            Free Evaluation
+          <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-1.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow transition leading-tight">
+            <span class="block text-xs sm:text-sm">Free Evaluation</span>
+            <span class="block text-[10px] sm:text-xs font-normal opacity-90">Sell High</span>
           </a>
-          <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs sm:text-sm rounded-lg border border-slate-600 transition duration-150">
-            Custom MLS Alerts
+          <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-1.5 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg border border-slate-600 transition leading-tight">
+            <span class="block text-xs sm:text-sm">Buy Smart</span>
+            <span class="block text-[10px] sm:text-xs font-normal opacity-90">Free & No-Obligation</span>
           </a>
         </div>
       </div>
     </div>
+
+
 </body>
 </html>
 """

@@ -1,4 +1,4 @@
-name: Automated Ottawa Valley Blog Generator
+name: Daily Automated SEO Blog Post
 
 on:
   schedule:

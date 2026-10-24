@@ -96,14 +96,12 @@ slug_date = datetime.date.today().strftime("%Y-%m-%d")
 
 prompt = f"""
 You are an expert real estate SEO copywriter for Prakash Solanki, an individual REALTOR® with RE/MAX Pembroke Realty Ltd., Brokerage, serving Pembroke, Petawawa, Deep River, Renfrew, Whitewater Region, and the Ottawa Valley.
-Write a complete, highly engaging HTML blog post about: "{selected_topic}" specifically tailored for home buyers/sellers in "{selected_town}", Ontario.
+Write a concise, punchy, and highly scannable HTML blog post about: "{selected_topic}" specifically tailored for home buyers/sellers in "{selected_town}", Ontario.
 
 Guidelines:
-1. Write in a professional, authoritative, yet warm and approachable tone.
+1. Keep the article concise, direct, and easy to read (under 400 words total). Use short paragraphs and bullet points so it is not too long.
 2. Incorporate local geographic references relevant to {selected_town} and the Ottawa Valley.
-3. Include practical, actionable real estate advice.
-4. Structurally use <h2>, <h3>, <p>, <ul>, and <li> tags with clean styling class names like Tailwind CSS.
-5. Include a prominent call-to-action encouraging readers to get a Free Home Evaluation at solankihomes.ca or request custom MLS alerts.
+3. Structurally use <h2>, <h3>, <p>, <ul>, and <li> tags.
 Return ONLY valid HTML content for the article body inside the <div>. Do not include markdown code blocks like ```html.
 """
 
@@ -190,7 +188,7 @@ head_html = """<!DOCTYPE html>
 
     <div class="max-w-3xl mx-auto bg-slate-800 p-6 sm:p-10 rounded-2xl border border-slate-700 shadow-2xl mt-2">
         
-        <!-- PROMINENT BLOG BRANDING HEADER WITH SOLANKIHOMES.CA -->
+        <!-- PROMINENT BLOG BRANDING HEADER -->
         <div class="mb-6 border-b border-slate-700 pb-6">
             <div class="inline-flex items-center gap-2 bg-slate-900/90 border border-red-500/30 px-3.5 py-1.5 rounded-full mb-3">
                 <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
@@ -212,13 +210,17 @@ head_html = head_html.replace("DATE_PLACEHOLDER", today_str)
 tail_html = """
         </div>
 
-        <!-- BOTTOM CONVERSION BOX -->
-        <div class="mt-12 p-6 bg-slate-900 rounded-xl border border-red-500/30 text-center space-y-3">
-            <h3 class="text-xl font-bold text-white">Planning a Move in TOWN_PLACEHOLDER or the Ottawa Valley?</h3>
-            <p class="text-sm text-slate-300">Contact Prakash Solanki today for expert local guidance and zero obligation.</p>
-            <div class="pt-2 flex flex-col sm:flex-row justify-center gap-4">
-                 <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow-md">Buy Free-No Obligation</a>
-                 <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow-md">Sell Top Dollar</a>
+        <!-- BOTTOM CONVERSION BOX (MATCHING LANDING PAGE BUTTONS) -->
+        <div class="mt-12 p-8 bg-slate-900 rounded-2xl border border-red-500/30 text-center space-y-4 shadow-xl">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Planning a Move to or from TOWN_PLACEHOLDER?</h3>
+            <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto">Get clarity on your home's current market value or receive immediate notifications when properties hit the MLS in TOWN_PLACEHOLDER and the Ottawa Valley.</p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                 <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-8 rounded-xl text-sm sm:text-base transition shadow-md">Get a Free Home Evaluation</a>
+                 <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3.5 px-8 rounded-xl text-sm sm:text-base transition shadow-md border border-slate-600">Request Custom MLS Alerts</a>
+            </div>
+            <div class="pt-2 text-xs text-slate-400 font-medium">
+                Prakash Solanki, REALTOR® | RE/MAX Pembroke Realty Ltd., Brokerage<br>
+                Dedicated service throughout TOWN_PLACEHOLDER and across the Ottawa Valley.
             </div>
         </div>
     </div>
@@ -235,11 +237,11 @@ tail_html = """
           </p>
         </div>
         <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
-          <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs sm:text-sm rounded-lg border border-slate-600 transition">
-            Buy Free-No Obligation
-          </a>
           <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow transition">
-            Sell Top Dollar
+            Get Free Evaluation
+          </a>
+          <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs sm:text-sm rounded-lg border border-slate-600 transition">
+            Request MLS Alerts
           </a>
         </div>
       </div>

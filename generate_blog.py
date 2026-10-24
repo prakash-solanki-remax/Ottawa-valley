@@ -15,6 +15,7 @@ if not GEMINI_API_KEY:
 
 # Initialize Gemini client
 client = genai.Client(api_key=GEMINI_API_KEY)
+
 # Core / Primary Markets (Weighted higher for frequent posting)
 CORE_TOWNS = [
     "Petawawa",
@@ -106,7 +107,6 @@ Guidelines:
 Return ONLY valid HTML content for the article body inside the <div>. Do not include markdown code blocks like ```html.
 """
 
-
 max_retries = 3
 for attempt in range(max_retries):
   try:
@@ -136,19 +136,72 @@ head_html = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON | Prakash Solanki REALTOR</title>
+    <title>TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON | Blog — SolankiHomes.ca | Prakash Solanki REALTOR®</title>
     <meta name="description" content="Expert insights on TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, Ontario with Prakash Solanki, RE/MAX Pembroke Realty Ltd. Brokerage.">
     <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap)" rel="stylesheet">
+    <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&display=swap)" rel="stylesheet">
     <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mx-auto bg-slate-800 p-6 sm:p-10 rounded-2xl border border-slate-700 shadow-2xl">
-        <div class="mb-8 border-b border-slate-700 pb-6">
+<body class="bg-slate-900 text-slate-100 min-h-screen pt-28 pb-32 px-4 sm:px-6 lg:px-8">
+
+    <!-- STICKY NAVIGATION HEADER WITH PROFILE PICTURE, DESKTOP-ONLY RE/MAX LOGO & PHONE -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3 w-full">
             
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 leading-tight">TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON</h1>
-            <p class="text-xs text-slate-400 mt-2">Published by Prakash Solanki, REALTOR on DATE_PLACEHOLDER</p>
+            <!-- LEFT: Profile Photo & Branding -->
+            <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <a href="[https://solankihomes.ca](https://solankihomes.ca)" class="flex-shrink-0">
+                    <img src="/Prakash_new_pic.PNG" alt="Prakash Solanki REALTOR" class="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border-2 border-red-600 shadow-sm" onerror="this.onerror=null; this.src='Prakash_new_pic.PNG';">
+                </a>
+                <a href="[https://solankihomes.ca](https://solankihomes.ca)" class="flex flex-col min-w-0 group">
+                    <div class="flex items-center gap-1.5 leading-tight truncate">
+                        <span class="text-xs sm:text-base font-extrabold tracking-tight text-slate-900 group-hover:text-red-600 transition-colors truncate">
+                            Prakash Solanki
+                        </span>
+                        <span class="text-[9px] sm:text-xs font-black tracking-wider text-red-600 uppercase flex-shrink-0">
+                            REALTOR®
+                        </span>
+                    </div>
+                    <span class="text-[9px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
+                        RE/MAX Pembroke Realty Ltd.
+                    </span>
+                    <span class="text-[8px] sm:text-[10px] font-bold text-slate-500 block leading-tight truncate">
+                        📍 10A Canadian Forces Dr., Petawawa, ON
+                    </span>
+                </a>
+            </div>
+
+            <!-- CENTER: RE/MAX Logo (DESKTOP ONLY) -->
+            <div class="hidden md:flex items-center justify-center flex-shrink-0 px-2">
+                <a href="[https://solankihomes.ca](https://solankihomes.ca)">
+                    <img src="/remax_logo.png" alt="RE/MAX Logo" class="h-10 sm:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='remax_logo.png';">
+                </a>
+            </div>
+
+            <!-- RIGHT: Call Button -->
+            <div class="flex items-center flex-shrink-0">
+                <a href="tel:16132033313" class="inline-flex items-center gap-1.5 sm:gap-2 bg-red-600 hover:bg-red-700 text-white font-black px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs sm:text-sm transition shadow-md whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
         </div>
+    </header>
+
+    <div class="max-w-3xl mx-auto bg-slate-800 p-6 sm:p-10 rounded-2xl border border-slate-700 shadow-2xl mt-2">
+        
+        <!-- PROMINENT BLOG BRANDING HEADER WITH SOLANKIHOMES.CA -->
+        <div class="mb-6 border-b border-slate-700 pb-6">
+            <div class="inline-flex items-center gap-2 bg-slate-900/90 border border-red-500/30 px-3.5 py-1.5 rounded-full mb-3">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide uppercase">
+                    Blog — SolankiHomes.ca
+                </span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-white mt-1 leading-tight">TOPIC_PLACEHOLDER in TOWN_PLACEHOLDER, ON</h1>
+            <p class="text-xs text-slate-400 mt-2.5">Published by Prakash Solanki, REALTOR® on DATE_PLACEHOLDER</p>
+        </div>
+        
         <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-4">
 """
 
@@ -158,18 +211,20 @@ head_html = head_html.replace("DATE_PLACEHOLDER", today_str)
 
 tail_html = """
         </div>
+
+        <!-- BOTTOM CONVERSION BOX -->
         <div class="mt-12 p-6 bg-slate-900 rounded-xl border border-red-500/30 text-center space-y-3">
             <h3 class="text-xl font-bold text-white">Planning a Move in TOWN_PLACEHOLDER or the Ottawa Valley?</h3>
-            <p class="text-sm text-slate-300">Contact Prakash Solanki today for a free home evaluation or personalized MLS property alerts.</p>
-            <div class="pt-2 flex justify-center gap-4">
-                 <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Free Home Evaluation</a>
-                 <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-2.5 px-5 rounded-lg text-sm transition shadow-md">Custom MLS Alerts</a>
+            <p class="text-sm text-slate-300">Contact Prakash Solanki today for expert local guidance and zero obligation.</p>
+            <div class="pt-2 flex flex-col sm:flex-row justify-center gap-4">
+                 <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow-md">Buy Free-No Obligation</a>
+                 <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow-md">Sell Top Dollar</a>
             </div>
         </div>
     </div>
 
-<!-- Sticky Bottom CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-2.5 px-4 z-50 shadow-2xl">
+    <!-- STICKY BOTTOM MOBILE CTA BAR -->
+    <div class="fixed bottom-2 sm:bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-3 px-4 z-50 shadow-[0_-8px_20px_rgba(0,0,0,0.4)]">
       <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
         <div class="hidden sm:block">
           <p class="text-xs sm:text-sm font-semibold text-slate-200">
@@ -180,17 +235,15 @@ tail_html = """
           </p>
         </div>
         <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
-          <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow transition">
-            Free Evaluation / Sell High
+          <a href="[https://buyer.solankihomes.ca](https://buyer.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs sm:text-sm rounded-lg border border-slate-600 transition">
+            Buy Free-No Obligation
           </a>
-          <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs sm:text-sm rounded-lg border border-slate-600 transition">
-            Buy Smart / Free No-Obligation
+          <a href="[https://seller.solankihomes.ca](https://seller.solankihomes.ca)" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow transition">
+            Sell Top Dollar
           </a>
         </div>
       </div>
     </div>
-
-
 
 </body>
 </html>

@@ -786,7 +786,22 @@
         padding: 16px;
         border-right: 1px solid #334155;
         overflow-y: auto;
-        max-height: 520px;
+        height: 520px; /* Locked height showing ~5 articles */
+        scrollbar-width: thin;
+      }
+      .sh-sidebar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .sh-sidebar::-webkit-scrollbar-track {
+        background: #0f172a;
+        border-radius: 4px;
+      }
+      .sh-sidebar::-webkit-scrollbar-thumb {
+        background: #64748b;
+        border-radius: 4px;
+      }
+      .sh-sidebar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
       }
       .sh-search {
         width: 100%;
@@ -818,7 +833,7 @@
         <div class="sh-brand">
           <img src="/Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="sh-avatar">
           <div class="sh-title-area">
-            <h2>The Solanki Homes Blog </h2>
+            <h2>The Solanki Homes Blog</h2>
             <p class="sh-subtitle">Prakash Solanki, REALTOR® | RE/MAX Pembroke Realty Ltd., Brokerage</p>
           </div>
         </div>

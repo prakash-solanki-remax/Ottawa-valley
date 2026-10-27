@@ -1079,10 +1079,13 @@
             }
         });
 
+        // Bounded scroll function so sliders stop firmly at the first and last card boundaries
         function scrollRow(elementId, distance) {
             const container = document.getElementById(elementId);
             if (container) {
-                container.scrollBy({ left: distance, behavior: 'smooth' });
+                const maxScrollLeft = container.scrollWidth - container.clientWidth;
+                const targetScroll = Math.max(0, Math.min(container.scrollLeft + distance, maxScrollLeft));
+                container.scrollTo({ left: targetScroll, behavior: 'smooth' });
             }
         }
 

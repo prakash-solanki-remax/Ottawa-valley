@@ -117,15 +117,21 @@
         *, ::before, ::after {
             box-sizing: border-box !important;
         }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            padding-top: 76px; 
-        }
+html { 
+    scroll-behavior: smooth; 
+    overscroll-behavior-y: none; /* Prevents mobile rubber-band locking at page bottom */
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: #070d1d; 
+    color: #f8fafc; 
+    antialiased; 
+    overflow-x: hidden; 
+    -webkit-tap-highlight-color: transparent; 
+    padding-top: 70px; 
+    touch-action: pan-y; /* Tells mobile touch engines to prioritize vertical swipe scrolling */
+}
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);
         }

@@ -40,12 +40,12 @@
     }
 </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-28">
+<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-32">
 
    
 
     <!-- MAIN ARTICLE & CONTENT CONTAINER -->
-    <div class="max-w-3xl mx-auto bg-white text-slate-900 p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-2xl mb-8 overflow-hidden">
+    <div class="max-w-3xl mx-auto bg-white text-slate-900 p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-2xl mb-16 overflow-hidden">
         
         <article class="max-w-4xl mx-auto">
             
@@ -272,65 +272,7 @@
 
             </section>
 
-            <!-- 🔴 SELLER & 🔵 BUYER INTENT CONVERSION CARDS -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
-                
-                <!-- SELLER INTENT CARD -->
-       <!--         <div class="bg-red-50/70 border-2 border-red-200 rounded-2xl p-5 flex flex-col justify-between shadow-sm">
-                    <div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="text-2xl">🔴</span>
-                            <h2 class="text-lg sm:text-xl font-extrabold text-red-950">For Local Homeowners (Equity & Upgrading)</h2>
-                        </div>
-                        <ul class="space-y-3 text-slate-800 text-sm sm:text-base font-medium mb-5">
-                            <li class="flex items-start gap-2">
-                                <span class="text-red-600 font-bold">•</span>
-                                <span><strong>Comparative Equity Check:</strong> Evaluate current closed MLS® sales on your specific street or township to understand your home's true market value.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-red-600 font-bold">•</span>
-                                <span><strong>Upgrading & Downsizing Strategy:</strong> Plan your transition smoothly whether moving into larger acreage or sizing down to a low-maintenance layout.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center font-extrabold py-3.5 px-4 rounded-xl text-sm sm:text-base transition shadow flex items-center justify-center gap-1.5">
-                        🏠 Get Your Free Home Equity Check
-                    </a>
-                </div>
-
-                
--->
-
-
-
             <!-- CALL TO ACTION BANNER -->
-         <!--       
-<section class="bg-[#0b1329] border border-red-500/30 rounded-2xl p-6 sm:p-8 text-center shadow-xl mb-8">
-    <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2 leading-tight">
-        Planning Your Next Move in Petawawa, Pembroke or Renfrew County?
-    </h3>
-    <p class="text-slate-300 text-sm sm:text-base max-w-lg mx-auto mb-5 leading-relaxed">
-        Get direct Ottawa Valley market advice, instant MLS® alerts, or a confidential home equity check with zero obligation.
-    </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-sm sm:max-w-md mx-auto">
-        
-        <!-- BLUE BUYER BUTTON -->
- <!--       <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-4 rounded-xl shadow-md hover:bg-blue-700 transition leading-tight block">
-            🔍 <span class="block">Buy Smart</span>
-            <span class="block">No-Obligation</span>
-        </a>
-
-        <!-- RED SELLER BUTTON -->
-    <!--    <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="bg-red-600 text-white font-bold py-3 px-4 rounded-xl shadow-md hover:bg-red-700 transition leading-tight block">
-            🏠 <span class="block">Get Free</span>
-            <span class="block">Home Valuation</span>
-        </a>
-
-    </div>
-</section>
--->
-
- <!-- CALL TO ACTION BANNER (MATCHES YOUR ATTACHED IMAGE DESIGN) -->
             <section class="bg-[#0b1329] border border-red-500/30 rounded-2xl p-6 sm:p-8 mb-8 text-center shadow-xl">
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 leading-tight">
                   Planning to Buy or Sell in the Ottawa Valley?
@@ -347,8 +289,6 @@
                     </a>
                 </div>
             </section>
-
-                
 
             <!-- FOOTER -->
             <footer class="border-t border-slate-200 pt-5 bg-slate-50 p-4 rounded-2xl text-left border">
@@ -369,19 +309,35 @@
     <!-- STICKY BOTTOM TOOLBAR -->
     <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-3 px-4 z-50 shadow-2xl">
       <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
-        <div class="hidden md:block">
+        
+        <!-- Left side text (Visible on Desktop/Tablet) -->
+        <div class="hidden lg:block">
           <p class="text-sm font-bold text-slate-100">
-              Planning to Buy or Sell Anywhere in the Ottawa Valley?
+            Planning to Buy or Sell Anywhere in the Ottawa Valley?
           </p>
-         
         </div>
-        <div class="flex items-center gap-2.5 w-full md:w-auto justify-center">
-          <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow transition">
-            Free Evaluation / Sell High
+
+        <!-- Right side navigation & call-to-action buttons -->
+        <div class="flex items-center gap-2 w-full lg:w-auto justify-between sm:justify-center">
+          
+          <!-- Home Icon Button to Main Website -->
+          <a href="https://solankihomes.ca" class="flex items-center gap-1.5 px-3 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-100 font-extrabold text-xs sm:text-sm rounded-xl border border-slate-600 transition shrink-0" title="Go to SolankiHomes.ca Home Page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current text-amber-400" viewBox="0 0 24 24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            <span>SolankiHomes.ca</span>
           </a>
-          <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow transition">
-            Buy Smart / Free Alerts
+
+          <!-- Sell Button -->
+          <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 lg:flex-none text-center px-3 sm:px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow transition whitespace-nowrap">
+            Free Evaluation
           </a>
+
+          <!-- Buy Button -->
+          <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 lg:flex-none text-center px-3 sm:px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow transition whitespace-nowrap">
+            Buy Smart
+          </a>
+
         </div>
       </div>
     </div>

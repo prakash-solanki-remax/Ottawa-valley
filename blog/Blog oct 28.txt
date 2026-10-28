@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    
+    <!-- PRIMARY GOOGLE SEO TAGS -->
+    <title>Ottawa Valley Real Estate Guide: Home Equity, Upgrading & Market Intelligence | Prakash Solanki REALTOR®</title>
+    <meta name="description" content="Local real estate intelligence for Pembroke, Petawawa, Deep River, Renfrew, and Ottawa Valley homeowners. Explore equity strategies, upgrading insights, and township micro-market trends with Prakash Solanki, REALTOR®.">
+    <meta name="keywords" content="MLS Petawawa, Realtor Petawawa, houses for sale in Petawawa, MLS Pembroke, Realtor Pembroke, houses for sale in Pembroke, home equity Pembroke Petawawa, Ottawa Valley real estate guide, Laurentian Valley home values, Deep River real estate, Renfrew home prices, Whitewater Region acreage, upgrading home Pembroke, downsizing Ottawa Valley">
+    <meta name="author" content="Prakash Solanki REALTOR®">
+    <link rel="canonical" href="https://solankihomes.ca/">
+
+    <!-- FACEBOOK & INSTAGRAM OPEN GRAPH META TAGS (FB / IG / MESSENGER) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solankihomes.ca/">
+    <meta property="og:title" content="Ottawa Valley Local Real Estate Intelligence & Equity Guide">
+    <meta property="og:description" content="Local market insights for Pembroke, Petawawa, Deep River, and Renfrew County homeowners. Strategic advice on upgrading, equity valuation, and township shifts.">
+    <meta property="og:image" content="https://solankihomes.ca/remax_logo_bann.png">
+    <meta property="og:site_name" content="Prakash Solanki REALTOR® - RE/MAX Pembroke Realty Ltd.">
+
+    <!-- TWITTER / X CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ottawa Valley Real Estate Intelligence | Prakash Solanki REALTOR®">
+    <meta name="twitter:description" content="Local equity analysis, upgrading strategies, and neighborhood trends for Pembroke, Petawawa, and Renfrew County residents.">
+    <meta name="twitter:image" content="https://solankihomes.ca/remax_logo_bann.png">
+
+    <!-- Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        html, body { overflow-x: hidden; width: 100%; position: relative; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-28">
+
+   
+
+    <!-- MAIN ARTICLE & CONTENT CONTAINER -->
+    <div class="max-w-3xl mx-auto bg-white text-slate-900 p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-2xl mb-8 overflow-hidden">
+        
+        <article class="max-w-4xl mx-auto">
+            
+            <!-- HEADER & BADGES -->
+            <header class="mb-6 border-b border-slate-200 pb-5">
+                <div class="flex flex-wrap items-center justify-between gap-2.5 mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    <span class="inline-block bg-slate-900 text-amber-400 text-xs sm:text-sm font-black px-3.5 py-1.5 rounded-lg uppercase tracking-wider shadow-sm">
+                        The Solanki Homes Blog
+                    </span>
+                    
+                </div>
+
+                <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-3">
+                    
+                    Ottawa Valley Real Estate: Homeowner & Buyer Guide
+                </h1>
+                
+                <p class="text-base sm:text-lg text-slate-700 font-medium leading-relaxed mb-4">
+                    As an Ottawa Valley resident, general market statistics don't tell the full story. Whether you are contemplating an upgrade into a larger property, evaluating neighborhood tax shifts, or reviewing your home equity after recent market changes, this guide offers localized intelligence tailored for existing homeowners and active local buyers across Renfrew County.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-between gap-2 text-sm font-bold text-slate-600 pt-3 border-t border-slate-200">
+                    <span>Published by <strong class="text-slate-900">Prakash Solanki, REALTOR®</strong> (RE/MAX Pembroke Realty Ltd., Brokerage)</span>
+                    <span>Direct: <a href="tel:6132033313" class="text-blue-700 hover:underline font-extrabold">(613) 203-3313</a></span>
+                </div>
+            </header>
+
+            <!-- 🎯 REGIONAL MARKET BREAKDOWN WITH LOCAL RESIDENT INTELLIGENCE -->
+            <section class="mb-8 text-slate-800 space-y-6">
+                <div class="border-b border-slate-200 pb-3">
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900">
+                        Local Micro-Market Breakdown: Towns & Townships
+                    </h2>
+                    <p class="text-sm sm:text-base text-slate-600 font-medium mt-1">
+                        Localized equity insights, neighborhood dynamics, and strategic guidance for residents across our 6 regional clusters.
+                    </p>
+                </div>
+
+                <!-- CLUSTER 1 -->
+                <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50/90 shadow-sm space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="font-black text-slate-900 text-xl sm:text-2xl flex items-center gap-2">
+                            <span>🏡</span> 1. Core Urban & Military Hub
+                        </h3>
+                        <span class="bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full">
+                            Pembroke, Petawawa, Laurentian Valley
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-900">For Local Homeowners:</strong> If you currently own a single-detached home or semi in Petawawa or Pembroke, strong buyer demand for updated 3-to-4 bedroom family layouts keeps equity levels resilient. Homeowners looking to upgrade can leverage accumulated equity to move into low-maintenance main-floor bungalows or transition across municipal boundaries into Laurentian Valley for larger 1+ acre lot parcels, detached shops, and lower township property tax rates.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Renovation & Equity ROI:</strong> Updating HVAC systems, replacing roofs, and modernizing kitchens provide the highest return when listing in this hub, as posting military buyers and medical staff actively seek turnkey move-in readiness.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Local Buyer & Investor Insights:</strong> Pembroke's East and West Ends present high-demand opportunities for multi-family duplex conversions and secondary suites, while Petawawa's established subdivisions near local elementary schools offer maximum resale liquidity during spring rotation cycles.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Check Home Equity
+                        </a>
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Find Local Properties
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CLUSTER 2 -->
+                <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50/90 shadow-sm space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="font-black text-slate-900 text-xl sm:text-2xl flex items-center gap-2">
+                            <span>🌲</span> 2. The Northern Corridor
+                        </h3>
+                        <span class="bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full">
+                            Deep River, Chalk River, Laurentian Hills
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-900">For Local Homeowners:</strong> Deep River's master-planned town design and riverfront pockets maintain tight, low-inventory conditions. Long-term residents considering downsizing to single-level living will find exceptional demand among incoming Canadian Nuclear Laboratories (CNL) technical staff and retirees for well-maintained mid-century builds and updated bungalows.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Renovation & Equity ROI:</strong> Energy efficiency upgrades (heat pumps, insulation, window seals) hold significant value for Northern Corridor buyers who prioritize low winter heating overhead.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Local Buyer & Investor Insights:</strong> Chalk River and Laurentian Hills offer exceptional square-footage value for local buyers needing extra garage space, outbuildings, or private acreage while staying within a 10-minute drive of main regional workplaces.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Check Home Equity
+                        </a>
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Find Local Properties
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CLUSTER 3 -->
+                <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50/90 shadow-sm space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="font-black text-slate-900 text-xl sm:text-2xl flex items-center gap-2">
+                            <span>💧</span> 3. Bonnechere & Central Townships
+                        </h3>
+                        <span class="bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full">
+                            Eganville, Bonnechere Valley, Whitewater Region
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-900">For Local Homeowners:</strong> Rural acreage and agricultural parcels across Eganville, Whitewater Region, and Westmeath have experienced strong valuation gains. Homeowners with cleared acreage, outbuildings, or updated septic systems hold high-equity assets ready for market.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Renovation & Equity ROI:</strong> WETT-certified wood heat installations, drilled wells, and updated electrical panels are top valuation multipliers for central township buyers.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Local Buyer & Investor Insights:</strong> Local families seeking room for horses, hobby farming, or large detached workshops choose central townships to gain significant land area while remaining connected to Highway 17 corridors.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Check Home Equity
+                        </a>
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Find Local Properties
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CLUSTER 4 -->
+                <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50/90 shadow-sm space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="font-black text-slate-900 text-xl sm:text-2xl flex items-center gap-2">
+                            <span>⛰️</span> 4. The Highlands & Lakes Pockets
+                        </h3>
+                        <span class="bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full">
+                            Barry’s Bay, Madawaska Valley, Killaloe, Round Lake
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-900">For Local Homeowners:</strong> Waterfront valuations along Round Lake, Golden Lake, and Madawaska Valley waterways hold long-term stability. Cottage owners evaluating whether to sell or winterize seasonal residences can unlock maximum market equity by converting seasonal properties into year-round accessible homes.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Renovation & Equity ROI:</strong> Upgrading shoreline docks, winterizing plumbing, and installing backup generator hookups dramatically expand buyer appeal.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Local Buyer & Investor Insights:</strong> Local residents seeking year-round lakefront living or secluded acreage benefit from tracking off-season winter listing movements before spring waterfront buyer competition heats up.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Check Home Equity
+                        </a>
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Find Local Properties
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CLUSTER 5 -->
+                <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50/90 shadow-sm space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="font-black text-slate-900 text-xl sm:text-2xl flex items-center gap-2">
+                            <span>🚗</span> 5. Southeastern Growth Gateway
+                        </h3>
+                        <span class="bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full">
+                            Renfrew, Horton, Admaston Bromley, McNab Braeside
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-900">For Local Homeowners:</strong> Highway 17 expansion progress directly supports home valuations in Renfrew, Horton, and McNab/Braeside. Neighborhood sellers benefit from strong buyer demand originating from Ottawa/Kanata commuters seeking manageable travel times paired with small-town community lifestyle advantages.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Renovation & Equity ROI:</strong> Modernizing main bathrooms and creating dedicated home-office spaces maximize sale velocity with hybrid work commuters.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Local Buyer & Investor Insights:</strong> Local families relocating closer to regional healthcare and shopping find established town subdivisions in Renfrew offer an ideal balance of convenience and long-term equity growth.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Check Home Equity
+                        </a>
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Find Local Properties
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CLUSTER 6 -->
+                <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50/90 shadow-sm space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="font-black text-slate-900 text-xl sm:text-2xl flex items-center gap-2">
+                            <span>🛶</span> 6. Calabogie & Southern Highlands
+                        </h3>
+                        <span class="bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full">
+                            Greater Madawaska, Calabogie
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-900">For Local Homeowners:</strong> Premium resort, ski-hill, and lakefront real estate in Calabogie commands high valuation metrics. Owners of mountain chalets, vacant building lots, or custom homes benefit from strategic marketing that highlights year-round lifestyle appeal (skiing, golf, motorsports, boating).
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Renovation & Equity ROI:</strong> High-end interior finishes, stone fireplaces, and outdoor deck entertainment areas drive high equity capture in this luxury cluster.
+                        </p>
+                        <p>
+                            <strong class="text-slate-900">Local Buyer & Investor Insights:</strong> Local buyers examining vacation rental income or permanent relocation near Calabogie Peaks benefit from thorough review of township municipal zoning and short-term rental regulations before purchasing.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Check Home Equity
+                        </a>
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                            Find Local Properties
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 🔴 SELLER & 🔵 BUYER INTENT CONVERSION CARDS -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+                
+                <!-- SELLER INTENT CARD -->
+                <div class="bg-red-50/70 border-2 border-red-200 rounded-2xl p-5 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-2xl">🔴</span>
+                            <h2 class="text-lg sm:text-xl font-extrabold text-red-950">For Local Homeowners (Equity & Upgrading)</h2>
+                        </div>
+                        <ul class="space-y-3 text-slate-800 text-sm sm:text-base font-medium mb-5">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-600 font-bold">•</span>
+                                <span><strong>Comparative Equity Check:</strong> Evaluate current closed MLS® sales on your specific street or township to understand your home's true market value.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-600 font-bold">•</span>
+                                <span><strong>Upgrading & Downsizing Strategy:</strong> Plan your transition smoothly whether moving into larger acreage or sizing down to a low-maintenance layout.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center font-extrabold py-3.5 px-4 rounded-xl text-sm sm:text-base transition shadow flex items-center justify-center gap-1.5">
+                        🏠 Get Your Free Home Equity Check
+                    </a>
+                </div>
+
+                
+
+
+
+
+            <!-- CALL TO ACTION BANNER -->
+<section class="bg-[#0b1329] border border-red-500/30 rounded-2xl p-6 sm:p-8 text-center shadow-xl mb-8">
+    <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2 leading-tight">
+        Planning Your Next Move in Petawawa, Pembroke or Renfrew County?
+    </h3>
+    <p class="text-slate-300 text-sm sm:text-base max-w-lg mx-auto mb-5 leading-relaxed">
+        Get direct Ottawa Valley market advice, instant MLS® alerts, or a confidential home equity check with zero obligation.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-sm sm:max-w-md mx-auto">
+        
+        <!-- BLUE BUYER BUTTON -->
+        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-4 rounded-xl shadow-md hover:bg-blue-700 transition leading-tight block">
+            🔍 <span class="block">Buy Smart</span>
+            <span class="block">No-Obligation</span>
+        </a>
+
+        <!-- RED SELLER BUTTON -->
+        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="bg-red-600 text-white font-bold py-3 px-4 rounded-xl shadow-md hover:bg-red-700 transition leading-tight block">
+            🏠 <span class="block">Get Free</span>
+            <span class="block">Home Valuation</span>
+        </a>
+
+    </div>
+</section>
+
+
+            <!-- FOOTER -->
+            <footer class="border-t border-slate-200 pt-5 bg-slate-50 p-4 rounded-2xl text-left border">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div>
+                        <h4 class="text-base font-extrabold text-slate-900">Prakash Solanki, REALTOR®</h4>
+                        <p class="text-slate-700 text-sm font-medium">RE/MAX Pembroke Realty Ltd., Brokerage</p>
+                        <p class="text-slate-900 font-bold text-sm mt-1">
+                            Direct: <a href="tel:6132033313" class="text-blue-700 hover:underline font-extrabold">(613) 203-3313</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+        </article>
+    </div>
+
+    <!-- STICKY BOTTOM TOOLBAR -->
+    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-3 px-4 z-50 shadow-2xl">
+      <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
+        <div class="hidden md:block">
+          <p class="text-sm font-bold text-slate-100">
+              Planning to Buy or Sell Anywhere in the Ottawa Valley?
+          </p>
+         
+        </div>
+        <div class="flex items-center gap-2.5 w-full md:w-auto justify-center">
+          <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow transition">
+            Free Evaluation / Sell High
+          </a>
+          <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow transition">
+            Buy Smart / Free Alerts
+          </a>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

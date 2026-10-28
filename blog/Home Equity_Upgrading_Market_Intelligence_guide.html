@@ -28,26 +28,22 @@
     <!-- Tailwind CSS & Google Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
+   <style>
     html { 
         scroll-behavior: smooth; 
-        overscroll-behavior-y: none; 
     }
     html, body { overflow-x: hidden; width: 100%; position: relative; }
     body { 
         font-family: 'Plus Jakarta Sans', sans-serif; 
-        touch-action: pan-y; 
     }
 </style>
-
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-30">
+<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-32">
 
    
 
     <!-- MAIN ARTICLE & CONTENT CONTAINER -->
-    <div class="max-w-3xl mx-auto bg-white text-slate-900 p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-2xl mb-16 overflow-hidden">
+    <div class="max-w-3xl mx-auto bg-white text-slate-900 p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-2xl mb-8 overflow-hidden">
         
         <article class="max-w-4xl mx-auto">
             
@@ -311,35 +307,19 @@
     <!-- STICKY BOTTOM TOOLBAR -->
     <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700 py-3 px-4 z-50 shadow-2xl">
       <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
-        
-        <!-- Left side text (Visible on Desktop/Tablet) -->
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
           <p class="text-sm font-bold text-slate-100">
-            Planning to Buy or Sell Anywhere in the Ottawa Valley?
+              Planning to Buy or Sell Anywhere in the Ottawa Valley?
           </p>
+         
         </div>
-
-        <!-- Right side navigation & call-to-action buttons -->
-        <div class="flex items-center gap-2 w-full lg:w-auto justify-between sm:justify-center">
-          
-          <!-- Home Icon Button to Main Website -->
-          <a href="https://solankihomes.ca" class="flex items-center gap-1.5 px-3 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-100 font-extrabold text-xs sm:text-sm rounded-xl border border-slate-600 transition shrink-0" title="Go to SolankiHomes.ca Home Page">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current text-amber-400" viewBox="0 0 24 24">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-            </svg>
-            <span>SolankiHomes.ca</span>
+        <div class="flex items-center gap-2.5 w-full md:w-auto justify-center">
+          <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow transition">
+            Free Evaluation / Sell High
           </a>
-
-          <!-- Sell Button -->
-          <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 lg:flex-none text-center px-3 sm:px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow transition whitespace-nowrap">
-            Free Evaluation
+          <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow transition">
+            Buy Smart / Free Alerts
           </a>
-
-          <!-- Buy Button -->
-          <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="flex-1 lg:flex-none text-center px-3 sm:px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow transition whitespace-nowrap">
-            Buy Smart
-          </a>
-
         </div>
       </div>
     </div>

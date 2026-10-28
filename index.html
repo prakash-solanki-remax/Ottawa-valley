@@ -165,11 +165,14 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
 
-    <!-- 1. REDESIGNED NAVIGATION HEADER -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
+<!-- 1. REDESIGNED NAVIGATION HEADER (2-ROW MOBILE / 1-ROW DESKTOP) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2 md:gap-4 w-full">
+        
+        <!-- TOP ROW ON MOBILE / LEFT & CENTER ON DESKTOP -->
+        <div class="flex items-center justify-between min-w-0 w-full md:w-auto gap-2">
             
-            <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & BOLD ADDRESS -->
+            <!-- LEFT: AGENT NAME, REALTOR® & BROKERAGE -->
             <a href="#" class="flex flex-col min-w-0 flex-shrink group">
                 <div class="flex items-center gap-1.5 leading-tight truncate">
                     <span class="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
@@ -182,26 +185,35 @@
                 <span class="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
                     RE/MAX Pembroke Realty Ltd.
                 </span>
-                <span class="text-[10px] sm:text-[11px] font-bold text-slate-600 block leading-tight mt-0.5 truncate">
-                    📍 10A Canadian Forces Dr., Petawawa, ON
-                </span>
             </a>
 
-            <!-- CENTER: PROMINENT RE/MAX LOGO (DESKTOP & MOBILE INTEGRATED) -->
-            <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
-            </div>
-
-            <!-- RIGHT: DESKTOP CLICK-TO-CALL BUTTON (HIDDEN ON MOBILE TO PREVENT CLUTTER) -->
-            <div class="hidden md:flex items-center flex-shrink-0">
-                <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
-                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-                    <span>(613) 203-3313</span>
-                </a>
+            <!-- CENTER: PROMINENT RE/MAX LOGO -->
+            <div class="flex items-center justify-end md:justify-center flex-shrink-0 pl-1 sm:px-4">
+                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-9 sm:h-12 md:h-14 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
             </div>
 
         </div>
-    </header>
+
+        <!-- BOTTOM ROW ON MOBILE / RIGHT SIDE ON DESKTOP: CLICK-TO-CALL BUTTON -->
+        <div class="flex items-center justify-center flex-shrink-0 w-full md:w-auto pt-1 md:pt-0 border-t md:border-t-0 border-slate-100">
+            <a href="tel:16132033313" class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                <span>Call (613) 203-3313</span>
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+    
+
+
+
+
+    
 
     <!-- 2. HERO SECTION WITH 4 CARDS & HEADSHOT -->
     <section class="hero-bg text-white relative overflow-hidden pt-8 pb-14 sm:pt-14 sm:pb-20 px-3.5 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">

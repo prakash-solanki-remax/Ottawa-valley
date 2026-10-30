@@ -14,24 +14,31 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-24">
+<body class="bg-slate-900 text-slate-100 min-h-screen pt-14 py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-24">
 
-    <!-- TOP WEBSITE BRANDING HEADER -->
- <!--   <div class="max-w-3xl mx-auto bg-white text-slate-900 rounded-2xl p-4 sm:p-5 mb-4 shadow-lg border border-slate-200 flex items-center justify-between gap-2 overflow-hidden">
-        <div class="min-w-0 flex-1">
-            <h2 class="text-base sm:text-2xl font-extrabold text-slate-900 leading-tight truncate">
-                Prakash Solanki <span class="text-blue-700">REALTOR®</span>
-            </h2>
-            <p class="text-xs sm:text-sm font-bold text-slate-700 truncate">RE/MAX PEMBROKE REALTY LTD.</p>
-            <p class="text-xs sm:text-sm text-slate-600 flex items-center gap-1 mt-0.5 truncate">
-                📍 10A Canadian Forces Dr., Petawawa, ON
-            </p>
+    <!-- TOP THIN STICKY NAVBAR WITH HOME ICON & WEBSITE LINK -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/80 px-3 py-2 shadow-md">
+        <div class="max-w-3xl mx-auto flex items-center justify-between gap-2">
+            
+            <!-- LEFT: HOME ICON & MAIN WEBSITE LINK -->
+            <a href="https://www.solankihomes.ca" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-extrabold text-xs sm:text-sm tracking-wide transition-colors group">
+                <svg class="w-4 h-4 text-amber-400 group-hover:scale-110 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                <span class="underline underline-offset-2 decoration-amber-400/50 group-hover:decoration-amber-300">www.SolankiHomes.ca</span>
+            </a>
+
+            <!-- RIGHT: AGENT BRANDING / DIRECT LINK -->
+            <div class="flex items-center gap-2">
+                <span class="text-[11px] sm:text-xs font-bold text-slate-300 truncate hidden xs:inline">Prakash Solanki REALTOR®</span>
+                <a href="https://www.solankihomes.ca" class="bg-blue-600 hover:bg-blue-700 text-white text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-lg transition-colors whitespace-nowrap shadow-sm">
+                    Visit Main Site
+                </a>
+            </div>
+
         </div>
-        <div class="flex-shrink-0">
-            <img src="../remax_logo_bann.png" alt="RE/MAX Logo" class="h-8 sm:h-11 max-w-[130px] sm:max-w-none w-auto object-contain" onerror="this.onerror=null; this.src='../remax_logo.png';">
-        </div>
-    </div>
--->
+    </nav>
+
     <!-- MAIN ARTICLE CARD -->
     <div class="max-w-3xl mx-auto bg-white text-slate-900 p-5 sm:p-10 rounded-2xl border border-slate-200 shadow-2xl mb-8 overflow-hidden">
         
@@ -39,16 +46,6 @@
             
             <!-- ARTICLE HEADER -->
             <header class="mb-8 border-b border-slate-200 pb-6">
-                <!-- BADGES -->
-     <!--           <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 mb-5 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
-                    <span class="inline-block bg-slate-900 text-amber-400 text-xs sm:text-sm font-black px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-sm">
-                        SolankiHomes.ca Blog
-                    </span>
-                    <span class="inline-block bg-blue-100 text-blue-900 text-xs sm:text-sm font-extrabold px-3 py-1.5 rounded-lg uppercase tracking-wider">
-                        Laurentian Valley Real Estate Guide
-                    </span>
-                </div>
--->
                 <!-- MAIN TITLE -->
                 <h1 class="text-2xl sm:text-4xl font-black text-slate-900 leading-snug mb-4">
                     Closing Costs and Financial Steps for Buying a Home in the Ottawa Valley.
@@ -69,7 +66,6 @@
             <!-- ARTICLE BODY CONTENT -->
             <section class="mb-8 text-slate-800 leading-relaxed space-y-4 text-sm sm:text-lg">
                 <p>
-                 <!-- Nestled along the borders of Pembroke and Petawawa, the township of <strong>Laurentian Valley</strong> offers buyers the perfect blend of picturesque rural acreage, quiet residential subdivisions, and fast access to major regional hubs such as Canadian Forces Base (CFB) Petawawa and the Pembroke Regional Hospital. Whether you are relocating for a military posting, upgrading to a larger country property, or purchasing your first starter home, acquiring real estate in this corner of the Ottawa Valley is an exciting venture. -->
                   Nestled along the borders of Pembroke and Petawawa, the township of Laurentian Valley offers buyers the perfect blend of picturesque rural acreage, quiet residential subdivisions, and fast access to major regional hubs such as Canadian Forces Base (CFB) Petawawa and the Pembroke Regional Hospital. Whether you are relocating for a military posting, upgrading to a larger country property, or purchasing your first starter home, acquiring real estate in this corner of the Ottawa Valley is an exciting venture.   
                 </p>
                 <p>
@@ -176,7 +172,7 @@
                 </div>
             </section>
 
-            <!-- CALL TO ACTION BANNER (MATCHES YOUR ATTACHED IMAGE DESIGN) -->
+            <!-- CALL TO ACTION BANNER -->
             <section class="bg-[#0b1329] border border-red-500/30 rounded-2xl p-6 sm:p-8 mb-8 text-center shadow-xl">
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 leading-tight">
                   Planning to Buy or Sell in Laurentian Valley or Anywhere in the Ottawa Valley?
@@ -200,8 +196,6 @@
                   <div>
                     <h4 class="text-base font-bold text-slate-900">Prakash Solanki, REALTOR®</h4>
                     <p class="text-slate-600 text-xs sm:text-sm">RE/MAX Pembroke Realty Ltd., Brokerage</p>
-              <!--      <p class="text-slate-600 text-xs sm:text-sm">Serving Laurentian Valley, Petawawa, Pembroke, & Renfrew County</p>
-                    <p class="text-slate-900 font-bold text-xs sm:text-sm mt-1">Direct: <a href="tel:6132033313" class="text-blue-600 hover:underline">(613) 203-3313</a></p>  -->
                   </div>
                   <div class="text-center sm:text-right w-full sm:w-auto">
                     <a href="tel:6132033313" class="inline-block w-full sm:w-auto text-center bg-slate-900 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition">
@@ -221,10 +215,6 @@
           <p class="text-xs sm:text-sm font-bold text-slate-100">
               Planning to Buy or Sell?
           </p>
-     <!--     <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">
-            100% Free & No Obligation
-          </p>   
-      -->      
         </div>
         <div class="flex items-center gap-2.5 w-full sm:w-auto justify-center">
           <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow transition">

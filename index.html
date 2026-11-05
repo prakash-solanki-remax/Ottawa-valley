@@ -276,32 +276,38 @@
                                 Explore live municipal market statistics, real-time inventory counts, average days on market, and verified sold data across our local communities:
                             </p>
                             
-                            <div class="relative flex items-center gap-1 mb-3 w-full min-w-0">
-                                <button onclick="scrollRow('market-towns-scroll', -150)" aria-label="Previous towns" class="flex-shrink-0 bg-remax-red text-white font-black px-2.5 py-2 rounded-lg text-sm hover:bg-remax-blue transition shadow-sm">
-                                    ❮
-                                </button>
-                                
-                                <div id="market-towns-scroll" class="flex items-center gap-1.5 overflow-x-auto custom-scroll py-1 px-1 flex-grow min-w-0">
-                                    <a href="https://myre.io/0nkCXcMs5Suh" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Pembroke</a>
-                                    <a href="https://myre.io/0IZdTFHKTc4t" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Petawawa</a>
-                                    <a href="https://myre.io/001oKrkQvGdd" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Deep River</a>
-                                    <a href="https://myre.io/0zyHIUn8bfKj" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Chalk River & Laurentian Hills S.</a>
-                                    <a href="https://myre.io/0CdzbeavFbhv" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Laurentian Valley</a>
-                                    <a href="https://myre.io/0Fn9REDP4lSk" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Renfrew</a>
-                                    <a href="https://myre.io/0xZd02GS6mpf" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Head Township</a>
-                                    <a href="https://myre.io/0fKA4ZxnKgcb" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Laurentian Hills North</a>
-                                    <a href="https://myre.io/0UitvkvUm50f" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Greater Madawaska</a>
-                                    <a href="https://myre.io/0P2uginx4btv" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Horton Township</a>
-                                    <a href="https://myre.io/0NepN5trQGjr" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Arnprior</a>
-                                    <a href="https://myre.io/0HDlWs8v2fTp" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Eganville & Bonnechere Valley</a>
-                                    <a href="https://myre.io/0KfzgErQncYb" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Madawaska Valley</a>
-                                    <a href="https://myre.io/0zICaluMMZqu" target="_blank" class="text-xs font-semibold bg-remax-red hover:bg-remax-blue text-white px-3 py-1.5 rounded-lg border border-remax-red hover:border-remax-blue transition flex-shrink-0 shadow-sm">Killaloe, Hagarty, Richards, Round Lake</a>
-                                </div>
+<div class="relative flex items-center gap-1.5 mb-3 w-full min-w-0">
+    <!-- LEFT ARROW BUTTON -->
+    <button type="button" onclick="scrollRow('market-towns-scroll', -250)" aria-label="Previous towns" class="flex-shrink-0 bg-remax-red hover:bg-red-700 text-white font-black px-3 py-2.5 rounded-xl text-sm transition shadow-md z-20 cursor-pointer">
+        ❮
+    </button>
+    
+    <!-- TOWN BADGES SCROLLER -->
+    <div id="market-towns-scroll" class="flex items-center gap-1.5 overflow-x-auto custom-scroll py-1 px-1 flex-grow min-w-0 scroll-smooth">
+        <a href="https://myre.io/0nkCXcMs5Suh" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Pembroke</a>
+        <a href="https://myre.io/0IZdTFHKTc4t" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Petawawa</a>
+        <a href="https://myre.io/001oKrkQvGdd" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Deep River</a>
+        <a href="https://myre.io/0zyHIUn8bfKj" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Chalk River & Laurentian Hills S.</a>
+        <a href="https://myre.io/0CdzbeavFbhv" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Laurentian Valley</a>
+        <a href="https://myre.io/0Fn9REDP4lSk" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Renfrew</a>
+        <a href="https://myre.io/0xZd02GS6mpf" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Head Township</a>
+        <a href="https://myre.io/0fKA4ZxnKgcb" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Laurentian Hills North</a>
+        <a href="https://myre.io/0UitvkvUm50f" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Greater Madawaska</a>
+        <a href="https://myre.io/0P2uginx4btv" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Horton Township</a>
+        <a href="https://myre.io/0NepN5trQGjr" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Arnprior</a>
+        <a href="https://myre.io/0HDlWs8v2fTp" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Eganville & Bonnechere Valley</a>
+        <a href="https://myre.io/0KfzgErQncYb" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Madawaska Valley</a>
+        <a href="https://myre.io/0zICaluMMZqu" target="_blank" class="text-xs font-extrabold bg-remax-red hover:bg-red-700 text-white px-3.5 py-2 rounded-xl border border-remax-red transition flex-shrink-0 shadow-sm">Killaloe, Hagarty, Richards, Round Lake</a>
+    </div>
 
-                                <button onclick="scrollRow('market-towns-scroll', 150)" aria-label="Next towns" class="flex-shrink-0 bg-remax-red text-white font-black px-2.5 py-2 rounded-lg text-sm hover:bg-remax-blue transition shadow-sm">
-                                    ❯
-                                </button>
-                            </div>
+    <!-- RIGHT ARROW BUTTON -->
+    <button type="button" onclick="scrollRow('market-towns-scroll', 250)" aria-label="Next towns" class="flex-shrink-0 bg-remax-red hover:bg-red-700 text-white font-black px-3 py-2.5 rounded-xl text-sm transition shadow-md z-20 cursor-pointer">
+        ❯
+    </button>
+</div>
+
+
+                            
                         </div>
                         <a href="https://myre.io/0O8hS2S5rI3e" target="_blank" class="mt-2 text-sm font-extrabold text-white bg-remax-red hover:bg-remax-blue border border-remax-red hover:border-remax-blue px-4 py-3 rounded-xl transition flex items-center justify-between group w-full shadow-md">
                             <span>Full Region Report</span>

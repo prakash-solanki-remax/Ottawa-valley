@@ -119,7 +119,7 @@
         }
         html { 
             scroll-behavior: smooth; 
-            overscroll-behavior-y: none; /* Prevents mobile rubber-band locking at page bottom */
+            overscroll-behavior-y: none;
         }
 
         body { 
@@ -130,7 +130,7 @@
             overflow-x: hidden; 
             -webkit-tap-highlight-color: transparent; 
             padding-top: 70px; 
-            touch-action: pan-y; /* Tells mobile touch engines to prioritize vertical swipe scrolling */
+            touch-action: pan-y;
         }
         .hero-bg {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #002266 100%);
@@ -166,11 +166,10 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
 
 <!-- 1. NAVIGATION HEADER -->
-<!-- <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">  -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
         
-        <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & ADDRESS (VISIBLE ON BOTH, BUT STACKS CLEANLY ON MOBILE) -->
+        <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & ADDRESS -->
         <a href="#" class="flex flex-col min-w-0 flex-shrink group">
             <div class="flex items-center gap-1.5 leading-tight truncate">
                 <span class="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
@@ -188,43 +187,30 @@
             </span>
         </a>
 
-
-
-    
-        <!-- CENTER: PROMINENT RE/MAX LOGO -->
-   <!--     <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
-            <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
-        </div>
--->
+        <!-- CENTER: RE/MAX LOGO -->
         <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
-    <div class="bg-[#00205B] px-3 py-1.5 rounded-xl shadow-md border border-white/20 flex items-center justify-center">
-        <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
-    </div>
-</div>
+            <div class="bg-[#00205B] px-3 py-1.5 rounded-xl shadow-md border border-white/20 flex items-center justify-center">
+                <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
+            </div>
+        </div>
         
-      <!-- RIGHT: CLICK-TO-CALL BUTTON (HIDDEN ON MOBILE TOP ROW, VISIBLE AS FULL BUTTON ON DESKTOP) -->
-    <div class="hidden md:flex items-center flex-shrink-0">
-        <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
-            <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-            <span>(613) 203-3313</span>
+        <!-- RIGHT: CLICK-TO-CALL BUTTON (DESKTOP) -->
+        <div class="hidden md:flex items-center flex-shrink-0">
+            <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                <span>(613) 203-3313</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MOBILE-ONLY SECOND ROW FOR PHONE BUTTON -->
+    <div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
+        <a href="tel:16132033313" class="w-full inline-flex items-center justify-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2 rounded-xl text-xs transition-all duration-200 shadow-md">
+            <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            <span>Call (613) 203-3313</span>
         </a>
     </div>
-
-</div>
-
-<!-- MOBILE-ONLY SECOND ROW FOR PHONE BUTTON (ROYAL NAVY BACKGROUND) -->
-<div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
-    <a href="tel:16132033313" class="w-full inline-flex items-center justify-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2 rounded-xl text-xs transition-all duration-200 shadow-md">
-        <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-        <span>Call (613) 203-3313</span>
-    </a>
-</div>
 </header>
-
-
-
-
-    
 
     <!-- 2. HERO SECTION WITH 4 CARDS & HEADSHOT -->
     <section class="hero-bg text-white relative overflow-hidden pt-8 pb-14 sm:pt-14 sm:pb-20 px-3.5 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">
@@ -354,24 +340,16 @@
             </div>
             
             <!-- RIGHT COLUMN: HEADSHOT CARD -->
-           <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0">
-    <div class="relative w-full max-w-xs sm:max-w-sm">
-        <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-2 scale-105 opacity-40 blur-sm"></div>
-
-        <div class="relative bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-700/80">
-            <!-- Your Main Photo -->
-            <img src="Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="w-full h-80 sm:h-[420px] object-cover object-top" onerror="this.onerror=null; this.src='Prakash.jpeg';">  
-
-            <!-- RE/MAX Logo Badge with clean styling -->
-      <!--      <div class="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex items-center justify-center bg-white/95 backdrop-blur-md px-4 py-2 sm:px-5 sm:py-2.5 rounded-2xl shadow-xl border border-slate-200/50" title="RE/MAX Pembroke Realty Ltd.">
-                <img src="Remax_with_balloon_2.jpg" alt="RE/MAX Logo" class="h-5 sm:h-7 w-auto object-contain flex-shrink-0" onerror="this.onerror=null; this.src='Remax_with_balloon.jpg';">
-            </div>   -->
+            <div class="lg:col-span-5 flex justify-center w-full px-2 sm:px-0">
+                <div class="relative w-full max-w-xs sm:max-w-sm">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-remax-red to-remax-blue rounded-3xl transform rotate-2 scale-105 opacity-40 blur-sm"></div>
+                    <div class="relative bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-700/80">
+                        <img src="Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="w-full h-80 sm:h-[420px] object-cover object-top" onerror="this.onerror=null; this.src='Prakash.jpeg';">  
+                    </div>
+                </div>
+            </div>  
+            
         </div>
-    </div>
-</div>  
-        
-        
-</div>
     </section>
 
     <!-- 3. OTTAWA VALLEY COMMUNITIES & SPECIALTY MLS® LISTINGS SECTION -->
@@ -751,7 +729,7 @@
 
     </section>
 
-    <!-- SOLANKIHOMES INSIGHTS EMBEDDED DASHBOARD WIDGET (DATE-SORTED LIST) -->
+    <!-- SOLANKIHOMES INSIGHTS EMBEDDED DASHBOARD WIDGET -->
     <style>
       .sh-widget-container {
         max-width: 1100px;
@@ -826,7 +804,7 @@
         padding: 16px;
         border-right: 1px solid #334155;
         overflow-y: auto;
-        height: 310px; /* Compact height showing 3 articles */
+        height: 310px;
         scrollbar-width: thin;
       }
       .sh-sidebar::-webkit-scrollbar {
@@ -861,7 +839,7 @@
       .sh-viewer iframe {
         width: 100%;
         height: 100%;
-        min-height: 520px; /* Main article reading window remains full height */
+        min-height: 520px;
         border: none;
         overscroll-behavior: contain;
         touch-action: pan-y;
@@ -884,7 +862,7 @@
          <iframe id="sh-frame" title="SolankiHomes Article Viewer" style="width: 100%; height: 520px; border: none;"></iframe>
         </div>
 
-        <div class="sh-sidebar" style="width: 320px; min-width: 320px; flex-shrink: 0;">
+        <div class="sh-sidebar">
           <input type="text" id="sh-search-input" placeholder="Search articles or topics..." class="sh-search" onkeyup="filterPosts()">
           
           <div id="sh-articles-list">
@@ -893,40 +871,26 @@
             </p>
 
             <!-- BLOG_LIST_START -->
-<!--            <div class="space-y-2">
-                <a href="#" onclick="loadArticle('/blog/2026-10-21-laurentian-valley.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
-                <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
-                <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Laurentian Valley Real Estate & Living Guide</span>
-              </a>
-              <a href="#" onclick="loadArticle('/blog/2026-10-21-laurentian-hills.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
-                <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
-                <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Laurentian Hills Real Estate & Living Guide</span>
-              </a>
+            <div class="space-y-2">
+                <a href="#" onclick="loadArticle('/blog/Home_Equity_Upgrading_Market_Intelligence_guide.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                    <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 28, 2026</span>
+                    <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Homeowners & Buyers Market Intelligence Guide</span>
+                </a>
+                <a href="#" onclick="loadArticle('/blog/2026-10-21-Ottawa-valley.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                    <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
+                    <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Closing Costs and Financial Steps</span>
+                </a>
+                <a href="#" onclick="loadArticle('/blog/2026-10-21-laurentian-hills.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                    <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
+                    <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Laurentian Hills Real Estate & Living Guide</span>
+                </a>
             </div>
- -->
-
-<!-- BLOG_LIST_START -->
-           <div class="space-y-2">
-    <a href="#" onclick="loadArticle('/blog/Home_Equity_Upgrading_Market_Intelligence_guide.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
-        <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 28, 2026</span>
-        <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Homeowners & Buyers Market Intelligence Guide</span>
-    </a>
-    <a href="#" onclick="loadArticle('/blog/2026-10-21-Ottawa-valley.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
-        <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
-        <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Closing Costs and Financial Steps</span>
-    </a>
-    <a href="#" onclick="loadArticle('/blog/2026-10-21-laurentian-hills.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
-        <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
-        <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Laurentian Hills Real Estate & Living Guide</span>
-    </a>
-</div>
             <!-- BLOG_LIST_END -->
+          </div><!-- /#sh-articles-list -->
+        </div><!-- /.sh-sidebar -->
+      </div><!-- /.sh-body -->
+    </div><!-- /.sh-widget-container -->
 
-
-              
-
-
-              
     <!-- 4. HERITAGE & LIFESTYLE OF THE OTTAWA VALLEY SECTION -->
     <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800 w-full">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-remax-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -993,15 +957,13 @@
                     Direct Connection
                 </div>
 
-
-<div class="mb-6 text-left pt-4">
-    <span class="text-remax-gold font-bold text-xs uppercase tracking-widest block mb-1 mt-2">Free Buyer Consultation</span>
-    <h3 class="text-2xl sm:text-3xl font-black text-white">Have a Real Estate Question?</h3>
-    <p class="text-sm sm:text-sm text-slate-300 mt-2 leading-relaxed">
-        Send a message below and I'll get right back to you.
-    </p>
-</div>
-                
+                <div class="mb-6 text-left pt-4">
+                    <span class="text-remax-gold font-bold text-xs uppercase tracking-widest block mb-1 mt-2">Free Buyer Consultation</span>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white">Have a Real Estate Question?</h3>
+                    <p class="text-sm sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                        Send a message below and I'll get right back to you.
+                    </p>
+                </div>
 
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { document.getElementById('leadForm').style.display='none'; document.getElementById('thankYouMessage').style.display='block'; }"></iframe>
 
@@ -1028,7 +990,6 @@
                             <span>Send Message</span>
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </button>
-                        
                     </div>
                 </form>
 
@@ -1084,12 +1045,6 @@
         </div>
     </footer>
 
-    <!-- MOBILE STICKY CALL BUTTON (BOTTOM-LEFT) -->
-<!--    <a href="tel:16132033313" class="md:hidden fixed bottom-4 left-4 z-50 inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-full shadow-2xl border-2 border-white transition-transform active:scale-95">
-        <svg class="w-4 h-4 text-white flex-shrink-0 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-        <span class="text-xs tracking-wide">(613) 203-3313</span>
-    </a>
--->
     <!-- MOBILE-FRIENDLY FLOATING STICKY HEADSHOT BADGE -->
     <div onclick="scrollToForm()" ontouchend="scrollToForm(); event.preventDefault();" class="fixed bottom-4 right-4 z-50 cursor-pointer group flex items-center gap-2.5 bg-slate-900 border-2 border-remax-blue p-2 rounded-full shadow-2xl transition-transform active:scale-95">
         <div class="relative w-11 h-11 flex-shrink-0">

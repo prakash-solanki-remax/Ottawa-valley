@@ -166,6 +166,7 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
 
 <!-- 1. NAVIGATION HEADER -->
+<!-- 1. NAVIGATION HEADER -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
         
@@ -188,38 +189,47 @@
         </a>
 
         <!-- CENTER: RE/MAX LOGO -->
-    <!--    <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
-            <div class="bg-[#00205B] px-3 py-1.5 rounded-xl shadow-md border border-white/20 flex items-center justify-center">
-                <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
-            </div>
-        </div>
-      -->
         <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
-                <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
+            <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
         </div>
 
+        <!-- RIGHT: BUTTONS (DESKTOP) -->
+        <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+            <!-- HOME BUTTON -->
+            <a href="https://solankihomes.ca" class="inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                <span>Home</span>
+            </a>
 
-
-
-        
-        <!-- RIGHT: CLICK-TO-CALL BUTTON (DESKTOP) -->
-        <div class="hidden md:flex items-center flex-shrink-0">
-            <a href="tel:16132033313" class="inline-flex items-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+            <!-- PHONE BUTTON -->
+            <a href="tel:16132033313" class="inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
                 <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                 <span>(613) 203-3313</span>
             </a>
         </div>
     </div>
 
-    <!-- MOBILE-ONLY SECOND ROW FOR PHONE BUTTON -->
+    <!-- MOBILE-ONLY SECOND ROW FOR BUTTONS -->
     <div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
-        <a href="tel:16132033313" class="w-full inline-flex items-center justify-center gap-2 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2 rounded-xl text-xs transition-all duration-200 shadow-md">
-            <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-            <span>Call (613) 203-3313</span>
-        </a>
+        <div class="flex items-center gap-2 w-full max-w-sm">
+            <!-- HOME BUTTON (MOBILE - 50% Width) -->
+            <a href="https://solankihomes.ca" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-3 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                <span>Home</span>
+            </a>
+
+            <!-- PHONE BUTTON (MOBILE - 50% Width) -->
+            <a href="tel:16132033313" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-2 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                <span>(613) 203-3313</span>
+            </a>
+        </div>
     </div>
 </header>
-
     <!-- 2. HERO SECTION WITH 4 CARDS & HEADSHOT -->
     <section class="hero-bg text-white relative overflow-hidden pt-8 pb-14 sm:pt-14 sm:pb-20 px-3.5 sm:px-6 lg:px-8 border-b border-slate-800 w-full max-w-full">
         <div class="absolute -top-10 left-1/4 w-96 h-96 bg-remax-blue/30 blur-3xl rounded-full pointer-events-none"></div>

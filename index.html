@@ -866,11 +866,10 @@
         touch-action: pan-y;
       }
     </style>
-
-    <div class="sh-widget-container">
+<div class="sh-widget-container">
       <div class="sh-header">
         <div class="sh-brand">
-          <img src="/Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="sh-avatar">
+          <img src="Prakash_new_pic.PNG" alt="Prakash Solanki, REALTOR®" class="sh-avatar">
           <div class="sh-title-area">
             <h2>The Solanki Homes Blog</h2>
             <p class="sh-subtitle">Prakash Solanki, REALTOR® | RE/MAX Pembroke Realty Ltd., Brokerage</p>
@@ -880,8 +879,8 @@
 
       <div class="sh-body">
         <div class="sh-viewer">
-         
-         <iframe id="sh-frame" title="SolankiHomes Article Viewer" loading="lazy" style="width: 100%; height: 520px; border: none;"></iframe>   
+          <!-- 1. Added default src so it loads the latest post immediately -->
+          <iframe id="sh-frame" title="SolankiHomes Article Viewer" src="blog/Essential_Strategies_for_Property_Sellers_and_Homebuyers.html" loading="lazy" style="width: 100%; height: 520px; border: none;"></iframe>   
         </div>
 
         <div class="sh-sidebar">
@@ -891,21 +890,23 @@
             <p class="text-xs text-slate-400 font-medium px-1 mb-3 italic">
               📅 All Blog Posts (Arranged by Date):
             </p>
-<!-- BLOG_LIST_START -->
+
+            <!-- BLOG_LIST_START -->
             <div class="space-y-2">
-                <a href="blog/Essential_Strategies_for_Property_Sellers_and_Homebuyers.html" target="_blank" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                <!-- 2. Restored onclick to load inside iframe without opening new tabs -->
+                <a href="#" onclick="loadArticle('blog/Essential_Strategies_for_Property_Sellers_and_Homebuyers.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
                     <span class="text-[10px] font-extrabold text-remax-gold block mb-1">November 6, 2026</span>
                     <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Essential Strategies for Property Sellers and Homebuyers</span>
                 </a>
-                <a href="blog/Home_Equity_Upgrading_Market_Intelligence_guide.html" target="_blank" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                <a href="#" onclick="loadArticle('blog/Home_Equity_Upgrading_Market_Intelligence_guide.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
                     <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 28, 2026</span>
                     <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Homeowners & Buyers Market Intelligence Guide</span>
                 </a>
-                <a href="blog/2026-10-21-Ottawa-valley.html" target="_blank" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                <a href="#" onclick="loadArticle('blog/2026-10-21-Ottawa-valley.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
                     <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
                     <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Closing Costs and Financial Steps</span>
                 </a>
-                <a href="blog/2026-10-21-laurentian-hills.html" target="_blank" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
+                <a href="#" onclick="loadArticle('blog/2026-10-21-laurentian-hills.html', this); return false;" class="sh-post-item block p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition group">
                     <span class="text-[10px] font-extrabold text-remax-gold block mb-1">October 21, 2026</span>
                     <span class="text-xs font-bold text-white group-hover:text-sky-400 transition leading-snug block">Laurentian Hills Real Estate & Living Guide</span>
                 </a>
@@ -915,7 +916,7 @@
         </div><!-- /.sh-sidebar -->
       </div><!-- /.sh-body -->
     </div><!-- /.sh-widget-container -->
-
+    
     <!-- 4. HERITAGE & LIFESTYLE OF THE OTTAWA VALLEY SECTION -->
     <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-b border-slate-800 w-full">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-remax-blue/10 blur-[120px] rounded-full pointer-events-none"></div>

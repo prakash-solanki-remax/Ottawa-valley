@@ -18,6 +18,9 @@
     <meta property="og:site_name" content="Solanki Homes">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
@@ -25,8 +28,129 @@
             max-width: 850px;
             margin: 0 auto;
             padding: 20px;
+            padding-top: 130px; /* Space so fixed header doesn't cover title */
             background-color: #ffffff;
         }
+
+        /* STICKY HEADER STYLES */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .agent-brand {
+            text-decoration: none;
+            color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        .agent-name {
+            font-size: 1.1em;
+            font-weight: 800;
+        }
+        .realtor-tag {
+            color: #00205B;
+            font-size: 0.75em;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-left: 4px;
+        }
+        .brokerage-name {
+            font-size: 0.75em;
+            font-weight: 800;
+            color: #334155;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        .address-tag {
+            font-size: 0.7em;
+            color: #64748b;
+            margin-top: 2px;
+        }
+        .logo-container img {
+            height: 42px;
+            width: auto;
+            object-fit: contain;
+        }
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-header-home {
+            background-color: #00205B;
+            color: #ffffff !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85em;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-header-phone {
+            background-color: #DC143C;
+            color: #ffffff !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85em;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .mobile-btn-bar {
+            display: none;
+            background-color: #00205B;
+            padding: 8px;
+            text-align: center;
+        }
+        .mobile-btn-container {
+            display: flex;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .mobile-btn-container a {
+            flex: 1;
+            padding: 8px;
+            border-radius: 6px;
+            color: #ffffff !important;
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 150px;
+            }
+            .header-buttons {
+                display: none;
+            }
+            .mobile-btn-bar {
+                display: block;
+            }
+        }
+
+        /* ARTICLE CONTENT STYLES */
         h1 {
             color: #003366;
             font-size: 2em;
@@ -78,9 +202,6 @@
             font-weight: bold;
             font-size: 0.95em;
         }
-        .btn-link:hover {
-            background-color: #002244;
-        }
         .contact-card {
             background-color: #fafafa;
             border: 1px solid #e0e0e0;
@@ -113,6 +234,46 @@
     </style>
 </head>
 <body>
+
+    <!-- STICKY HEADER -->
+    <header class="sticky-header">
+        <div class="header-inner">
+            <!-- LEFT: BRANDING -->
+            <a href="https://solankihomes.ca" class="agent-brand">
+                <div>
+                    <span class="agent-name">Prakash Solanki</span>
+                    <span class="realtor-tag">REALTOR®</span>
+                </div>
+                <span class="brokerage-name">RE/MAX Pembroke Realty Ltd.</span>
+                <span class="address-tag">📍 10A Canadian Forces Dr., Petawawa, ON</span>
+            </a>
+
+            <!-- CENTER: LOGO -->
+            <div class="logo-container">
+                <img src="../remax_logo_bann.png" alt="RE/MAX Logo" onerror="this.onerror=null; this.src='../remax_logo.png';">
+            </div>
+
+            <!-- RIGHT: DESKTOP BUTTONS -->
+            <div class="header-buttons">
+                <a href="https://solankihomes.ca" class="btn-header-home">
+                    <svg style="width:14px;height:14px;" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                    Home
+                </a>
+                <a href="tel:16132033313" class="btn-header-phone">
+                    <svg style="width:14px;height:14px;" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    (613) 203-3313
+                </a>
+            </div>
+        </div>
+
+        <!-- MOBILE BUTTON BAR -->
+        <div class="mobile-btn-bar">
+            <div class="mobile-btn-container">
+                <a href="https://solankihomes.ca" style="background-color:#00205B;">Home</a>
+                <a href="tel:16132033313" style="background-color:#DC143C;">(613) 203-3313</a>
+            </div>
+        </div>
+    </header>
 
     <header>
         <h1>The Ultimate Waterfront Property Buying Checklist in Laurentian Hills, Ontario</h1>

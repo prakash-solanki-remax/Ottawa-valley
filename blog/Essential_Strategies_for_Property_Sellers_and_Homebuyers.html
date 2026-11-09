@@ -1,5 +1,3 @@
-essential strategies for property sllers and homebuyers.html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +17,21 @@ essential strategies for property sllers and homebuyers.html
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Solanki Homes">
 
+    <!-- TAILWIND CSS & RE/MAX COLOR CONFIGURATION -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'remax-blue': '#00205B',
+                        'remax-red': '#DC143C',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -26,7 +39,9 @@ essential strategies for property sllers and homebuyers.html
             color: #333333;
             max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
             background-color: #ffffff;
         }
         h1 {
@@ -114,9 +129,75 @@ essential strategies for property sllers and homebuyers.html
         }
     </style>
 </head>
-<body>
+<body class="pt-28 sm:pt-24">
 
-    <header>
+    <!-- STICKY HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
+            
+            <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & ADDRESS -->
+            <a href="https://solankihomes.ca" class="flex flex-col min-w-0 flex-shrink group text-left no-underline">
+                <div class="flex items-center gap-1.5 leading-tight truncate">
+                    <span class="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
+                        Prakash Solanki
+                    </span>
+                    <span class="text-xs sm:text-xs lg:text-xs font-extrabold tracking-wider text-remax-blue uppercase">
+                        REALTOR®
+                    </span>
+                </div>
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
+                    RE/MAX Pembroke Realty Ltd.
+                </span>
+                <span class="text-[10px] sm:text-[11px] font-bold text-slate-600 block leading-tight mt-0.5 truncate">
+                    📍 10A Canadian Forces Dr., Petawawa, ON
+                </span>
+            </a>
+
+            <!-- CENTER: RE/MAX LOGO -->
+            <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
+                <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='../remax_logo.png';">
+            </div>
+
+            <!-- RIGHT: BUTTONS (DESKTOP) -->
+            <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+                <!-- HOME BUTTON -->
+                <a href="https://solankihomes.ca" class="inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <!-- PHONE BUTTON -->
+                <a href="tel:16132033313" class="inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MOBILE-ONLY SECOND ROW FOR BUTTONS -->
+        <div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
+            <div class="flex items-center gap-2 w-full max-w-sm">
+                <!-- HOME BUTTON (MOBILE - 50% Width) -->
+                <a href="https://solankihomes.ca" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-3 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <!-- PHONE BUTTON (MOBILE - 50% Width) -->
+                <a href="tel:16132033313" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-2 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE HEADER -->
+    <header class="mt-4">
         <h1>Essential Strategies for Property Sellers and Homebuyers</h1>
     </header>
 
@@ -171,21 +252,6 @@ essential strategies for property sllers and homebuyers.html
         </ul>
     </section>
 
-  <!--  <section class="contact-card">
-        <h3>Ready to Discuss Your Real Estate Goals?</h3>
-        <p>I invite you to reach out anytime to discuss your real estate plans and explore your options across the Ottawa Valley:</p>
-        <ul>
-            <li><strong>For Sellers:</strong> <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener">Request Your Complimentary Home Valuation</a></li>
-            <li><strong>For Buyers:</strong> <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener">Request a No-Obligation Buyer Consultation</a></li>
-        </ul>
-        <hr>
-        <p style="margin-bottom: 5px;"><strong>Prakash Solanki, REALTOR®</strong></p>
-        <p style="margin-top: 0; margin-bottom: 5px;">RE/MAX Pembroke Realty Ltd., Brokerage</p>
-        <p style="margin-top: 0; margin-bottom: 5px;"><em>Local Office:</em> 10A Canadian Forces Drive, Petawawa, Ontario</p>
-        <p style="margin-top: 0; margin-bottom: 5px;"><em>Direct Phone:</em> <a href="tel:6132033313">(613) 203-3313</a></p>
-        <p style="margin-top: 0;"><em>Main Web Hub:</em> <a href="https://www.solankihomes.ca" target="_blank" rel="noopener">www.SolankiHomes.ca</a></p>
-    </section>
--->
     <footer>
         <p class="disclaimer">The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Market conditions vary by micro-market and change over time. For specific guidance regarding your real estate goals or property details, reach out directly to schedule a personalized consultation, or consult your legal or financial advisor.</p>
     </footer>

@@ -28,22 +28,21 @@
             max-width: 850px;
             margin: 0 auto;
             padding: 20px;
-            padding-top: 20px; /* Reset padding since wrapper handles spacing */
+            padding-top: 140px; /* Spacing for fixed header */
             background-color: #f8fafc;
         }
         
-        /* PROFESSIONAL HEADER */
+        /* PROFESSIONAL STICKY HEADER */
         .sticky-header {
-            position: relative; /* Changed from fixed to relative to prevent double-header collision gaps */
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 99;
+            z-index: 9999;
             background-color: #ffffff;
             border-bottom: 2px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             width: 100%;
-            margin-bottom: 30px;
         }
         .header-inner {
             max-width: 1100px;
@@ -159,6 +158,9 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-top: 165px;
+            }
             .header-buttons {
                 display: none;
             }
@@ -271,7 +273,7 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- STICKY HEADER -->
     <header class="sticky-header">
         <div class="header-inner">
             <!-- LEFT: AGENT BRANDING -->

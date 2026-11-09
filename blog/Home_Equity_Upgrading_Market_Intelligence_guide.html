@@ -2,12 +2,12 @@
 <html lang="en" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     
     <!-- PRIMARY GOOGLE SEO TAGS -->
     <title>Ottawa Valley Real Estate: Homeowners & Buyers Market Intelligence Guide | Prakash Solanki REALTOR®</title>
-    <meta name="description" content="Local real estate intelligence for Pembroke, Petawawa, Deep River, Renfrew, and Ottawa Valley homeowners. Explore equity strategies, upgrading insights, and township micro-market trends with Prakash Solanki, REALTOR®[cite: 9].">
-    <meta name="keywords" content="MLS Petawawa, Realtor Petawawa, houses for sale in Petawawa, MLS Pembroke, Realtor Pembroke, houses for sale in Pembroke, home equity Pembroke Petawawa, Ottawa Valley real estate guide, Laurentian Valley home values, Deep River real estate, Renfrew home prices, Whitewater Region acreage, upgrading home Pembroke, downsizing Ottawa Valley[cite: 9]">
+    <meta name="description" content="Local real estate intelligence for Pembroke, Petawawa, Deep River, Renfrew, and Ottawa Valley homeowners. Explore equity strategies, upgrading insights, and township micro-market trends with Prakash Solanki, REALTOR®.">
+    <meta name="keywords" content="MLS Petawawa, Realtor Petawawa, houses for sale in Petawawa, MLS Pembroke, Realtor Pembroke, houses for sale in Pembroke, home equity Pembroke Petawawa, Ottawa Valley real estate guide, Laurentian Valley home values, Deep River real estate, Renfrew home prices, Whitewater Region acreage, upgrading home Pembroke, downsizing Ottawa Valley">
     <meta name="author" content="Prakash Solanki REALTOR®">
     <link rel="canonical" href="https://solankihomes.ca/">
 
@@ -15,15 +15,30 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://solankihomes.ca/">
     <meta property="og:title" content="Ottawa Valley Real Estate: Homeowners & Buyers Market Intelligence Guide">
-    <meta property="og:description" content="Local market insights for Pembroke, Petawawa, Deep River, and Renfrew County homeowners. Strategic advice on upgrading, equity valuation, and township shifts[cite: 9].">
+    <meta property="og:description" content="Local market insights for Pembroke, Petawawa, Deep River, and Renfrew County homeowners. Strategic advice on upgrading, equity valuation, and township shifts.">
     <meta property="og:image" content="https://solankihomes.ca/remax_logo_bann.png">
     <meta property="og:site_name" content="Prakash Solanki REALTOR® - RE/MAX Pembroke Realty Ltd.">
 
     <!-- TWITTER / X CARD META TAGS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ottawa Valley Real Estate: Homeowners & Buyers Market Intelligence Guide | Prakash Solanki REALTOR®">
-    <meta name="twitter:description" content="Local equity analysis, upgrading strategies, and neighborhood trends for Pembroke, Petawawa, and Renfrew County residents[cite: 9].">
+    <meta name="twitter:description" content="Local equity analysis, upgrading strategies, and neighborhood trends for Pembroke, Petawawa, and Renfrew County residents.">
     <meta name="twitter:image" content="https://solankihomes.ca/remax_logo_bann.png">
+
+    <!-- Tailwind CSS & RE/MAX Color Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'remax-blue': '#00205B',
+                        'remax-red': '#DC143C',
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -40,21 +55,20 @@
             line-height: 1.7;
             color: #2c3e50;
             background-color: #f8fafc;
-            padding-top: 20px; /* Reset padding since wrapper handles spacing */
+            padding-top: 140px; /* Spacing for fixed header */
         }
 
-               /* PROFESSIONAL HEADER */
+        /* PROFESSIONAL STICKY HEADER */
         .sticky-header {
-            position: relative; /* Changed from fixed to relative to prevent double-header collision gaps */
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 99;
+            z-index: 9999;
             background-color: #ffffff;
             border-bottom: 2px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             width: 100%;
-            margin-bottom: 30px;
         }
         .header-inner {
             max-width: 1100px;
@@ -170,6 +184,9 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-top: 165px;
+            }
             .header-buttons {
                 display: none;
             }
@@ -237,7 +254,7 @@
 </head>
 <body class="px-3 sm:px-6 lg:px-8 pb-36">
 
-    <!-- HEADER -->
+    <!-- STICKY HEADER -->
     <header class="sticky-header">
         <div class="header-inner">
             <!-- LEFT: AGENT BRANDING -->
@@ -252,11 +269,8 @@
 
             <!-- CENTER: RE/MAX LOGO -->
             <div class="logo-container">
-             <!--   <img src="remax_logo_bann.png" alt="RE/MAX Logo" onerror="this.onerror=null; this.src='remax_logo.png';">  -->
-                 <img src="Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='../remax_logo.png';">
-
+                 <img src="../Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='../remax_logo.png';">
             </div>
-
 
             <!-- RIGHT: DESKTOP BUTTONS -->
             <div class="header-buttons">
@@ -289,7 +303,6 @@
             <div class="mb-6 border-b border-slate-200 pb-5">
                 <div class="flex flex-wrap items-center justify-between gap-2.5 mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200">
                     <span class="inline-block bg-slate-900 text-amber-400 text-xs sm:text-sm font-black px-3.5 py-1.5 rounded-lg uppercase tracking-wider shadow-sm">
-                    <!--    The Solanki Homes Blog -->
                     </span>
                 </div>
 
@@ -301,7 +314,7 @@
 
                 <div class="flex flex-wrap items-center justify-between gap-2 text-sm font-bold text-slate-600 pt-3 border-t border-slate-200">
                     <span>Published by <strong class="text-slate-900">Prakash Solanki, REALTOR®</strong> (RE/MAX Pembroke Realty Ltd., Brokerage)[cite: 9]</span>
-                    <span>Direct: <a href="tel:6132033313" class="text-blue-700 hover:underline font-extrabold">(613) 203-3313</a></span>
+                    <span>Direct: <a href="tel:6132033313" class="text-blue-700 hover:underline font-extrabold">(613) 203-3313</a>[cite: 9]</span>
                 </div>
             </div>
 

@@ -168,6 +168,8 @@
             font-weight: bold;
             font-size: 0.9em;
         }
+
+        /* CONTACT CARD & BUTTONS STYLING */
         .contact-card {
             background-color: #f8fafc;
             border: 1px solid #cbd5e1;
@@ -179,6 +181,55 @@
             margin-top: 0;
             border-bottom: none;
         }
+        .action-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 18px 0;
+        }
+        .btn-action-seller {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #DC143C;
+            color: #ffffff !important;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 4px rgba(220, 20, 60, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-action-seller:hover {
+            background-color: #b01030;
+        }
+        .btn-action-buyer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #00205B;
+            color: #ffffff !important;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 4px rgba(0, 32, 91, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-action-buyer:hover {
+            background-color: #001233;
+        }
+        .btn-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         a {
             color: #00205B;
             text-decoration: underline;
@@ -187,10 +238,10 @@
             border: 0;
             height: 1px;
             background: #cbd5e1;
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
-        /* SMALL DISCLAIMER STYLING */
+        /* DISCLAIMER STYLING */
         .disclaimer-box {
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -198,7 +249,7 @@
             border-radius: 8px;
             margin-top: 25px;
             margin-bottom: 20px;
-            font-size: 0.75rem; /* Small font size */
+            font-size: 0.75rem;
             color: #64748b;
             line-height: 1.4;
         }
@@ -208,7 +259,7 @@
             margin-bottom: 4px;
         }
 
-        /* FIXED CLEAN FOOTER STYLING */
+        /* FOOTER STYLING */
         .custom-footer {
             border-top: 1px solid #e2e8f0;
             padding-top: 15px;
@@ -343,13 +394,22 @@
             </ul>
         </section>
 
+        <!-- CONTACT & ACTION BUTTONS SECTION -->
         <section class="contact-card">
             <h3>Ready to Discuss Your Real Estate Goals?</h3>
-            <p>I invite you to reach out anytime to discuss your real estate plans and explore your options across the Ottawa Valley:</p>
-            <ul>
-                <li><strong>For Sellers:</strong> <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener">Request Your Complimentary Home Valuation</a></li>
-                <li><strong>For Buyers:</strong> <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener">Request a No-Obligation Buyer Consultation</a></li>
-            </ul>
+            <p>Select an option below to schedule a consultation or get your market report:</p>
+            
+            <div class="action-button-group">
+                <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener" class="btn-action-seller">
+                    <span>🏠 Request Your Complimentary Home Valuation</span>
+                    <span class="btn-tag">For Sellers</span>
+                </a>
+                <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener" class="btn-action-buyer">
+                    <span>🔍 Request a No-Obligation Buyer Consultation</span>
+                    <span class="btn-tag">For Buyers</span>
+                </a>
+            </div>
+
             <hr>
             <p style="margin-bottom: 4px;"><strong>Prakash Solanki, REALTOR®</strong></p>
             <p style="margin-top: 0; margin-bottom: 4px;">RE/MAX Pembroke Realty Ltd., Brokerage</p>
@@ -358,13 +418,13 @@
             <p style="margin-top: 0;"><em>Main Web Hub:</em> <a href="https://www.solankihomes.ca" target="_blank" rel="noopener">www.SolankiHomes.ca</a></p>
         </section>
 
-        <!-- UNIVERSAL BLOG DISCLAIMER (Small Font) -->
+        <!-- UNIVERSAL BLOG DISCLAIMER -->
         <div class="disclaimer-box">
             <div class="disclaimer-title">Disclaimer:</div>
             The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Market conditions vary by micro-market and change over time. For specific guidance regarding your real estate goals or property details, reach out directly to schedule a personalized consultation, or consult your legal or financial advisor.
         </div>
 
-        <!-- CLEAN & STABLE FOOTER -->
+        <!-- FOOTER -->
         <footer class="custom-footer">
             <div class="footer-info">
                 <h4>Prakash Solanki, REALTOR®</h4>

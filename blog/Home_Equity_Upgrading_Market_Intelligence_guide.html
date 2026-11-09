@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- PRIMARY GOOGLE SEO TAGS -->
     <title>Ottawa Valley Real Estate: Homeowners & Buyers Market Intelligence Guide | Prakash Solanki REALTOR®</title>
@@ -11,7 +11,7 @@
     <meta name="author" content="Prakash Solanki REALTOR®">
     <link rel="canonical" href="https://solankihomes.ca/">
 
-    <!-- FACEBOOK & INSTAGRAM OPEN GRAPH META TAGS (FB / IG / MESSENGER) -->
+    <!-- FACEBOOK & INSTAGRAM OPEN GRAPH META TAGS -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://solankihomes.ca/">
     <meta property="og:title" content="Ottawa Valley Real Estate: Homeowners & Buyers Market Intelligence Guide">
@@ -46,29 +46,33 @@
         * {
             box-sizing: border-box;
         }
-        html { 
-            scroll-behavior: smooth; 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
         }
-        html, body { overflow-x: hidden; width: 100%; position: relative; }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.7;
             color: #2c3e50;
             background-color: #f8fafc;
-            padding-top: 140px; /* Spacing for fixed header */
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 12px;
         }
 
-        /* PROFESSIONAL STICKY HEADER */
+        /* STICKY HEADER (Visible on Desktop, Hidden on Mobile to prevent shaking) */
         .sticky-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 9999;
+            position: relative;
+            z-index: 999;
             background-color: #ffffff;
             border-bottom: 2px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             width: 100%;
+            margin-bottom: 25px;
+            border-radius: 8px;
         }
         .header-inner {
             max-width: 1100px;
@@ -138,10 +142,6 @@
             align-items: center;
             gap: 6px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: background-color 0.2s;
-        }
-        .btn-header-home:hover {
-            background-color: #001233;
         }
         .btn-header-phone {
             background-color: #DC143C;
@@ -155,65 +155,46 @@
             align-items: center;
             gap: 6px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: background-color 0.2s;
-        }
-        .btn-header-phone:hover {
-            background-color: #b01030;
-        }
-        .mobile-btn-bar {
-            display: none;
-            background-color: #00205B;
-            padding: 10px;
-            text-align: center;
-        }
-        .mobile-btn-container {
-            display: flex;
-            gap: 10px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .mobile-btn-container a {
-            flex: 1;
-            padding: 9px;
-            border-radius: 6px;
-            color: #ffffff !important;
-            text-decoration: none;
-            font-size: 0.85em;
-            font-weight: 700;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
 
         @media (max-width: 768px) {
-            body {
-                padding-top: 165px;
-            }
-            .header-buttons {
+            .sticky-header {
                 display: none;
             }
-            .mobile-btn-bar {
-                display: block;
+            body {
+                padding: 8px;
             }
         }
 
         /* ARTICLE CONTAINER STYLING */
         .article-card {
             background-color: #ffffff;
-            padding: 40px;
+            padding: 24px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
             max-width: 850px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 30px auto;
+        }
+        @media (min-width: 769px) {
+            .article-card {
+                padding: 40px;
+            }
         }
 
         h1 {
             color: #00205B;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             line-height: 1.3;
             border-bottom: 3px solid #DC143C;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
             margin-top: 0;
+        }
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 2.2rem;
+            }
         }
         h2 {
             color: #1e293b;
@@ -250,11 +231,92 @@
             background: #cbd5e1;
             margin: 35px 0;
         }
+
+        /* DISCLAIMER STYLING */
+        .disclaimer-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        .disclaimer-title {
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 4px;
+        }
+
+        /* PROFESSIONAL FOOTER STYLING */
+        .custom-footer {
+            border-top: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        @media (min-width: 640px) {
+            .custom-footer {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .footer-info h4 {
+            margin: 0 0 3px 0;
+            font-size: 0.95rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        .footer-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+        .footer-buttons {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .footer-buttons {
+                width: auto;
+            }
+        }
+        .footer-buttons a {
+            flex: 1;
+            text-align: center;
+        }
+        .btn-call {
+            background-color: #0f172a;
+            color: #ffffff !important;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .btn-web {
+            background-color: #f59e0b;
+            color: #0f172a !important;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
     </style>
 </head>
-<body class="px-3 sm:px-6 lg:px-8 pb-36">
+<body>
 
-    <!-- STICKY HEADER -->
+    <!-- STICKY HEADER (Visible on desktop, hidden on mobile) -->
     <header class="sticky-header">
         <div class="header-inner">
             <!-- LEFT: AGENT BRANDING -->
@@ -275,21 +337,13 @@
             <!-- RIGHT: DESKTOP BUTTONS -->
             <div class="header-buttons">
                 <a href="https://solankihomes.ca" class="btn-header-home">
-                    <svg style="width:15px;height:15px;" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                    <svg style="width:15px;height:15px;" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
                     Home
                 </a>
                 <a href="tel:16132033313" class="btn-header-phone">
                     <svg style="width:15px;height:15px;" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                     (613) 203-3313
                 </a>
-            </div>
-        </div>
-
-        <!-- MOBILE BUTTON BAR -->
-        <div class="mobile-btn-bar">
-            <div class="mobile-btn-container">
-                <a href="https://solankihomes.ca" style="background-color:#00205B;">Home</a>
-                <a href="tel:16132033313" style="background-color:#DC143C;">(613) 203-3313</a>
             </div>
         </div>
     </header>
@@ -301,21 +355,11 @@
             
             <!-- TITLE & INTRO -->
             <div class="mb-6 border-b border-slate-200 pb-5">
-           <!--     <div class="flex flex-wrap items-center justify-between gap-2.5 mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200">
-                    <span class="inline-block bg-slate-900 text-amber-400 text-xs sm:text-sm font-black px-3.5 py-1.5 rounded-lg uppercase tracking-wider shadow-sm">
-                    </span>
-                </div>
--->
                 <h1>Ottawa Valley Real Estate: Homeowners & Buyers Market Intelligence Guide</h1>
                 
                 <p class="text-base sm:text-lg text-slate-700 font-medium leading-relaxed mb-4">
                     As an Ottawa Valley resident, general market statistics don't tell the full story. Whether you are contemplating an upgrade into a larger property, evaluating neighborhood tax shifts, or reviewing your home equity after recent market changes, I have prepared this guide to offer localized intelligence tailored for existing homeowners and active local buyers across Renfrew County.
                 </p>
-
-          <!--      <div class="flex flex-wrap items-center justify-between gap-2 text-sm font-bold text-slate-600 pt-3 border-t border-slate-200">
-                   <span>Published by <strong class="text-slate-900">Prakash Solanki, REALTOR®</strong> (RE/MAX Pembroke Realty Ltd., Brokerage)</span> -->
-           <!--         <span>Direct: <a href="tel:6132033313" class="text-blue-700 hover:underline font-extrabold">(613) 203-3313</a></span>
-                </div>    -->
             </div>
 
             <!-- 🎯 REGIONAL MARKET BREAKDOWN WITH LOCAL RESIDENT INTELLIGENCE -->
@@ -351,10 +395,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Check Home Equity
                         </a>
-                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Find Local Properties
                         </a>
                     </div>
@@ -382,10 +426,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Check Home Equity
                         </a>
-                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Find Local Properties
                         </a>
                     </div>
@@ -413,10 +457,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Check Home Equity
                         </a>
-                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Find Local Properties
                         </a>
                     </div>
@@ -444,10 +488,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Check Home Equity
                         </a>
-                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Find Local Properties
                         </a>
                     </div>
@@ -475,10 +519,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Check Home Equity
                         </a>
-                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Find Local Properties
                         </a>
                     </div>
@@ -506,10 +550,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://seller.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-red-600 hover:bg-red-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Check Home Equity
                         </a>
-                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow">
+                        <a href="https://buyer.solankihomes.ca/" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-center text-sm sm:text-base font-extrabold py-3.5 px-4 rounded-xl transition shadow no-underline">
                             Find Local Properties
                         </a>
                     </div>
@@ -526,43 +570,34 @@
                     Contact me today for a no-obligation home evaluation or personalized MLS® property alerts.
                 </p>
                 <div class="grid grid-cols-2 gap-3 max-w-xs sm:max-w-sm mx-auto">
-                    <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base transition shadow-md flex items-center justify-center text-center leading-tight">
+                    <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base transition shadow-md flex items-center justify-center text-center leading-tight no-underline">
                         Find<br>Homes
                     </a>
-                    <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="bg-[#dc2626] hover:bg-red-700 text-white font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base transition shadow-md flex items-center justify-center text-center leading-tight">
+                    <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="bg-[#dc2626] hover:bg-red-700 text-white font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base transition shadow-md flex items-center justify-center text-center leading-tight no-underline">
                         Home<br>Evaluation
                     </a>
                 </div>
             </section>
 
-                  <!-- UNIVERSAL BLOG DISCLAIMER -->
-        <div class="disclaimer-box">
-            <div class="disclaimer-title">Disclaimer:</div>
-            The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Market conditions vary by micro-market and change over time. For specific guidance regarding your real estate goals or property details, reach out directly to schedule a personalized consultation, or consult your legal or financial advisor.
-        </div>
+            <!-- UNIVERSAL BLOG DISCLAIMER -->
+            <div class="disclaimer-box">
+                <div class="disclaimer-title">Disclaimer:</div>
+                The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Market conditions vary by micro-market and change over time. For specific guidance regarding your real estate goals or property details, reach out directly to schedule a personalized consultation, or consult your legal or financial advisor.
+            </div>
 
-
-        <!-- FOOTER WITH AGENT INFO & WEBSITE LINK -->
-            <footer class="border-t border-slate-200 pt-6 bg-slate-50 p-5 rounded-2xl text-left border space-y-4">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div>
-                    <h4 class="text-base font-bold text-slate-900">Prakash Solanki, REALTOR®</h4>
-                    <p class="text-slate-600 text-xs sm:text-sm">RE/MAX Pembroke Realty Ltd., Brokerage</p>
-                   
-                  </div>
-                  <div class="text-center sm:text-right w-full sm:w-auto">
-                    <a href="tel:6132033313" class="inline-block w-full sm:w-auto text-center bg-slate-900 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition">
-                      Call (613) 203-3313
-                    </a>
-                    <a href="https://www.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition shadow-sm whitespace-nowrap mt-2 sm:mt-0">
-                      <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                      </svg>
-                      www.SolankiHomes.ca
-                    </a>
-                  </div>
-                </div>  
+            <!-- PROFESSIONAL FOOTER -->
+            <footer class="custom-footer">
+                <div class="footer-info">
+                    <h4>Prakash Solanki, REALTOR®</h4>
+                    <p>RE/MAX Pembroke Realty Ltd., Brokerage</p>
+                    <p>📍 10A Canadian Forces Dr., Petawawa, ON</p> 
+                </div>
+                <div class="footer-buttons">
+                    <a href="tel:6132033313" class="btn-call">Call (613) 203-3313</a>
+                    <a href="https://www.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="btn-web">www.SolankiHomes.ca</a>
+                </div>
             </footer>
+
         </article>
     </div>
 

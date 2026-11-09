@@ -17,6 +17,21 @@
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Solanki Homes">
 
+    <!-- Tailwind CSS CDN & Configuration (Added so Tailwind classes work correctly) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'remax-blue': '#00205B',
+                        'remax-red': '#DC143C',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -381,7 +396,7 @@
             <p style="margin-top: 0; margin-bottom: 5px;">RE/MAX Pembroke Realty Ltd., Brokerage</p>
             <p style="margin-top: 0; margin-bottom: 5px;"><em>Local Office:</em> 10A Canadian Forces Drive, Petawawa, Ontario</p>
             <p style="margin-top: 0; margin-bottom: 5px;"><em>Direct Phone:</em> <a href="tel:6132033313">(613) 203-3313</a></p>
-            <p style="margin-top: 0;"><em>Main Web Hub:</em> <a href="www.solankihomes.ca" target="_blank" rel="noopener">www.SolankiHomes.ca</a></p>
+            <p style="margin-top: 0;"><em>Main Web Hub:</em> <a href="https://www.solankihomes.ca" target="_blank" rel="noopener">www.SolankiHomes.ca</a></p>
         </section>
 
          <!-- UNIVERSAL BLOG DISCLAIMER -->
@@ -412,26 +427,6 @@
                     </a>
                   </div>
                 </div>  
-
-                <!-- VISIT MAIN WEBSITE BANNER -->
-          <!--      <div class="pt-3 border-t border-slate-200/80">
-                  <a href="https://www.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-amber-500 hover:bg-amber-400 text-slate-950 p-3.5 rounded-xl shadow-md transition group">
-                    <div class="flex items-center gap-2.5">
-                      <div class="bg-slate-950 text-amber-400 p-2 rounded-lg group-hover:scale-105 transition-transform">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                        </svg>
-                      </div>
-                      <div>
-                        <p class="text-xs font-black uppercase tracking-wider text-slate-900">Explore More Listings & Insights</p>
-                        <p class="text-sm font-extrabold text-slate-950">Visit www.SolankiHomes.ca</p>
-                      </div>  
-                    </div>
-                    <span class="hidden xs:inline-block bg-slate-950 text-white text-xs font-bold px-3 py-1.5 rounded-lg">
-                      Visit Site &rarr;
-                    </span>
-                  </a>
-                </div> -->
             </footer>
 
         </article>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Military Relocation Guide: Preparing for the Petawawa Posting Season | Prakash Solanki REALTOR®</title>
+    <meta name="description" content="Essential real estate planning, posting timelines, and House Hunting Trip (HHT) tips for Canadian Armed Forces members moving to or from Garrison Petawawa with Prakash Solanki, REALTOR®.">
+
+    <!-- Facebook Open Graph / Social Media Preview Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.solankihomes.ca/blog/military-relocation-petawawa-guide.html">
+    <meta property="og:title" content="Military Relocation Guide: Preparing for the Petawawa Posting Season">
+    <meta property="og:description" content="Strategic real estate planning, HHT execution steps, and local market tips for CAF families navigating postings in Petawawa, Pembroke, and Laurentian Valley.">
+    <meta property="og:image" content="https://solankihomes.ca/remax_logo_bann.png">
+    <meta property="og:site_name" content="Solanki Homes">
+
+    <!-- Tailwind CSS & RE/MAX Color Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'remax-blue': '#00205B',
+                        'remax-red': '#DC143C',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        html, body { overflow-x: hidden; width: 100%; position: relative; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            padding-top: 140px; /* Spacing for fixed header */
+        }
+
+        /* PROFESSIONAL STICKY HEADER */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background-color: #ffffff;
+            border-bottom: 2px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 165px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8 pb-24">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky-header">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
+            
+            <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & ADDRESS -->
+            <a href="https://solankihomes.ca" class="flex flex-col min-w-0 flex-shrink group text-left no-underline">
+                <div class="flex items-center gap-1.5 leading-tight truncate">
+                    <span class="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
+                        Prakash Solanki
+                    </span>
+                    <span class="text-xs sm:text-xs lg:text-xs font-extrabold tracking-wider text-remax-blue uppercase">
+                        REALTOR®
+                    </span>
+                </div>
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
+                    RE/MAX Pembroke Realty Ltd.
+                </span>
+                <span class="text-[10px] sm:text-[11px] font-bold text-slate-600 block leading-tight mt-0.5 truncate">
+                    📍 10A Canadian Forces Dr., Petawawa, ON
+                </span>
+            </a>
+
+            <!-- CENTER: RE/MAX LOGO -->
+            <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
+                <img src="../Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='../remax_logo.png';">
+            </div>
+
+            <!-- RIGHT: BUTTONS (DESKTOP) -->
+            <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+                <!-- HOME BUTTON -->
+                <a href="https://solankihomes.ca" class="inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <!-- PHONE BUTTON -->
+                <a href="tel:16132033313" class="inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MOBILE-ONLY SECOND ROW FOR BUTTONS -->
+        <div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
+            <div class="flex items-center gap-2 w-full max-w-sm">
+                <!-- HOME BUTTON (MOBILE - 50% Width) -->
+                <a href="https://solankihomes.ca" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-3 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 011-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <!-- PHONE BUTTON (MOBILE - 50% Width) -->
+                <a href="tel:16132033313" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-2 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap no-underline">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN ARTICLE CARD -->
+    <div class="max-w-4xl mx-auto bg-white text-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-2xl mb-8 overflow-hidden">
+        
+        <article class="max-w-4xl mx-auto">
+            
+            <!-- ARTICLE HEADER -->
+            <header class="mb-8 border-b border-slate-200 pb-6">
+                <h1 class="text-2xl sm:text-4xl font-black text-slate-900 leading-snug mb-4">
+                    Military Relocation Guide: Strategic Steps Before the Spring Posting Season
+                </h1>
+
+                <p class="text-sm sm:text-xl text-slate-700 mb-5 leading-relaxed font-medium">
+                    Key timeline insights, House Hunting Trip (HHT) planning, and local market preparation across Garrison Petawawa, Pembroke, and Laurentian Valley.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-bold text-slate-700 pt-3.5 border-t border-slate-200">
+                    <span>Published by <strong class="text-slate-900">Prakash Solanki, REALTOR®</strong></span>
+                    <span>November 2026</span>
+                </div>
+            </header>
+
+            <!-- ARTICLE BODY CONTENT -->
+            <section class="mb-8 text-slate-800 leading-relaxed space-y-4 text-sm sm:text-lg">
+                <p>
+                  As home to 4th Canadian Division Support Base (4 CDSB) Garrison Petawawa, the Ottawa Valley experiences a distinct annual housing cycle tied directly to Canadian Armed Forces (CAF) posting directives. While formal posting messages are typically issued in the spring ahead of summer relocations, early planning behind the scenes starts long before the official House Hunting Trip (HHT) window opens.
+                </p>
+                <p>
+                  Whether you are anticipating a posting instruction into Garrison Petawawa or preparing to list your current home for an outbound move, establishing a clear real estate plan early ensures a smooth, stress-free transition for your family.
+                </p>
+            </section>
+
+            <!-- HIGHLIGHT BOX -->
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-xl shadow-sm mb-8">
+                <h3 class="text-base sm:text-xl font-bold text-blue-950 mb-1.5">Understanding the Posting Timeline</h3>
+                <p class="text-blue-950 text-sm sm:text-base leading-relaxed">
+                  While formal posting messages (Postmacs) peak in the spring, early market research in late fall and winter allows military members to define budget parameters, explore neighborhood micro-markets, and monitor pricing trends before active House Hunting Trips begin.
+                </p>
+            </div>
+
+            <!-- ROADMAP SECTION -->
+            <section class="mb-10 text-slate-800 space-y-6">
+                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 border-b pb-2.5">
+                  Essential Planning Checkpoints for Relocating Families
+                </h2>
+
+                <div>
+                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-1">1. Mortgage Pre-Approval & Budgeting Parameters</h3>
+                    <p class="text-slate-800 text-sm sm:text-base">
+                      Securing a formal mortgage pre-approval before your HHT begins establishes precise financial boundaries. Knowing your maximum pre-approval figure and estimated monthly overhead in advance allows you to view homes with complete confidence during your short HHT window.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-1">2. Target Neighborhood Selection & Commute Times</h3>
+                    <p class="text-slate-800 text-sm sm:text-base">
+                      Consider what location best matches your lifestyle:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-800 text-xs sm:text-sm ml-2 my-2 font-medium">
+                      <li><strong>Petawawa:</strong> Minutes from Garrison gates, near local schools, parks, and quick access to base facilities.</li>
+                      <li><strong>Pembroke:</strong> Established residential neighborhoods, regional hospital access, and broader retail/dining options.</li>
+                      <li><strong>Laurentian Valley & Rural Townships:</strong> Larger 1+ acre lots, detached outbuildings, private well/septic systems, and quiet country settings.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-1">3. Structuring Your House Hunting Trip (HHT)</h3>
+                    <p class="text-slate-800 text-sm sm:text-base">
+                      With limited days on the ground during an HHT, efficiency is critical. Working with a dedicated local real estate professional allows you to schedule back-to-back showings, organize property itineraries in advance, and coordinate home inspections without losing precious time.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-1">4. Pre-Listing Preparation for Outbound Sellers</h3>
+                    <p class="text-slate-800 text-sm sm:text-base">
+                      If you are posted out of Petawawa, starting minor cosmetic touch-ups, decluttering, and gathering essential paperwork (utility bills, major update receipts, property tax statements) early ensures your home is market-ready the moment your posting confirmation arrives.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CALL TO ACTION BANNER -->
+            <section class="bg-[#0b1329] border border-red-500/30 rounded-2xl p-6 sm:p-8 mb-8 text-center shadow-xl">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 leading-tight">
+                  Relocating To or From Garrison Petawawa?
+                </h3>
+                <p class="text-slate-300 text-sm sm:text-base max-w-lg mx-auto mb-6 leading-relaxed">
+                    Reach out today to set up customized MLS® property alerts or request a complimentary home market evaluation.
+                </p>
+                <div class="grid grid-cols-2 gap-3 max-w-xs sm:max-w-sm mx-auto">
+                    <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base transition shadow-md flex items-center justify-center text-center leading-tight">
+                        Find<br>Homes
+                    </a>
+                    <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="bg-[#dc2626] hover:bg-red-700 text-white font-bold py-3.5 px-4 rounded-2xl text-sm sm:text-base transition shadow-md flex items-center justify-center text-center leading-tight">
+                        Home<br>Evaluation
+                    </a>
+                </div>
+            </section>
+
+            <!-- UNIVERSAL BLOG DISCLAIMER -->
+            <div class="mt-8 mb-6 pt-5 border-t border-slate-200 bg-slate-50 p-4 rounded-xl text-xs text-slate-600 leading-relaxed">
+                <p class="font-bold text-slate-800 mb-1">Disclaimer:</p>
+                <p>
+                    The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Market conditions vary by micro-market and change over time. For specific guidance regarding your real estate goals or property details, reach out directly to schedule a personalized consultation, or consult your legal or financial advisor.
+                </p>
+            </div>
+
+            <!-- FOOTER WITH AGENT INFO & WEBSITE LINK -->
+            <footer class="border-t border-slate-200 pt-6 bg-slate-50 p-5 rounded-2xl text-left border space-y-4">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div>
+                    <h4 class="text-base font-bold text-slate-900">Prakash Solanki, REALTOR®</h4>
+                    <p class="text-slate-600 text-xs sm:text-sm">RE/MAX Pembroke Realty Ltd., Brokerage</p>
+                    <p class="text-slate-900 font-bold text-xs sm:text-sm mt-1">Direct: <a href="tel:6132033313" class="text-blue-600 hover:underline">(613) 203-3313</a></p>
+                  </div>
+                  <div class="text-center sm:text-right w-full sm:w-auto">
+                    <a href="tel:6132033313" class="inline-block w-full sm:w-auto text-center bg-slate-900 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition">
+                      Call (613) 203-3313
+                    </a>
+                    <a href="https://www.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition shadow-sm whitespace-nowrap mt-2 sm:mt-0">
+                      <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                      </svg>
+                      www.SolankiHomes.ca
+                    </a>
+                  </div>
+                </div>  
+
+                <!-- VISIT MAIN WEBSITE BANNER -->
+                <div class="pt-3 border-t border-slate-200/80">
+                  <a href="https://www.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-amber-500 hover:bg-amber-400 text-slate-950 p-3.5 rounded-xl shadow-md transition group">
+                    <div class="flex items-center gap-2.5">
+                      <div class="bg-slate-950 text-amber-400 p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-xs font-black uppercase tracking-wider text-slate-900">Explore More Listings & Insights</p>
+                        <p class="text-sm font-extrabold text-slate-950">Visit www.SolankiHomes.ca</p>
+                      </div>
+                    </div>
+                    <span class="hidden xs:inline-block bg-slate-950 text-white text-xs font-bold px-3 py-1.5 rounded-lg">
+                      Visit Site &rarr;
+                    </span>
+                  </a>
+                </div>
+            </footer>
+
+        </article>
+    </div>
+
+</body>
+</html>

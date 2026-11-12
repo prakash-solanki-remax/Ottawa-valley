@@ -2,110 +2,486 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waterfront Living in the Ottawa Valley & Whitewater Region | Solanki Homes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Waterfront Living in the Ottawa Valley & Whitewater Region | Prakash Solanki REALTOR®</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore waterfront real estate across the Ottawa Valley, Whitewater Region, Round Lake, and Golden Lake. Expert insights for buyers and sellers from Prakash Solanki, RE/MAX Pembroke Realty Ltd.">
-    <meta name="keywords" content="Ottawa Valley waterfront real estate, Whitewater Region homes for sale, Muskrat Lake waterfront, Round Lake property, Golden Lake real estate, Ontario waterfront homes, Prakash Solanki, RE/MAX Pembroke Realty Ltd">
-    <meta name="author" content="Prakash Solanki - RE/MAX Pembroke Realty Ltd.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Waterfront Living in the Ottawa Valley & Whitewater Region">
-    <meta property="og:description" content="Discover essential due diligence, shoreline regulations, and market insights for waterfront buyers and sellers in Renfrew County.">
+    <!-- FACEBOOK & SOCIAL MEDIA OPEN GRAPH TAGS -->
     <meta property="og:type" content="article">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <meta property="og:url" content="https://solankihomes.ca/blog/waterfront-living.html">
+    <meta property="og:title" content="Waterfront Living in the Ottawa Valley & Whitewater Region">
+    <meta property="og:description" content="Explore waterfront real estate across the Ottawa Valley, Whitewater Region, Round Lake, and Golden Lake. Expert insights for buyers and sellers.">
+    <meta property="og:image" content="https://solankihomes.ca/remax_logo_bann.png">
+    <meta property="og:site_name" content="Solanki Homes">
 
-    <!-- Header / Hub & Spoke Nav Frame Integration Placeholder -->
-    <header class="bg-red-700 text-white shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-tight">The Solanki Homes Blog: Daily Outlook</h1>
-            <p class="text-sm mt-1 sm:mt-0 text-red-100">Prakash Solanki | RE/MAX Pembroke Realty Ltd.</p>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: #f8fafc;
+        }
+        
+        /* HEADER STYLING (Visible on Desktop, Hidden on Mobile) */
+        .sticky-header {
+            position: relative;
+            z-index: 99;
+            background-color: #ffffff;
+            border-bottom: 2px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+        .header-inner {
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .agent-brand {
+            text-decoration: none;
+            color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+        .agent-name-wrap {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .agent-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+        .realtor-tag {
+            color: #00205B;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+        .brokerage-name {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #334155;
+            text-transform: uppercase;
+        }
+        .address-tag {
+            font-size: 0.70rem;
+            color: #64748b;
+        }
+        .logo-container img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-header-home {
+            background-color: #00205B;
+            color: #ffffff !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85em;
+        }
+        .btn-header-phone {
+            background-color: #DC143C;
+            color: #ffffff !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85em;
+        }
+
+        /* HIDE HEADER ON MOBILE SCREENS TO PREVENT SHAKING & SAVE SPACE */
+        @media (max-width: 768px) {
+            .sticky-header {
+                display: none;
+            }
+            body {
+                padding: 8px;
+            }
+        }
+
+        /* ARTICLE STYLING */
+        .article-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            width: 100%;
+        }
+        @media (min-width: 769px) {
+            .article-card {
+                padding: 30px;
+            }
+        }
+
+        h1 {
+            color: #00205B;
+            font-size: 1.6rem;
+            line-height: 1.3;
+            border-bottom: 3px solid #DC143C;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        h3 {
+            color: #00205B;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 6px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .cta-box {
+            background-color: #f1f5f9;
+            border-left: 5px solid #00205B;
+            padding: 16px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+        .cta-box p {
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .btn-link {
+            display: inline-block;
+            background-color: #00205B;
+            color: #ffffff !important;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        /* CONTACT CARD & BUTTONS STYLING */
+        .contact-card {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .contact-card h3 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        .action-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 18px 0;
+        }
+        .btn-action-seller {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #DC143C;
+            color: #ffffff !important;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 4px rgba(220, 20, 60, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-action-seller:hover {
+            background-color: #b01030;
+        }
+        .btn-action-buyer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #00205B;
+            color: #ffffff !important;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 4px rgba(0, 32, 91, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-action-buyer:hover {
+            background-color: #001233;
+        }
+        .btn-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        a {
+            color: #00205B;
+            text-decoration: underline;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #cbd5e1;
+            margin: 25px 0;
+        }
+
+        /* DISCLAIMER STYLING */
+        .disclaimer-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        .disclaimer-title {
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 4px;
+        }
+
+        /* PROFESSIONAL FOOTER STYLING */
+        .custom-footer {
+            border-top: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        @media (min-width: 640px) {
+            .custom-footer {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .footer-info h4 {
+            margin: 0 0 3px 0;
+            font-size: 0.95rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        .footer-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+        .footer-buttons {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .footer-buttons {
+                width: auto;
+            }
+        }
+        .footer-buttons a {
+            flex: 1;
+            text-align: center;
+        }
+        .btn-call {
+            background-color: #0f172a;
+            color: #ffffff !important;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .btn-web {
+            background-color: #f59e0b;
+            color: #0f172a !important;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (Visible on desktop, hidden on mobile) -->
+    <header class="sticky-header">
+        <div class="header-inner">
+            <!-- LEFT: AGENT BRANDING -->
+            <a href="https://solankihomes.ca" class="agent-brand">
+                <div class="agent-name-wrap">
+                    <span class="agent-name">Prakash Solanki</span>
+                    <span class="realtor-tag">REALTOR®</span>
+                </div>
+                <span class="brokerage-name">RE/MAX Pembroke Realty Ltd.</span>
+                <span class="address-tag">📍 10A Canadian Forces Dr., Petawawa, ON</span>
+            </a>
+
+            <!-- CENTER: RE/MAX LOGO -->
+            <div class="logo-container">
+                <img src="../remax_logo_bann.png" alt="RE/MAX Logo" onerror="this.onerror=null; this.src='../remax_logo.png';">
+            </div>
+
+            <!-- RIGHT: DESKTOP BUTTONS -->
+            <div class="header-buttons">
+                <a href="https://solankihomes.ca" class="btn-header-home">Home</a>
+                <a href="tel:16132033313" class="btn-header-phone">(613) 203-3313</a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-4 py-10 bg-white shadow-sm my-8 rounded-lg">
-        
-        <article class="space-y-6">
-            <!-- Article Header -->
-            <div class="border-b pb-6">
-                <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Waterfront Real Estate</span>
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
-                    Waterfront Living in the Ottawa Valley: What Buyers & Sellers Need to Know
-                </h1>
-                <p class="text-sm text-gray-500 mt-2">Published by Prakash Solanki | RE/MAX Pembroke Realty Ltd.</p>
+    <div class="article-card">
+        <h1>Waterfront Living in the Ottawa Valley: What Buyers & Sellers Need to Know</h1>
+
+        <section>
+            <h3>Introduction to Ottawa Valley & Renfrew County Waterfronts</h3>
+            <p>From the expansive shores of the Ottawa River and the adventurous waterways of the <strong>Whitewater Region</strong> (including Muskrat Lake, Westmeath, Beachburg, and Cobden) to scenic inland gems like Round Lake, Golden Lake, Calabogie Lake, and Kamaniskeg Lake along the Madawaska River corridor, Renfrew County offers some of the most diverse and sought-after waterfront real estate in Eastern Ontario.</p>
+            <p>Whether you are searching for a four-season family residence or a peaceful seasonal retreat, waterfront properties represent a unique lifestyle—and a distinct set of real estate considerations compared to traditional residential homes.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Exploring Renfrew County’s Diverse Waterfront Pockets</h3>
+            <p>Not all waterfront in the Ottawa Valley is the same—each corridor offers its own character, recreational appeal, and shoreline topography:</p>
+            <ul>
+                <li><strong>Whitewater Region & Muskrat Lake:</strong> Famous for world-class rafting along the Ottawa River and flat-water boating, paddling, and ice fishing on Muskrat Lake, communities like Westmeath, Cobden, and Beachburg combine sandy beaches, rural acreage, and convenient Highway 17 commuting access.</li>
+                <li><strong>Upper Valley & Inland Lakes (Round Lake, Golden Lake & Petawawa/Pembroke):</strong> Stretching along local river systems, these established lakefront communities are prized for deep, clean water, family-friendly swimming shorelines, and close proximity to town amenities.</li>
+                <li><strong>Southern & Western Corridors (Calabogie, Madawaska Valley & Barry’s Bay):</strong> For buyers drawn to rugged Canadian Shield scenery, multi-season recreation, and vast stretches of Crown land shoreline, lakes like Calabogie, Kamaniskeg, and Bark Lake offer incredible boating, angling, and proximity to trail networks.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Essential Due Diligence for Waterfront Buyers</h3>
+            <p>Purchasing a waterfront property involves looking beyond the home itself to evaluate the land, water access, and governing regulations. Here are the key checkpoints every waterfront buyer should review:</p>
+            <ol>
+                <li><strong>Shoreline Road Allowances (SRA) & Ownership Boundaries:</strong> In Ontario, owning a waterfront lot does not automatically mean you own right down to the water's edge. Many properties include a historic 66-foot municipal Shore Road Allowance. I always recommend ordering an up-to-date survey and having your real estate lawyer verify title.</li>
+                <li><strong>Dock, Boathouse & Shoreline Permits:</strong> Provincial ministries, local municipalities, and conservation authorities strictly regulate shoreline alterations—including building docks, installing boat lifts, or clearing shoreline vegetation. Confirming past permits protects you from costly compliance surprises.</li>
+                <li><strong>Water Level Management & Flow:</strong> Several major waterways feature hydro-regulated dams. Understanding seasonal water level fluctuations helps ensure your dock setup matches shoreline conditions.</li>
+                <li><strong>Private Wells & Septic Systems:</strong> Most rural and waterfront homes rely on private water and wastewater systems. Before finalizing conditions, I always advise arranging a formal septic inspection and water potability testing.</li>
+                <li><strong>Year-Round Access & Winterization:</strong> Confirm whether the property sits on a municipally maintained road plowed year-round or a private road governed by a shared maintenance agreement.</li>
+            </ol>
+
+            <div class="cta-box">
+                <p>💬 Planning Your Next Property Search?</p>
+                <p style="font-weight: normal; font-size: 0.9em; margin-bottom: 10px;">Connect directly to discuss your preferred timeline, preferred waterways, and ideal property criteria.</p>
+                <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener" class="btn-link">📱 Request a No-Obligation Buyer Consultation</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Strategic Tips for Waterfront Sellers</h3>
+            <p>Waterfront listings attract a wide pool of local and out-of-town buyers, including remote professionals and retirees. To maximize your property's market appeal:</p>
+            <ul>
+                <li><strong>Showcase the Shoreline & Lifestyle:</strong> Buyers aren't just purchasing square footage—they are buying sunrise views, water depth, and boating access. I ensure photography and marketing highlight the waterfront at its absolute best.</li>
+                <li><strong>Organize Documentation Upfront:</strong> Having your survey, septic pump-out records, well logs, and past permits ready gives prospective buyers immediate peace of mind.</li>
+                <li><strong>Price for Your Specific Waterway:</strong> Waterfront values vary dramatically depending on the body of water and shoreline type. I provide a tailored comparative market analysis grounded in recent sales on your specific lake or river stretch.</li>
+            </ul>
+
+            <div class="cta-box">
+                <p>📊 Curious About Your Waterfront Property's Value?</p>
+                <p style="font-weight: normal; font-size: 0.9em; margin-bottom: 10px;">Having accurate, data-backed insights on your specific lake or riverfront is the best starting point for your planning.</p>
+                <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener" class="btn-link">👉 Request Your Complimentary Home Valuation</a>
+            </div>
+        </section>
+
+        <!-- CONTACT CARD & BUTTONS SECTION -->
+        <section class="contact-card">
+            <h3>Let’s Discuss Your Waterfront Goals</h3>
+            <p>Select an option below to schedule a consultation or request your market report:</p>
+            
+            <div class="action-button-group">
+                <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener" class="btn-action-seller">
+                    <span>🏠 Request Your Complimentary Home Valuation</span>
+                    <span class="btn-tag">For Sellers</span>
+                </a>
+                <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener" class="btn-action-buyer">
+                    <span>🔍 Request a No-Obligation Buyer Consultation</span>
+                    <span class="btn-tag">For Buyers</span>
+                </a>
             </div>
 
-            <!-- Article Body -->
-            <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
-                <p>
-                    From the expansive shores of the Ottawa River and the adventurous waterways of the <strong>Whitewater Region</strong> (including Muskrat Lake, Westmeath, Beachburg, and Cobden) to scenic inland gems like Round Lake, Golden Lake, Calabogie Lake, and Kamaniskeg Lake along the Madawaska River corridor, Renfrew County offers some of the most diverse and sought-after waterfront real estate in Eastern Ontario. Whether you are searching for a four-season family residence or a peaceful seasonal retreat, waterfront properties represent a unique lifestyle—and a distinct set of real estate considerations compared to traditional residential homes.
-                </p>
-                <p>
-                    Understanding shoreline regulations, property infrastructure, and regional waterway differences is essential for making a confident waterfront move.
-                </p>
+            <hr>
+            <p style="margin-bottom: 4px;"><strong>Prakash Solanki, REALTOR®</strong></p>
+            <p style="margin-top: 0; margin-bottom: 4px;">RE/MAX Pembroke Realty Ltd., Brokerage</p>
+            <p style="margin-top: 0; margin-bottom: 4px;"><em>Local Office:</em> 10A Canadian Forces Drive, Petawawa, Ontario</p>
+            <p style="margin-top: 0; margin-bottom: 4px;"><em>Direct Phone:</em> <a href="tel:6132033313">(613) 203-3313</a></p>
+            <p style="margin-top: 0;"><em>Main Web Hub:</em> <a href="https://www.solankihomes.ca" target="_blank" rel="noopener">www.SolankiHomes.ca</a></p>
+        </section>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Exploring Renfrew County’s Diverse Waterfront Pockets</h2>
-                <p>
-                    Not all waterfront in the Ottawa Valley is the same—each corridor offers its own character, recreational appeal, and shoreline topography:
-                </p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>Whitewater Region & Muskrat Lake:</strong> Famous for world-class rafting along the Ottawa River and flat-water boating, paddling, and ice fishing on Muskrat Lake, communities like Westmeath, Cobden, and Beachburg combine sandy beaches, rural acreage, and convenient Highway 17 commuting access.</li>
-                    <li><strong>Upper Valley & Inland Lakes (Round Lake, Golden Lake & Petawawa/Pembroke):</strong> Stretching along local river systems, these established lakefront communities are prized for deep, clean water, family-friendly swimming shorelines, and close proximity to town amenities.</li>
-                    <li><strong>Southern & Western Corridors (Calabogie, Madawaska Valley & Barry’s Bay):</strong> For buyers drawn to rugged Canadian Shield scenery, multi-season recreation, and vast stretches of Crown land shoreline, lakes like Calabogie, Kamaniskeg, and Bark Lake offer incredible boating, angling, and proximity to trail networks.</li>
-                </ul>
+        <!-- UNIVERSAL BLOG DISCLAIMER -->
+        <div class="disclaimer-box">
+            <div class="disclaimer-title">Disclaimer:</div>
+            The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Shoreline regulations and municipal bylaws vary by waterway and change over time. For specific guidance regarding your real estate goals or property details, reach out directly to schedule a personalized consultation, or consult your legal or financial advisor.
+        </div>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Essential Due Diligence for Waterfront Buyers</h2>
-                <p>
-                    Purchasing a waterfront property involves looking beyond the home itself to evaluate the land, water access, and governing regulations. Here are the key checkpoints every waterfront buyer should review:
-                </p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>Shoreline Road Allowances (SRA) & Ownership Boundaries:</strong> In Ontario, owning a waterfront lot does not automatically mean you own right down to the water's edge. Many properties include a historic 66-foot municipal Shore Road Allowance. I always recommend ordering an up-to-date survey and having your real estate lawyer verify title.</li>
-                    <li><strong>Dock, Boathouse & Shoreline Permits:</strong> Provincial ministries, local municipalities, and conservation authorities strictly regulate shoreline alterations—including building docks, installing boat lifts, or clearing shoreline vegetation. Confirming past permits protects you from costly compliance surprises.</li>
-                    <li><strong>Water Level Management & Flow:</strong> Several major waterways feature hydro-regulated dams. Understanding seasonal water level fluctuations helps ensure your dock setup matches shoreline conditions.</li>
-                    <li><strong>Private Wells & Septic Systems:</strong> Most rural and waterfront homes rely on private water and wastewater systems. Before finalizing conditions, I always advise arranging a formal septic inspection and water potability testing.</li>
-                    <li><strong>Year-Round Access & Winterization:</strong> Confirm whether the property sits on a municipally maintained road plowed year-round or a private road governed by a shared maintenance agreement.</li>
-                </ul>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Strategic Tips for Waterfront Sellers</h2>
-                <p>
-                    Waterfront listings attract a wide pool of local and out-of-town buyers, including remote professionals and retirees. To maximize your property's market appeal:
-                </p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>Showcase the Shoreline & Lifestyle:</strong> Buyers aren't just purchasing square footage—they are buying sunrise views, water depth, and boating access. I ensure photography and marketing highlight the waterfront at its absolute best.</li>
-                    <li><strong>Organize Documentation Upfront:</strong> Having your survey, septic pump-out records, well logs, and past permits ready gives prospective buyers immediate peace of mind.</li>
-                    <li><strong>Price for Your Specific Waterway:</strong> Waterfront values vary dramatically depending on the body of water and shoreline type. I provide a tailored comparative market analysis grounded in recent sales on your specific lake or river stretch.</li>
-                </ul>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Let’s Discuss Your Waterfront Goals</h2>
-                <p>
-                    Whether you are dreaming of waking up to river views in Whitewater Region or preparing to list your lakefront property anywhere across Renfrew County, my goal is to guide you through every step with transparency and local expertise. Reach out anytime to schedule a <strong>no-obligation buyer or seller consultation</strong>.
-                </p>
+        <!-- PROFESSIONAL FOOTER -->
+        <footer class="custom-footer">
+            <div class="footer-info">
+                <h4>Prakash Solanki, REALTOR®</h4>
+                <p>RE/MAX Pembroke Realty Ltd., Brokerage</p>
+                <p>📍 10A Canadian Forces Dr., Petawawa, ON</p> 
             </div>
-
-            <!-- Call to Action / Footer Info Box -->
-            <div class="bg-gray-100 p-6 rounded-lg mt-8 border-l-4 border-red-700 space-y-3">
-                <h3 class="text-lg font-bold text-gray-900">Prakash Solanki — RE/MAX Pembroke Realty Ltd.</h3>
-                <p class="text-sm text-gray-600">Committed to providing professional, compliant guidance for all your Ottawa Valley real estate needs.</p>
-                <div class="pt-2 text-sm space-y-1">
-                    <p><strong>Direct Line:</strong> (613) 203-3313</p>
-                    <p><strong>Buyer Resources:</strong> <a href="https://buyer.solankihomes.ca" target="_blank" class="text-red-700 hover:underline">buyer.solankihomes.ca</a></p>
-                    <p><strong>Seller Resources:</strong> <a href="https://seller.solankihomes.ca" target="_blank" class="text-red-700 hover:underline">seller.solankihomes.ca</a></p>
-                </div>
+            <div class="footer-buttons">
+                <a href="tel:6132033313" class="btn-call">Call (613) 203-3313</a>
+                <a href="https://www.solankihomes.ca" target="_blank" rel="noopener noreferrer" class="btn-web">www.SolankiHomes.ca</a>
             </div>
+        </footer>
 
-            <!-- Disclaimer -->
-            <div class="text-xs text-gray-400 pt-4 border-t">
-                <p>Disclaimer: The real estate market information, strategies, and commentary provided on this blog are for general educational and informational purposes only and do not constitute formal legal, financial, accounting, or appraisal advice. Shoreline regulations and municipal bylaws vary by waterway.</p>
-            </div>
-        </article>
-
-    </main>
+    </div>
 
 </body>
 </html>

@@ -13,9 +13,34 @@
     <meta property="og:image" content="https://solankihomes.ca/remax_logo_bann.png">
     <meta property="og:site_name" content="Solanki Homes">
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        remax: {
+                            red: '#DC2626',
+                            blue: '#003399',
+                            darkBlue: '#0F172A',
+                            gold: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        * {
-            box-sizing: border-box;
+        *, ::before, ::after {
+            box-sizing: border-box !important;
         }
         html, body {
             overflow-x: hidden;
@@ -25,121 +50,14 @@
             -webkit-text-size-adjust: 100%;
         }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             color: #2c3e50;
             max-width: 850px;
             margin: 0 auto;
             padding: 12px;
             background-color: #f8fafc;
-        }
-        
-        /* UNIFORM STICKY HEADER FOR ALL DEVICES */
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            width: 100%;
-            margin-bottom: 25px;
-            border-radius: 8px;
-        }
-        .header-inner {
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-        }
-        .agent-brand {
-            text-decoration: none;
-            color: #0f172a;
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-            min-width: 0;
-        }
-        .agent-name-wrap {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            white-space: nowrap;
-        }
-        .agent-name {
-            font-size: 1rem;
-            font-weight: 800;
-        }
-        @media (min-width: 640px) {
-            .agent-name { font-size: 1.15rem; }
-        }
-        .realtor-tag {
-            color: #00205B;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            background: #e2e8f0;
-            padding: 1px 5px;
-            border-radius: 4px;
-        }
-        .brokerage-name {
-            font-size: 0.7rem;
-            font-weight: 800;
-            color: #334155;
-            text-transform: uppercase;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        @media (min-width: 640px) {
-            .brokerage-name { font-size: 0.75rem; }
-        }
-        .address-tag {
-            font-size: 0.65rem;
-            color: #64748b;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .logo-container img {
-            height: 35px;
-            width: auto;
-            object-fit: contain;
-        }
-        @media (min-width: 640px) {
-            .logo-container img { height: 40px; }
-        }
-        .header-buttons {
-            display: flex;
-            gap: 8px;
-        }
-        .btn-header-home {
-            background-color: #00205B;
-            color: #ffffff !important;
-            padding: 7px 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.75rem;
-            white-space: nowrap;
-        }
-        .btn-header-phone {
-            background-color: #DC143C;
-            color: #ffffff !important;
-            padding: 7px 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.75rem;
-            white-space: nowrap;
-        }
-        @media (min-width: 640px) {
-            .btn-header-home, .btn-header-phone {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-                border-radius: 8px;
-            }
+            padding-top: 115px; /* Ensures content doesn't slip under the fixed header */
         }
 
         /* ARTICLE STYLING */
@@ -154,6 +72,10 @@
         @media (min-width: 769px) {
             .article-card {
                 padding: 30px;
+                padding-top: 20px; /* Adjusts top padding for desktop since header is shorter */
+            }
+            body {
+                padding-top: 75px;
             }
         }
 
@@ -368,30 +290,69 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
 
-    <!-- UNIFORM STICKY HEADER FOR ALL DEVICES -->
-    <header class="sticky-header">
-        <div class="header-inner">
-            <!-- LEFT: AGENT BRANDING -->
-            <a href="https://solankihomes.ca" class="agent-brand">
-                <div class="agent-name-wrap">
-                    <span class="agent-name">Prakash Solanki</span>
-                    <span class="realtor-tag">REALTOR®</span>
+    <!-- NAVIGATION HEADER (Exact Replica from index.html) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
+            
+            <!-- LEFT: AGENT NAME, REALTOR®, BROKERAGE & ADDRESS -->
+            <a href="https://solankihomes.ca" class="flex flex-col min-w-0 flex-shrink group">
+                <div class="flex items-center gap-1.5 leading-tight truncate">
+                    <span class="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
+                        Prakash Solanki
+                    </span>
+                    <span class="text-xs sm:text-xs lg:text-xs font-extrabold tracking-wider text-remax-blue uppercase">
+                        REALTOR®
+                    </span>
                 </div>
-                <span class="brokerage-name">RE/MAX Pembroke Realty Ltd.</span>
-                <span class="address-tag">📍 10A Canadian Forces Dr., Petawawa, ON</span>
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
+                    RE/MAX Pembroke Realty Ltd.
+                </span>
+                <span class="text-[10px] sm:text-[11px] font-bold text-slate-600 block leading-tight mt-0.5 truncate">
+                    📍 10A Canadian Forces Dr., Petawawa, ON
+                </span>
             </a>
 
             <!-- CENTER: RE/MAX LOGO -->
-            <div class="logo-container">
-                <img src="../remax_logo_bann.png" alt="RE/MAX Logo" onerror="this.onerror=null; this.src='../remax_logo.png';">
+            <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
+                <img src="../Remax_with_balloon_2.png" alt="RE/MAX Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
             </div>
 
-            <!-- RIGHT: ACTION BUTTONS -->
-            <div class="header-buttons">
-                <a href="https://solankihomes.ca" class="btn-header-home">Home</a>
-                <a href="tel:16132033313" class="btn-header-phone">(613) 203-3313</a>
+            <!-- RIGHT: BUTTONS (DESKTOP) -->
+            <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+                <!-- HOME BUTTON -->
+                <a href="https://solankihomes.ca" class="inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <!-- PHONE BUTTON -->
+                <a href="tel:16132033313" class="inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MOBILE-ONLY SECOND ROW FOR BUTTONS -->
+        <div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
+            <div class="flex items-center gap-2 w-full max-w-sm">
+                <!-- HOME BUTTON (MOBILE - 50% Width) -->
+                <a href="https://solankihomes.ca" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-3 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <!-- PHONE BUTTON (MOBILE - 50% Width) -->
+                <a href="tel:16132033313" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-2 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
             </div>
         </div>
     </header>

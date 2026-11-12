@@ -34,94 +34,111 @@
             background-color: #f8fafc;
         }
         
-        /* HEADER STYLING (Visible on Desktop, Hidden on Mobile) */
+        /* UNIFORM STICKY HEADER FOR ALL DEVICES */
         .sticky-header {
-            position: relative;
-            z-index: 99;
+            position: sticky;
+            top: 0;
+            z-index: 999;
             background-color: #ffffff;
-            border-bottom: 2px solid #e2e8f0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             width: 100%;
             margin-bottom: 25px;
             border-radius: 8px;
         }
         .header-inner {
-            padding: 12px 18px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 15px;
+            gap: 12px;
         }
         .agent-brand {
             text-decoration: none;
             color: #0f172a;
             display: flex;
             flex-direction: column;
-            line-height: 1.3;
+            line-height: 1.2;
+            min-width: 0;
         }
         .agent-name-wrap {
             display: flex;
             align-items: center;
             gap: 6px;
+            white-space: nowrap;
         }
         .agent-name {
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 800;
+        }
+        @media (min-width: 640px) {
+            .agent-name { font-size: 1.15rem; }
         }
         .realtor-tag {
             color: #00205B;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 800;
             text-transform: uppercase;
             background: #e2e8f0;
-            padding: 1px 6px;
+            padding: 1px 5px;
             border-radius: 4px;
         }
         .brokerage-name {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 800;
             color: #334155;
             text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (min-width: 640px) {
+            .brokerage-name { font-size: 0.75rem; }
         }
         .address-tag {
-            font-size: 0.70rem;
+            font-size: 0.65rem;
             color: #64748b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .logo-container img {
-            height: 40px;
+            height: 35px;
             width: auto;
             object-fit: contain;
         }
+        @media (min-width: 640px) {
+            .logo-container img { height: 40px; }
+        }
         .header-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
         .btn-header-home {
             background-color: #00205B;
             color: #ffffff !important;
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 7px 12px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.85em;
+            font-size: 0.75rem;
+            white-space: nowrap;
         }
         .btn-header-phone {
             background-color: #DC143C;
             color: #ffffff !important;
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 7px 12px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.85em;
+            font-size: 0.75rem;
+            white-space: nowrap;
         }
-
-        /* HIDE HEADER ON MOBILE SCREENS TO PREVENT SHAKING & SAVE SPACE */
-        @media (max-width: 768px) {
-            .sticky-header {
-                display: none;
-            }
-            body {
-                padding: 8px;
+        @media (min-width: 640px) {
+            .btn-header-home, .btn-header-phone {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+                border-radius: 8px;
             }
         }
 
@@ -353,7 +370,7 @@
 </head>
 <body>
 
-    <!-- HEADER (Visible on desktop, hidden on mobile) -->
+    <!-- UNIFORM STICKY HEADER FOR ALL DEVICES -->
     <header class="sticky-header">
         <div class="header-inner">
             <!-- LEFT: AGENT BRANDING -->
@@ -371,7 +388,7 @@
                 <img src="../remax_logo_bann.png" alt="RE/MAX Logo" onerror="this.onerror=null; this.src='../remax_logo.png';">
             </div>
 
-            <!-- RIGHT: DESKTOP BUTTONS -->
+            <!-- RIGHT: ACTION BUTTONS -->
             <div class="header-buttons">
                 <a href="https://solankihomes.ca" class="btn-header-home">Home</a>
                 <a href="tel:16132033313" class="btn-header-phone">(613) 203-3313</a>

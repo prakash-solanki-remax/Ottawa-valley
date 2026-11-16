@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pre-Approval Rate Holds Ahead of December: Protecting Your Buying Power in Pembroke & Petawawa | Prakash Solanki, REALTOR®</title>
+    
+    <!-- FACEBOOK & SOCIAL MEDIA OPEN GRAPH TAGS -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solankihomes.ca/blog/pre-approval-rate-holds-december.html">
+    <meta property="og:title" content="Pre-Approval Rate Holds Ahead of December: Protecting Your Buying Power in Pembroke & Petawawa">
+    <meta property="og:description" content="Ahead of the December 9 Bank of Canada announcement, learn how a 90- to 120-day mortgage rate hold protects your budget when shopping in Pembroke, Petawawa, and the Ottawa Valley.">
+    <meta property="og:image" content="https://solankihomes.ca/remax_logo_bann.png">
+    <meta property="og:site_name" content="Solanki Homes">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        remax: {
+                            red: '#DC2626',
+                            blue: '#003399',
+                            darkBlue: '#0F172A',
+                            gold: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        *, ::before, ::after {
+            box-sizing: border-box !important;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.65;
+            color: #1e293b;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: #f8fafc;
+            padding-top: 118px; /* Clears two-row mobile sticky header */
+        }
+        @media (min-width: 768px) {
+            body {
+                padding-top: 78px; /* Clears single-row desktop sticky header */
+            }
+        }
+
+        /* ARTICLE CARD & TYPOGRAPHY */
+        .article-card {
+            background-color: #ffffff;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+            border: 1px solid #e2e8f0;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .article-card {
+                padding: 34px;
+            }
+        }
+
+        .topic-badge {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: #003399;
+            border: 1px solid #bfdbfe;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            color: #0f172a;
+            font-size: 1.55rem;
+            font-weight: 900;
+            line-height: 1.25;
+            border-bottom: 3px solid #DC2626;
+            padding-bottom: 14px;
+            margin-bottom: 18px;
+            margin-top: 0;
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 1.85rem;
+            }
+        }
+
+        .meta-line {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        h2 {
+            color: #003399;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-top: 26px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+            color: #334155;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 9px;
+            font-size: 0.96rem;
+            color: #334155;
+        }
+
+        /* HIGHLIGHT CALLOUT BOX */
+        .highlight-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            padding: 18px 20px;
+            border-radius: 12px;
+            border-left: 5px solid #DC2626;
+            margin: 22px 0;
+        }
+        .highlight-box-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fbbf24;
+            margin-bottom: 6px;
+        }
+        .highlight-box p {
+            color: #e2e8f0;
+            margin: 0;
+            font-size: 0.94rem;
+        }
+
+        /* COMPARISON TABLE */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        th {
+            background-color: #003399;
+            color: #ffffff;
+            font-weight: 800;
+            padding: 11px 14px;
+        }
+        td {
+            padding: 11px 14px;
+            border-top: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        /* CTA BOX */
+        .cta-box {
+            background-color: #f1f5f9;
+            border-left: 5px solid #003399;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .cta-box-heading {
+            margin: 0 0 6px 0;
+            font-weight: 800;
+            font-size: 1.02rem;
+            color: #0f172a;
+        }
+        .cta-box p {
+            margin: 0 0 12px 0;
+            font-size: 0.92rem;
+            color: #475569;
+        }
+        .btn-link {
+            display: inline-block;
+            background-color: #003399;
+            color: #ffffff !important;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+        .btn-link:hover {
+            background-color: #002266;
+        }
+
+        /* CONTACT CARD & ACTION BUTTONS */
+        .contact-card {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        .contact-card h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        .action-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 18px 0;
+        }
+        .btn-action-buyer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #003399;
+            color: #ffffff !important;
+            padding: 13px 18px;
+            border-radius: 10px;
+            text-decoration: none !important;
+            font-weight: 800;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 6px rgba(0, 51, 153, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-action-buyer:hover {
+            background-color: #002266;
+        }
+        .btn-action-seller {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #DC2626;
+            color: #ffffff !important;
+            padding: 13px 18px;
+            border-radius: 10px;
+            text-decoration: none !important;
+            font-weight: 800;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 6px rgba(220, 38, 38, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-action-seller:hover {
+            background-color: #b91c1c;
+        }
+        .btn-tag {
+            background-color: rgba(255, 255, 255, 0.22);
+            padding: 3px 9px;
+            border-radius: 5px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+            margin-left: 8px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 24px 0;
+        }
+
+        /* RECO / TRESA COMPLIANCE DISCLAIMER */
+        .disclaimer-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 14px 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.45;
+        }
+        .disclaimer-title {
+            font-weight: 800;
+            color: #334155;
+            margin-bottom: 4px;
+        }
+
+        /* FOOTER */
+        .custom-footer {
+            border-top: 2px solid #DC2626;
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 18px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        @media (min-width: 640px) {
+            .custom-footer {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .footer-info h4 {
+            margin: 0 0 3px 0;
+            font-size: 0.98rem;
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .footer-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+        }
+        .footer-buttons {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .footer-buttons {
+                width: auto;
+            }
+        }
+        .footer-buttons a {
+            flex: 1;
+            text-align: center;
+        }
+        .btn-call {
+            background-color: #DC2626;
+            color: #ffffff !important;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        .btn-web {
+            background-color: #D4AF37;
+            color: #0f172a !important;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-remax-red selection:text-white">
+
+    <!-- STICKY NAVIGATION HEADER (Matches index.html across all devices) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 w-full">
+            
+            <!-- LEFT: AGENT NAME, PERMITTED TITLE, BROKERAGE & OFFICE ADDRESS -->
+            <a href="https://solankihomes.ca" class="flex flex-col min-w-0 flex-shrink group" style="text-decoration: none;">
+                <div class="flex items-center gap-1.5 leading-tight truncate">
+                    <span class="text-base sm:text-lg lg:text-xl font-black tracking-tight text-slate-900 group-hover:text-remax-blue transition-colors">
+                        Prakash Solanki
+                    </span>
+                    <span class="text-xs font-extrabold tracking-wider text-remax-blue uppercase">
+                        REALTOR®
+                    </span>
+                </div>
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-700 block leading-tight mt-0.5 truncate">
+                    RE/MAX Pembroke Realty Ltd., Brokerage
+                </span>
+                <span class="text-[10px] sm:text-[11px] font-bold text-slate-600 block leading-tight mt-0.5 truncate">
+                    📍 10A Canadian Forces Dr., Petawawa, ON
+                </span>
+            </a>
+
+            <!-- CENTER: OFFICIAL RE/MAX BALLOON LOGO -->
+            <div class="flex items-center justify-center flex-shrink-0 px-1 sm:px-4">
+                <img src="../Remax_with_balloon_2.png" alt="RE/MAX Pembroke Realty Ltd., Brokerage Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all" onerror="this.onerror=null; this.src='Remax_with_balloon_2.png';">
+            </div>
+
+            <!-- RIGHT: BUTTONS (DESKTOP) -->
+            <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+                <a href="https://solankihomes.ca" style="text-decoration: none;" class="inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <a href="tel:16132033313" style="text-decoration: none;" class="inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-4 py-2.5 rounded-xl text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MOBILE-ONLY SECOND ROW FOR BUTTONS -->
+        <div class="flex md:hidden items-center justify-center w-full px-3 py-2 bg-[#00205B] border-t border-white/10">
+            <div class="flex items-center gap-2 w-full max-w-sm">
+                <a href="https://solankihomes.ca" style="text-decoration: none;" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-blue hover:bg-blue-900 text-white font-black px-3 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1V9.414l1.293 1.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+
+                <a href="tel:16132033313" style="text-decoration: none;" class="flex-1 w-1/2 inline-flex items-center justify-center gap-1.5 bg-remax-red hover:bg-red-700 text-white font-black px-2 py-2 rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    <span>(613) 203-3313</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BLOG ARTICLE -->
+    <article class="article-card">
+        <span class="topic-badge">Buyer &amp; Financing Strategy • November 2026</span>
+        <h1>Pre-Approval Rate Holds Ahead of December: Protecting Your Buying Power in Pembroke &amp; Petawawa</h1>
+        
+        <div class="meta-line">
+            <span>By <strong>Prakash Solanki</strong>, Real Estate Agent | REALTOR®</span>
+            <span>•</span>
+            <span>RE/MAX Pembroke Realty Ltd., Brokerage</span>
+        </div>
+
+        <section>
+            <p>With the Bank of Canada’s final scheduled policy rate announcement of the year approaching on <strong>December 9, 2026</strong>—and following the central bank’s October 28 adjustment bringing the overnight policy rate to <strong>2.50%</strong>—many prospective homebuyers across <strong>Pembroke, Petawawa, Laurentian Valley, and Deep River</strong> are asking me the same question: <em>“Should I lock in a mortgage pre-approval now, or wait until December to see what happens with rates?”</em></p>
+            <p>In my experience working with buyers across the Ottawa Valley, waiting on the sidelines for a rate announcement rarely works in a buyer’s favour. Securing a formal mortgage pre-approval with a rate hold today gives you price protection, clarity on your monthly payment ceiling, and stronger negotiating footing when the right home hits the MLS® System.</p>
+        </section>
+
+        <div class="highlight-box">
+            <div class="highlight-box-title">💡 Key Takeaway for Ottawa Valley Buyers</div>
+            <p>A mortgage rate hold acts as a one-way ceiling: if interest rates climb while you are house-hunting in Pembroke or Petawawa, your quoted rate stays protected for 90 to 120 days. If rates drop before your closing date, most lenders allow you to adjust down to the lower rate.</p>
+        </div>
+
+        <hr>
+
+        <section>
+            <h2>Pre-Qualification vs. Full Pre-Approval: Why the Difference Matters</h2>
+            <p>Before you start touring properties on the market, it is important to understand that an online mortgage calculator or quick phone estimate is not the same as a formal pre-approval:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Quick Pre-Qualification</th>
+                            <th>Formal Mortgage Pre-Approval</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Document Verification</strong></td>
+                            <td>Based on unverified self-reported estimates</td>
+                            <td>Full review of income, credit score, down payment, and debt ratios</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interest Rate Hold</strong></td>
+                            <td>No rate protection</td>
+                            <td>Typically locked for <strong>90 to 120 days</strong> (up to 130 days at select lenders)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Offer Strength</strong></td>
+                            <td>Carries minimal weight during negotiations</td>
+                            <td>Signals to sellers that your financing budget is verified</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>4 Ways a Rate Hold Protects Your Buying Power This Winter</h2>
+            <ol>
+                <li><strong>Shields You From Bond Yield &amp; Policy Rate Surprises:</strong> Fixed mortgage rates respond to Government of Canada bond yields, while variable rates move with lender prime rates. Locking in a pre-approval ahead of December 9 ensures that sudden market shifts will not shrink your maximum purchase price overnight.</li>
+                <li><strong>Covers a Full 3- to 4-Month Search Window:</strong> Because most Canadian lenders honour rate holds for 90 to 120 days, a pre-approval secured in mid-November carries your rate protection straight through the winter market into February or March 2027.</li>
+                <li><strong>Stress-Tests Your Comfort Zone in Advance:</strong> Under federal mortgage rules, lenders qualify borrowers at the higher of 5.25% or your contract rate plus 2%. Knowing your exact stress-tested limit lets me help you focus strictly on homes in Pembroke, Petawawa, or surrounding communities that fit comfortably within your monthly budget—leaving room for property taxes, heating, and closing costs.</li>
+                <li><strong>Positions You to Negotiate With Confidence:</strong> Late fall and winter buyers often encounter motivated sellers who value clean, well-prepared offers. Walking into negotiations with verified financing allows us to focus on price, closing dates, and protective conditions like home and septic inspections.</li>
+            </ol>
+
+            <div class="cta-box">
+                <div class="cta-box-heading">🧭 Ready to Map Out Your Purchase Budget &amp; Search Criteria?</div>
+                <p>I can walk you through current active MLS® inventory across Pembroke, Petawawa, and Renfrew County and help you prepare a clear game plan before you submit an offer.</p>
+                <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener" class="btn-link" style="text-decoration: none;">📱 Book a No-Obligation Buyer Consultation</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>What This Means If You Are Selling in Pembroke or Petawawa</h2>
+            <p>If you are considering listing your home this season, buyers who already hold locked-in pre-approvals are among the most serious shoppers in the market. They have a deadline on their rate hold and a clear financial incentive to finalize a purchase before their lock expires.</p>
+            <p>To attract these qualified buyers, I focus on accurate, data-backed pricing tailored to your specific neighbourhood—whether you own a family home in Petawawa, a classic residence in Pembroke, or a rural property in Laurentian Valley—paired with comprehensive digital marketing from day one on the MLS® System.</p>
+
+            <div class="cta-box">
+                <div class="cta-box-heading">📊 Wondering How Buyer Demand Affects Your Home’s Value?</div>
+                <p>I provide a detailed, data-driven Comparative Market Analysis grounded in recent neighbourhood sales across Renfrew County.</p>
+                <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener" class="btn-link" style="text-decoration: none;">🏠 Request a Complimentary Home Evaluation</a>
+            </div>
+        </section>
+
+        <!-- CONTACT CARD & ACTION BUTTONS -->
+        <section class="contact-card">
+            <h2>Let’s Plan Your Next Move in the Ottawa Valley</h2>
+            <p>Whether you are preparing to buy with a rate hold or evaluating your options as a homeowner, reach out directly to get started:</p>
+            
+            <div class="action-button-group">
+                <a href="https://buyer.solankihomes.ca" target="_blank" rel="noopener" class="btn-action-buyer">
+                    <span>🔍 Request a No-Obligation Buyer Consultation</span>
+                    <span class="btn-tag">For Buyers</span>
+                </a>
+                <a href="https://seller.solankihomes.ca" target="_blank" rel="noopener" class="btn-action-seller">
+                    <span>🏠 Request a Complimentary Home Evaluation</span>
+                    <span class="btn-tag">For Sellers</span>
+                </a>
+            </div>
+
+            <hr>
+            <p style="margin-bottom: 3px; color: #0f172a;"><strong>Prakash Solanki</strong>, Real Estate Agent | REALTOR®</p>
+            <p style="margin-top: 0; margin-bottom: 3px;">RE/MAX Pembroke Realty Ltd., Brokerage</p>
+            <p style="margin-top: 0; margin-bottom: 3px;"><em>Office Address:</em> 10A Canadian Forces Drive, Petawawa, ON K8H 0H4</p>
+            <p style="margin-top: 0; margin-bottom: 3px;"><em>Direct Phone:</em> <a href="tel:16132033313" style="color: #003399; font-weight: 700;">(613) 203-3313</a></p>
+            <p style="margin-top: 0; margin-bottom: 0;"><em>Website:</em> <a href="https://solankihomes.ca" target="_blank" rel="noopener" style="color: #003399; font-weight: 700;">www.SolankiHomes.ca</a></p>
+        </section>
+
+        <!-- RECO / TRESA COMPLIANCE DISCLAIMER -->
+        <div class="disclaimer-box">
+            <div class="disclaimer-title">Important Notice &amp; Disclaimer:</div>
+            The real estate and mortgage market information provided in this article is for general educational and informational purposes only and does not constitute formal financial, mortgage brokerage, legal, or appraisal advice. Mortgage rates, lender hold periods, and qualification terms vary by financial institution and are subject to change without notice; always consult a licensed mortgage professional or lender regarding your specific financing terms. REALTOR® and MLS® are registered trademarks owned or controlled by The Canadian Real Estate Association (CREA).
+        </div>
+
+        <!-- PROFESSIONAL FOOTER -->
+        <footer class="custom-footer">
+            <div class="footer-info">
+                <h4>Prakash Solanki, Real Estate Agent | REALTOR®</h4>
+                <p>RE/MAX Pembroke Realty Ltd., Brokerage</p>
+                <p>📍 10A Canadian Forces Dr., Petawawa, ON K8H 0H4</p> 
+            </div>
+            <div class="footer-buttons">
+                <a href="tel:16132033313" class="btn-call" style="text-decoration: none;">Call (613) 203-3313</a>
+                <a href="https://solankihomes.ca" target="_blank" rel="noopener noreferrer" class="btn-web" style="text-decoration: none;">SolankiHomes.ca</a>
+            </div>
+        </footer>
+
+    </article>
+
+</body>
+</html>

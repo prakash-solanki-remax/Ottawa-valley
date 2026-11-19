@@ -1262,30 +1262,22 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
                 <input id="form-name-field" type="text" name="entry.432417231" autocomplete="name" placeholder="Your Name" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
-                <div id="questionNameError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
-                    Please enter a valid name (at least 2 letters, no numbers).
-                </div>
+                <div id="questionNameError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;"></div>
             </div>
             <div>
                 <input id="form-phone-field" type="tel" name="entry.408933223" autocomplete="tel" inputmode="numeric" maxlength="14" placeholder="Phone Number" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
-                <div id="questionPhoneError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
-                    Please enter a valid 10-digit phone number.
-                </div>
+                <div id="questionPhoneError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;"></div>
             </div>
         </div>
 
         <div>
             <input id="form-email-field" type="email" name="entry.683045906" autocomplete="email" placeholder="Email Address" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
-            <div id="questionEmailError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
-                Please enter a valid email address.
-            </div>
+            <div id="questionEmailError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;"></div>
         </div>
 
         <div>
             <textarea id="form-message-field" name="entry.591931159" rows="3" placeholder="How can I help you with your real estate goals?" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner"></textarea>
-            <div id="questionMessageError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
-                Please enter your question or message (at least 3 characters).
-            </div>
+            <div id="questionMessageError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;"></div>
         </div>
 
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
@@ -1313,11 +1305,12 @@
             input.style.backgroundColor = "#ffffff";
         }
         if (error) {
+            error.textContent = "";
             error.style.display = "none";
         }
     }
 
-    function showQuestionError(inputId, errorId) {
+    function showQuestionError(inputId, errorId, message) {
         const input = document.getElementById(inputId);
         const error = document.getElementById(errorId);
         if (input) {
@@ -1326,6 +1319,7 @@
             input.focus();
         }
         if (error) {
+            error.textContent = message;
             error.style.display = "block";
         }
     }
@@ -1341,28 +1335,62 @@
         clearQuestionError("form-email-field", "questionEmailError");
         clearQuestionError("form-message-field", "questionMessageError");
 
+        // 1. Name validation
         const cleanName = nameInput.value.trim();
-        if (cleanName === "" || /\d/.test(cleanName) || cleanName.length < 2) {
-            showQuestionError("form-name-field", "questionNameError");
+        if (cleanName === "") {
+            showQuestionError("form-name-field", "questionNameError", "Please enter your name. This field cannot be empty.");
+            return false;
+        }
+        if (/\d/.test(cleanName)) {
+            showQuestionError("form-name-field", "questionNameError", "Please enter a valid name without numbers.");
+            return false;
+        }
+        if (cleanName.length < 2) {
+            showQuestionError("form-name-field", "questionNameError", "Please enter at least 2 letters for your name.");
             return false;
         }
 
-        const cleanPhone = phoneInput.value.replace(/\D/g, "");
+        // 2. Phone validation (10 digits, no space-numbering)
+        const rawPhone = phoneInput.value.trim();
+        if (rawPhone === "") {
+            showQuestionError("form-phone-field", "questionPhoneError", "Please enter your phone number. This field cannot be empty.");
+            return false;
+        }
+        const cleanPhone = rawPhone.replace(/\D/g, "");
         if (cleanPhone.length !== 10) {
-            showQuestionError("form-phone-field", "questionPhoneError");
+            showQuestionError("form-phone-field", "questionPhoneError", "Please enter a valid 10-digit phone number (e.g., 6132033313).");
             return false;
         }
 
+        // 3. Email validation (empty, missing @, invalid format)
         const cleanEmail = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (cleanEmail === "" || !emailRegex.test(cleanEmail)) {
-            showQuestionError("form-email-field", "questionEmailError");
+        if (cleanEmail === "") {
+            showQuestionError("form-email-field", "questionEmailError", "Please enter your email address. This field cannot be empty.");
+            return false;
+        }
+        if (!cleanEmail.includes("@")) {
+            showQuestionError("form-email-field", "questionEmailError", "Please enter a valid email address (missing '@' sign).");
+            return false;
+        }
+        const emailParts = cleanEmail.split("@");
+        if (emailParts.length !== 2 || !emailParts[0] || !emailParts[1] || !emailParts[1].includes(".")) {
+            showQuestionError("form-email-field", "questionEmailError", "Please enter a valid email address (for example, name@example.com).");
+            return false;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if (!emailRegex.test(cleanEmail)) {
+            showQuestionError("form-email-field", "questionEmailError", "Please enter a valid email address.");
             return false;
         }
 
+        // 4. Message validation
         const cleanMessage = messageInput.value.trim();
-        if (cleanMessage === "" || cleanMessage.length < 3) {
-            showQuestionError("form-message-field", "questionMessageError");
+        if (cleanMessage === "") {
+            showQuestionError("form-message-field", "questionMessageError", "Please enter your message. This field cannot be empty.");
+            return false;
+        }
+        if (cleanMessage.length < 3) {
+            showQuestionError("form-message-field", "questionMessageError", "Please enter at least 3 characters in your message.");
             return false;
         }
 
@@ -1394,6 +1422,7 @@
 
         if (phoneInput) {
             phoneInput.addEventListener("input", function() {
+                // Keeps only digits (no spaces inserted) up to 10 digits
                 this.value = this.value.replace(/\D/g, "").slice(0, 10);
                 if (this.value.length === 10) {
                     clearQuestionError("form-phone-field", "questionPhoneError");
@@ -1404,7 +1433,7 @@
         if (emailInput) {
             emailInput.addEventListener("input", function() {
                 const val = this.value.trim();
-                if (val !== "" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+                if (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) {
                     clearQuestionError("form-email-field", "questionEmailError");
                 }
             });
@@ -1419,7 +1448,6 @@
         }
     });
 </script>
-
 
                 
             </div>

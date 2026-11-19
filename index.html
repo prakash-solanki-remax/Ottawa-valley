@@ -1255,46 +1255,173 @@
                     </p>
                 </div>
 
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { document.getElementById('leadForm').style.display='none'; document.getElementById('thankYouMessage').style.display='block'; }"></iframe>
+<div id="questionFormWrapper">
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.questionFormSubmitted) { showQuestionSuccessMessage(); }"></iframe>
 
-<form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSde2wjsa-oJ_GXwGTZL32atB7xsf96tWnXIcJmKZxUyQcYxAw/formResponse" method="POST" target="hidden_iframe" onsubmit="window.submitted=true;" class="space-y-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-            <input id="form-name-field" type="text" name="entry.432417231" required placeholder="Your Name" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
+    <form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSde2wjsa-oJ_GXwGTZL32atB7xsf96tWnXIcJmKZxUyQcYxAw/formResponse" method="POST" target="hidden_iframe" onsubmit="return validateQuestionForm();" class="space-y-4" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+                <input id="form-name-field" type="text" name="entry.432417231" autocomplete="name" placeholder="Your Name" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
+                <div id="questionNameError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
+                    Please enter a valid name (at least 2 letters, no numbers).
+                </div>
+            </div>
+            <div>
+                <input id="form-phone-field" type="tel" name="entry.408933223" autocomplete="tel" inputmode="numeric" maxlength="14" placeholder="Phone Number" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
+                <div id="questionPhoneError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
+                    Please enter a valid 10-digit phone number.
+                </div>
+            </div>
         </div>
+
         <div>
-            <input type="tel" name="entry.408933223" required placeholder="Phone Number" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
+            <input id="form-email-field" type="email" name="entry.683045906" autocomplete="email" placeholder="Email Address" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
+            <div id="questionEmailError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
+                Please enter a valid email address.
+            </div>
         </div>
-    </div>
 
-    <div>
-        <input type="email" name="entry.683045906" required placeholder="Email Address" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner">
-    </div>
+        <div>
+            <textarea id="form-message-field" name="entry.591931159" rows="3" placeholder="How can I help you with your real estate goals?" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm border border-transparent focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner"></textarea>
+            <div id="questionMessageError" style="display: none; color: #fecaca; font-size: 12px; font-weight: 700; margin-top: 4px;">
+                Please enter your question or message (at least 3 characters).
+            </div>
+        </div>
 
-    <div>
-        <textarea name="entry.591931159" rows="3" required placeholder="How can I help you with your real estate goals?" class="w-full bg-white text-slate-900 font-medium rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-remax-red transition shadow-inner"></textarea>
-    </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <button type="submit" class="w-full sm:w-auto bg-remax-red hover:bg-red-700 text-white font-black uppercase tracking-wider px-8 py-3 rounded-xl transition shadow-lg text-xs sm:text-sm flex items-center justify-center gap-2 group">
+                <span>Send Message</span>
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+        </div>
+    </form>
 
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-        <button type="submit" class="w-full sm:w-auto bg-remax-red hover:bg-red-700 text-white font-black uppercase tracking-wider px-8 py-3 rounded-xl transition shadow-lg text-xs sm:text-sm flex items-center justify-center gap-2 group">
-            <span>Send Message</span>
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
-        </button>
+    <div id="questionFormSuccess" style="display: none; background-color: #ffffff; color: #0f172a; padding: 20px; border-radius: 12px; text-align: center; margin-top: 8px;">
+        <h4 style="font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Message Sent!</h4>
+        <p style="font-size: 14px; color: #475569; line-height: 1.5; font-weight: 500;">Thank you! Your question has been received and I will follow up shortly.</p>
     </div>
-</form>
+</div>
+
+<script>
+    window.questionFormSubmitted = false;
+
+    function clearQuestionError(inputId, errorId) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(errorId);
+        if (input) {
+            input.style.borderColor = "";
+            input.style.backgroundColor = "#ffffff";
+        }
+        if (error) {
+            error.style.display = "none";
+        }
+    }
+
+    function showQuestionError(inputId, errorId) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(errorId);
+        if (input) {
+            input.style.borderColor = "#dc2626";
+            input.style.backgroundColor = "#fef2f2";
+            input.focus();
+        }
+        if (error) {
+            error.style.display = "block";
+        }
+    }
+
+    function validateQuestionForm() {
+        const nameInput = document.getElementById("form-name-field");
+        const phoneInput = document.getElementById("form-phone-field");
+        const emailInput = document.getElementById("form-email-field");
+        const messageInput = document.getElementById("form-message-field");
+
+        clearQuestionError("form-name-field", "questionNameError");
+        clearQuestionError("form-phone-field", "questionPhoneError");
+        clearQuestionError("form-email-field", "questionEmailError");
+        clearQuestionError("form-message-field", "questionMessageError");
+
+        const cleanName = nameInput.value.trim();
+        if (cleanName === "" || /\d/.test(cleanName) || cleanName.length < 2) {
+            showQuestionError("form-name-field", "questionNameError");
+            return false;
+        }
+
+        const cleanPhone = phoneInput.value.replace(/\D/g, "");
+        if (cleanPhone.length !== 10) {
+            showQuestionError("form-phone-field", "questionPhoneError");
+            return false;
+        }
+
+        const cleanEmail = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (cleanEmail === "" || !emailRegex.test(cleanEmail)) {
+            showQuestionError("form-email-field", "questionEmailError");
+            return false;
+        }
+
+        const cleanMessage = messageInput.value.trim();
+        if (cleanMessage === "" || cleanMessage.length < 3) {
+            showQuestionError("form-message-field", "questionMessageError");
+            return false;
+        }
+
+        window.questionFormSubmitted = true;
+        return true;
+    }
+
+    function showQuestionSuccessMessage() {
+        const form = document.getElementById("leadForm");
+        const successBox = document.getElementById("questionFormSuccess");
+        if (form) form.style.display = "none";
+        if (successBox) successBox.style.display = "block";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const nameInput = document.getElementById("form-name-field");
+        const phoneInput = document.getElementById("form-phone-field");
+        const emailInput = document.getElementById("form-email-field");
+        const messageInput = document.getElementById("form-message-field");
+
+        if (nameInput) {
+            nameInput.addEventListener("input", function() {
+                this.value = this.value.replace(/[0-9]/g, "");
+                if (this.value.trim().length >= 2) {
+                    clearQuestionError("form-name-field", "questionNameError");
+                }
+            });
+        }
+
+        if (phoneInput) {
+            phoneInput.addEventListener("input", function() {
+                this.value = this.value.replace(/\D/g, "").slice(0, 10);
+                if (this.value.length === 10) {
+                    clearQuestionError("form-phone-field", "questionPhoneError");
+                }
+            });
+        }
+
+        if (emailInput) {
+            emailInput.addEventListener("input", function() {
+                const val = this.value.trim();
+                if (val !== "" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+                    clearQuestionError("form-email-field", "questionEmailError");
+                }
+            });
+        }
+
+        if (messageInput) {
+            messageInput.addEventListener("input", function() {
+                if (this.value.trim().length >= 3) {
+                    clearQuestionError("form-message-field", "questionMessageError");
+                }
+            });
+        }
+    });
+</script>
 
 
                 
-
-                <div id="thankYouMessage" style="display:none;" class="text-center py-8 px-4">
-                    <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                        ✓
-                    </div>
-                    <h4 class="text-2xl font-black text-white mb-2">Message Sent Successfully!</h4>
-                    <p class="text-slate-300 text-base sm:text-sm">
-                        Thank you for reaching out. Prakash has received your inquiry and will get back to you shortly.
-                    </p>
-                </div>
             </div>
         </div>
     </section>

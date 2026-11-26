@@ -1,0 +1,88 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleChoosing a Real Estate Agent in Pembroke &amp; Petawawa Key Questions to Asktitle
+    meta name=description content=Practical questions to ask before choosing a real estate agent in Pembroke and Petawawa. Learn about local market knowledge, Ontario representation rules, and brokerage support with Prakash Solanki, REALTOR®.
+    meta name=keywords content=find a real estate agent near me, real estate agent Pembroke, real estate agent Petawawa, REMAX Pembroke Realty Ltd., Prakash Solanki
+    script src=httpscdn.tailwindcss.comscript
+    link href=httpsfonts.googleapis.comcss2family=Plus+Jakarta+Sanswght@400;500;600;700;800&display=swap rel=stylesheet
+    style
+        body { font-family 'Plus Jakarta Sans', sans-serif; }
+    style
+head
+body class=bg-slate-50 text-slate-800 antialiased
+
+    header class=bg-slate-900 text-white py-12 px-4 smpx-6 lgpx-8 border-b-4 border-red-600
+        div class=max-w-4xl mx-auto text-center
+            span class=text-xs font-black uppercase tracking-widest bg-red-60020 text-red-400 px-3 py-1.5 rounded-full border border-red-60030
+                Ottawa Valley Buyer &amp; Seller Guide
+            span
+            h1 class=text-3xl smtext-4xl lgtext-5xl font-black tracking-tight mt-4 mb-4 leading-tight
+                Choosing a Real Estate Agent in Pembroke &amp; Petawawa Key Questions to Ask Before You Start
+            h1
+            p class=text-slate-400 text-sm smtext-base
+                Published by strong class=text-whitePrakash Solanki, REALTOR®strong  REMAX Pembroke Realty Ltd., Brokerage
+            p
+        div
+    header
+
+    main class=max-w-3xl mx-auto px-4 smpx-6 lgpx-8 py-12
+        article class=bg-white rounded-3xl p-6 smp-10 shadow-sm border border-slate-200 space-y-6 text-slate-700 leading-relaxed text-base smtext-lg
+            
+            p class=font-medium text-slate-900
+                Whether you are planning to buy a home or sell a property in Pembroke, Petawawa, or nearby Ottawa Valley communities, choosing the right real estate representation is an important early decision. A strong working relationship starts with clear communication, honest expectations, and a solid grasp of local neighbourhoods and Ontario real estate rules.
+            p
+
+            h2 class=text-2xl font-black text-slate-900 pt-41. How Well Do You Know Pembroke, Petawawa &amp; Surrounding Areash2
+            p
+                Local market conditions can shift from street to street and township to township. Asking how an agent tracks local inventory, neighbourhood dynamics, and property considerations in Pembroke, Petawawa, Laurentian Valley, and surrounding areas helps you see whether their day-to-day focus matches your goals.
+            p
+
+            h2 class=text-2xl font-black text-slate-900 pt-42. How Does Client Representation Work Under Ontario Rulesh2
+            p
+                In Ontario, real estate transactions are governed by RECO and TRESA rules, which set clear standards around disclosure, written representation agreements, and how client interests are protected. A good agent will explain how representation works in plain language before you sign anything so you feel informed at every stage.
+            p
+
+            h2 class=text-2xl font-black text-slate-900 pt-43. What Is Your Communication &amp; Next-Steps Processh2
+            p
+                Buying or selling involves many moving parts, from reviewing property details and scheduling showings to coordinating offers, inspections, and closing timelines. Ask how often you will receive updates, how quickly questions are answered, and what the first practical step looks like for your timeline.
+            p
+            ul class=list-disc pl-6 space-y-2 text-base text-slate-600
+                listrongFor Buyersstrong Clarify financing readiness, must-have features, and how you will evaluate comparable properties before making an offer.li
+                listrongFor Sellersstrong Discuss realistic pricing strategy, preparation priorities, and how your home will be presented and marketed.li
+                listrongBrokerage Supportstrong Working through an established local brokerage like REMAX Pembroke Realty Ltd., Brokerage provides office resources, compliance oversight, and local market tools.li
+            ul
+
+            h2 class=text-2xl font-black text-slate-900 pt-4Start With a Clear, Low-Pressure Conversationh2
+            p
+                You do not need to have every detail figured out before reaching out. If you are exploring options in Pembroke, Petawawa, or across the Ottawa Valley, I am happy to answer your questions and help you map out a sensible starting point.
+            p
+
+            div class=bg-slate-900 text-white p-6 smp-8 rounded-2xl mt-8 text-center space-y-4
+                h3 class=text-xl font-extraboldHave Questions About Buying or Selling Locallyh3
+                p class=text-slate-300 text-sm
+                    Reach out today to talk through your goals and next steps.
+                p
+                div class=flex flex-col smflex-row items-center justify-center gap-3 pt-2
+                    a href=tel16132033313 class=w-full smw-auto bg-red-600 hoverbg-red-700 text-white font-extrabold px-6 py-3 rounded-xl transition text-sm
+                        📞 Call  Text (613) 203-3313
+                    a
+                    a href=mailtosolanki.reqltor@gmail.com class=w-full smw-auto bg-blue-600 hoverbg-blue-700 text-white font-extrabold px-6 py-3 rounded-xl transition text-sm
+                        ✉️ Email Prakash
+                    a
+                div
+            div
+
+        article
+
+        div class=text-center mt-8
+            a href=httpssolankihomes.ca class=text-sm font-bold text-red-600 hoverunderline
+                ← Back to SolankiHomes.ca Homepage
+            a
+        div
+    main
+
+body
+html
